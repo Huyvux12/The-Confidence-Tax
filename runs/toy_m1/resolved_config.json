@@ -1,0 +1,75 @@
+{
+  "config": {
+    "method": "M1",
+    "data_dir": "data/toy_b_entropy_conflict",
+    "out_dir": "runs/toy_m1",
+    "seed": 0,
+    "generate_toy": {
+      "scenario": "b_entropy_conflict",
+      "seed": 0,
+      "K": 4
+    },
+    "grid": {
+      "lo": 0.25,
+      "hi": 4.0,
+      "n": 241
+    },
+    "m1": {
+      "centers": [
+        0,
+        1,
+        2,
+        4,
+        8
+      ],
+      "bandwidth": [
+        0.2,
+        0.5,
+        1.0
+      ],
+      "field_l2": [
+        0.0,
+        0.01,
+        0.1
+      ],
+      "beta_min": 0.25,
+      "beta_max": 4.0,
+      "epsilon_select": 0.0
+    },
+    "exploratory": true
+  },
+  "method": "M1",
+  "seed": 0,
+  "beta_grid": [
+    0.25,
+    4.0,
+    241
+  ],
+  "units": [
+    [
+      "toy_model",
+      "toy_prompt"
+    ]
+  ],
+  "corruption": null,
+  "input_fingerprints": {
+    "source_train.jsonl": "f826096b060356fc844564c543dddd03143402a0c1920fcd38e054b2257ecabc",
+    "source_select.jsonl": "c72490bc6b92c37f8ff447bd681f48dcc69424e42ec6db48fa34bb3218358da7",
+    "source_audit.jsonl": "2c7591895ecd8517320a4e05d8a1dc51286146275bea2f4d7bdca1efdf04624b",
+    "target_inputs.jsonl": "a64ccf9d3c1f3023b41f0201536fe42284cd904111d444fe12fa51cbeb4ecc6b",
+    "manifest.json": "ec56e888811910afdcfb2f649db0bd61e195813c6d290c058aa0091cb7f9a5ff"
+  },
+  "protocols": {
+    "IDENTITY": "source_only",
+    "POOLED_TS": "source_only",
+    "POOLED_TS_GATED": "source_only",
+    "MRTS": "source_only",
+    "MRTS_GATED": "source_only",
+    "M1_MINIMAX": "source_only",
+    "M1_MEAN_SAFE": "source_only",
+    "M1_POOLED": "source_only",
+    "M1_MINIMAX_ENTROPY_AFFINE": "source_only"
+  },
+  "gate_rule": "max_w Delta_w(select) <= epsilon_select + 1e-8, fixed before select is read",
+  "endpoint": "macro delta NLL vs MRTS, paired case bootstrap 95% CI excludes 0, harm_001 not higher"
+}

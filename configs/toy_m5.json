@@ -1,0 +1,6 @@
+{"method": "M5", "data_dir": "data/toy_m5_shared_temperature", "out_dir": "runs/toy_m5", "seed": 0,
+ "generate_toy": {"scenario": "a_shared_temperature", "seed": 1, "K": 4},
+ "m1": {"centers": [0, 2, 4], "bandwidth": [0.5], "field_l2": [0.01]},
+ "m5": {"budgets": [0, 8, 16, 32, 64], "random_seeds": 20, "eta": 1e-6,
+        "candidates": ["IDENTITY", "POOLED_TS", "MRTS", "M1_MINIMAX", "M3_MINIMAX"]},
+ "exploratory": true}

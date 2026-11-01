@@ -1,0 +1,7 @@
+{
+  "generator": "toy_data",
+  "scenario": "m3_top_gap",
+  "seed": 0,
+  "K": 4,
+  "label_provenance": "synthetic_known_truth"
+}

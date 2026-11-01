@@ -1,0 +1,390 @@
+{
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "identity_log_q_equals_log_p",
+      "method_id": "IDENTITY",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "IDENTITY",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 2.220446049250313e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "POOLED_TS",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 2.220446049250313e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "POOLED_TS_GATED",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 2.220446049250313e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "MRTS",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 4.440892098500626e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "MRTS_GATED",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 4.440892098500626e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "M4_SCALAR_rho0.00",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 4.440892098500626e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "M4_SCALAR_rho0.05",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 2.220446049250313e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "M4_SCALAR_rho0.10",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 4.440892098500626e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "M4_SCALAR_rho0.20",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 2.220446049250313e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "M4_FIELD_rho0.00",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 2.220446049250313e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "M4_FIELD_rho0.05",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 2.220446049250313e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "M4_FIELD_rho0.10",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 2.220446049250313e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "M4_FIELD_rho0.20",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 2.220446049250313e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "IDENTITY",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "IDENTITY",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "POOLED_TS",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "grid"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "POOLED_TS",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "POOLED_TS_GATED",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "grid"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "POOLED_TS_GATED",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "MRTS",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "grid"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "MRTS",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "MRTS_GATED",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "grid"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "MRTS_GATED",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "M4_SCALAR_rho0.00",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "grid"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "M4_SCALAR_rho0.00",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "m4_identity_robust_risk_zero",
+      "method_id": "M4_SCALAR_rho0.00",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "M4_SCALAR_rho0.05",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "grid"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "M4_SCALAR_rho0.05",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "m4_identity_robust_risk_zero",
+      "method_id": "M4_SCALAR_rho0.05",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "M4_SCALAR_rho0.10",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "grid"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "M4_SCALAR_rho0.10",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "m4_identity_robust_risk_zero",
+      "method_id": "M4_SCALAR_rho0.10",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "M4_SCALAR_rho0.20",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "grid"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "M4_SCALAR_rho0.20",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "m4_identity_robust_risk_zero",
+      "method_id": "M4_SCALAR_rho0.20",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "M4_FIELD_rho0.00",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "CLARABEL:optimal_inaccurate"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "M4_FIELD_rho0.00",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "m4_identity_robust_risk_zero",
+      "method_id": "M4_FIELD_rho0.00",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "M4_FIELD_rho0.05",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "CLARABEL:optimal"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "M4_FIELD_rho0.05",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "m4_identity_robust_risk_zero",
+      "method_id": "M4_FIELD_rho0.05",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "M4_FIELD_rho0.10",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "CLARABEL:optimal"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "M4_FIELD_rho0.10",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "m4_identity_robust_risk_zero",
+      "method_id": "M4_FIELD_rho0.10",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "M4_FIELD_rho0.20",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "CLARABEL:optimal"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "M4_FIELD_rho0.20",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "m4_identity_robust_risk_zero",
+      "method_id": "M4_FIELD_rho0.20",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "target_inputs_have_no_y",
+      "passed": true
+    },
+    {
+      "check": "labels_opened_after_freeze",
+      "passed": true,
+      "detail": {
+        "prediction_sha256_before_labels": "c63c68df38276089889ae392f679c718ae2fb7f74bb1d1896250f44e30a62ad2"
+      }
+    }
+  ]
+}

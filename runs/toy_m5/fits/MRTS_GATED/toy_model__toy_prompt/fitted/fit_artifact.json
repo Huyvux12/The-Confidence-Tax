@@ -1,0 +1,7 @@
+{
+  "kind": "scalar_ts",
+  "params": {
+    "beta": 0.7405487761432822
+  },
+  "method_id": "MRTS_GATED"
+}

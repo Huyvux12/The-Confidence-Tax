@@ -1,0 +1,13 @@
+{
+  "kind": "field_beta",
+  "params": {
+    "feature_map": {
+      "kind": "entropy_affine",
+      "sigma": null,
+      "n_centers": 0
+    },
+    "b0": 0.5620598911786189,
+    "field_norm": 0.5324373844953724
+  },
+  "method_id": "ENTROPY_AFFINE_POOLED"
+}

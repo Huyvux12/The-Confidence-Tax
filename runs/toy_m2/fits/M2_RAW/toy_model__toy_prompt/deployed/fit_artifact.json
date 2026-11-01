@@ -1,0 +1,80 @@
+{
+  "kind": "batch_beta",
+  "params": {
+    "batch_fields": [
+      "model_id",
+      "prompt_id",
+      "task_id"
+    ],
+    "betas": {
+      "toy_model|toy_prompt|target_task_0": 1.0,
+      "toy_model|toy_prompt|target_task_1": 1.0
+    }
+  },
+  "method_id": "M2_RAW",
+  "summary": {
+    "method_id": "M2_RAW",
+    "protocol": "target_unlabeled",
+    "parameters": {
+      "betas": {
+        "toy_model|toy_prompt|target_task_0": 1.0,
+        "toy_model|toy_prompt|target_task_1": 1.0
+      }
+    },
+    "selected_hyperparameters": {
+      "interval_type": "raw",
+      "n_bins": {},
+      "inflation": {
+        "4": null
+      }
+    },
+    "solver_status": "closed_form",
+    "solver_valid": true,
+    "source_gate": {
+      "accept": true,
+      "checks": [
+        {
+          "source_id": "src_A",
+          "K": 4,
+          "true_m": 0.9319539220766236,
+          "covered": true,
+          "raw_lower": 0.4039827101719284,
+          "raw_upper": 5.5356983342129285,
+          "m_lower": 0.4039827101719284,
+          "m_upper": 5.5356983342129285,
+          "unsupported_mass": 1.0,
+          "status": "RAW_ONLY"
+        },
+        {
+          "source_id": "src_B",
+          "K": 4,
+          "true_m": 1.1026579461664803,
+          "covered": true,
+          "raw_lower": 0.34883717489173005,
+          "raw_upper": 5.467053301844784,
+          "m_lower": 0.34883717489173005,
+          "m_upper": 5.467053301844784,
+          "unsupported_mass": 1.0,
+          "status": "RAW_ONLY"
+        },
+        {
+          "source_id": "src_C",
+          "K": 4,
+          "true_m": 1.0231588318793488,
+          "covered": true,
+          "raw_lower": 0.3950460844806598,
+          "raw_upper": 6.065642602525739,
+          "m_lower": 0.3950460844806598,
+          "m_upper": 6.065642602525739,
+          "unsupported_mass": 1.0,
+          "status": "RAW_ONLY"
+        }
+      ]
+    },
+    "fallback_reason": null,
+    "diagnostic_scope": "conditional_on_interval_coverage",
+    "feature_map": null,
+    "input_fingerprints": {},
+    "deployed_kind": "batch_beta"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "field_beta",
+  "params": {
+    "feature_map": {
+      "kind": "constant",
+      "sigma": null,
+      "n_centers": 0
+    },
+    "b0": 0.7416125281304596,
+    "field_norm": 0.0
+  },
+  "method_id": "M1_MINIMAX"
+}

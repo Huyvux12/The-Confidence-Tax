@@ -1,0 +1,25 @@
+# environment and caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# LaTeX build files (paper/main.pdf is kept)
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/build*.log
+
+# regenerable large data: rebuild with `python data_gen/make_splits.py`, check with data/real_SHA256SUMS.txt
+data/real/
+data/real3/
+data/real_gemma/
+data/real_qwen/
+
+# concatenations of runs/*/units/*.pkl; run_rbcal.py rebuilds them from the unit cache
+runs/*/unit_results.pkl
+
+# polling scratch files
+runs/colab_poll*.txt

@@ -1,0 +1,7 @@
+{
+  "generator": "toy_data",
+  "scenario": "m2_shifted_target",
+  "seed": 0,
+  "K": 4,
+  "label_provenance": "synthetic_known_truth"
+}

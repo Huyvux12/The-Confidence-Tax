@@ -1,0 +1,83 @@
+{
+  "kind": "scalar_ts",
+  "params": {
+    "beta": 0.8408964152537145
+  },
+  "method_id": "M4_SCALAR_rho0.10",
+  "summary": {
+    "method_id": "M4_SCALAR_rho0.10",
+    "protocol": "source_only",
+    "parameters": {
+      "beta": 0.8408964152537145
+    },
+    "selected_hyperparameters": {
+      "rho_assumed": 0.1,
+      "function_class": "scalar"
+    },
+    "solver_status": "grid",
+    "solver_valid": true,
+    "source_gate": {
+      "accept": true,
+      "max_R_rho": -0.017208336311231143,
+      "risk": {
+        "src_A": {
+          "n_states": 60,
+          "n_rows": 113,
+          "rho": 0.1,
+          "B": 6,
+          "R_obs": -0.07270512205182782,
+          "adversarial_increase": 0.04877400226709777,
+          "R_rho": -0.023931119784730046,
+          "dominating_cases": [
+            "source_select_src_A_c00040",
+            "source_select_src_A_c00056",
+            "source_select_src_A_c00043",
+            "source_select_src_A_c00023",
+            "source_select_src_A_c00026",
+            "source_select_src_A_c00015"
+          ]
+        },
+        "src_B": {
+          "n_states": 60,
+          "n_rows": 108,
+          "rho": 0.1,
+          "B": 6,
+          "R_obs": -0.14947819225947473,
+          "adversarial_increase": 0.10852091452977722,
+          "R_rho": -0.04095727772969751,
+          "dominating_cases": [
+            "source_select_src_B_c00008",
+            "source_select_src_B_c00006",
+            "source_select_src_B_c00043",
+            "source_select_src_B_c00014",
+            "source_select_src_B_c00017",
+            "source_select_src_B_c00019"
+          ]
+        },
+        "src_C": {
+          "n_states": 60,
+          "n_rows": 121,
+          "rho": 0.1,
+          "B": 6,
+          "R_obs": -0.06599679074709922,
+          "adversarial_increase": 0.04878845443586807,
+          "R_rho": -0.017208336311231143,
+          "dominating_cases": [
+            "source_select_src_C_c00051",
+            "source_select_src_C_c00004",
+            "source_select_src_C_c00012",
+            "source_select_src_C_c00005",
+            "source_select_src_C_c00048",
+            "source_select_src_C_c00014"
+          ]
+        }
+      },
+      "scope": "finite_source_select_check_under_assumed_state_budget"
+    },
+    "fallback_reason": null,
+    "diagnostic_scope": "assumed_state_budget_noise_set",
+    "feature_map": null,
+    "input_fingerprints": {},
+    "deployed_kind": "scalar_ts"
+  }
+}

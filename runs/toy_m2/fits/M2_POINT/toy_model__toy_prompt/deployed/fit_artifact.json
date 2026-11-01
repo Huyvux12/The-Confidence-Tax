@@ -1,0 +1,79 @@
+{
+  "kind": "batch_beta",
+  "params": {
+    "batch_fields": [
+      "model_id",
+      "prompt_id",
+      "task_id"
+    ],
+    "betas": {}
+  },
+  "method_id": "M2_POINT",
+  "summary": {
+    "method_id": "M2_POINT",
+    "protocol": "target_unlabeled",
+    "parameters": {
+      "betas": {
+        "toy_model|toy_prompt|target_task_0": 0.7320428479728127,
+        "toy_model|toy_prompt|target_task_1": 0.723634618720189
+      }
+    },
+    "selected_hyperparameters": {
+      "interval_type": "point",
+      "n_bins": {
+        "4": 2
+      },
+      "inflation": {
+        "4": 0.06994069210796039
+      }
+    },
+    "solver_status": "closed_form",
+    "solver_valid": true,
+    "source_gate": {
+      "accept": false,
+      "checks": [
+        {
+          "source_id": "src_A",
+          "K": 4,
+          "true_m": 0.9319539220766236,
+          "covered": true,
+          "raw_lower": 0.4039827101719284,
+          "raw_upper": 5.5356983342129285,
+          "unsupported_mass": 0.0,
+          "m_lower": 0.744494586764225,
+          "m_upper": 1.0452142726842144,
+          "status": "OK"
+        },
+        {
+          "source_id": "src_B",
+          "K": 4,
+          "true_m": 1.1026579461664803,
+          "covered": false,
+          "raw_lower": 0.34883717489173005,
+          "raw_upper": 5.467053301844784,
+          "unsupported_mass": 0.0,
+          "m_lower": 0.7275284747739933,
+          "m_upper": 1.0239454966125545,
+          "status": "OK"
+        },
+        {
+          "source_id": "src_C",
+          "K": 4,
+          "true_m": 1.0231588318793488,
+          "covered": true,
+          "raw_lower": 0.3950460844806598,
+          "raw_upper": 6.065642602525739,
+          "unsupported_mass": 0.0,
+          "m_lower": 0.7523129833611986,
+          "m_upper": 1.0550154414231803,
+          "status": "OK"
+        }
+      ]
+    },
+    "fallback_reason": "SOURCE_INTERVAL_GATE_FALSE",
+    "diagnostic_scope": "conditional_on_interval_coverage",
+    "feature_map": null,
+    "input_fingerprints": {},
+    "deployed_kind": "batch_beta"
+  }
+}

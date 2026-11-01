@@ -1,0 +1,47 @@
+{
+  "kind": "top_gap",
+  "params": {
+    "a": 0.7533850774319899,
+    "b": 0.7329434064514226
+  },
+  "method_id": "M3_MINIMAX",
+  "summary": {
+    "method_id": "M3_MINIMAX",
+    "protocol": "source_only",
+    "parameters": {
+      "a": 0.7533850774319899,
+      "b": 0.7329434064514226,
+      "effective_dof": 2,
+      "at_bound": [
+        false,
+        false
+      ]
+    },
+    "selected_hyperparameters": {
+      "lambda": 0.1,
+      "objective": "MINIMAX",
+      "box": [
+        0.25,
+        4.0
+      ]
+    },
+    "solver_status": "CLARABEL:optimal",
+    "solver_valid": true,
+    "source_gate": {
+      "accept": true,
+      "max_delta": -0.014101486065521744,
+      "deltas": {
+        "src_A": -0.055557100779333256,
+        "src_B": -0.06950123562812054,
+        "src_C": -0.014101486065521744
+      },
+      "epsilon_select": 0.0,
+      "scope": "finite_source_select_check"
+    },
+    "fallback_reason": null,
+    "diagnostic_scope": "observed_source_losses",
+    "feature_map": null,
+    "input_fingerprints": {},
+    "deployed_kind": "top_gap"
+  }
+}

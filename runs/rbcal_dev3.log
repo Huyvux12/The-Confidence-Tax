@@ -1,0 +1,159 @@
+done ('Qwen/Qwen3.5-9B', 'letter_colon') regime=conflict in 32.6 min
+done ('Qwen/Qwen3.5-9B', 'paren') regime=conflict in 32.1 min
+done ('google/gemma-4-12B-it', 'letter_colon') regime=consensus in 34.1 min
+done ('google/gemma-4-12B-it', 'paren') regime=consensus in 27.9 min
+done ('ibm-granite/granite-4.2-8b', 'letter_colon') regime=consensus in 26.5 min
+done ('ibm-granite/granite-4.2-8b', 'paren') regime=consensus in 25.0 min
+{
+ "all": {
+  "E1_vs_MRTS": {
+   "paired": {
+    "unit": "__macro__",
+    "n_cases": 1500,
+    "mean_diff": 0.31198134660700344,
+    "ci_low": 0.294642640362639,
+    "ci_high": 0.32886049930890027
+   },
+   "harm": [
+    0,
+    0
+   ],
+   "pass": false
+  },
+  "E2_vs_POOLED_TS": {
+   "harm": [
+    0,
+    1
+   ],
+   "worst": [
+    0.0,
+    0.01689468811375241
+   ],
+   "gain_retained": 0.002333937758586076,
+   "pass": true
+  },
+  "E3_vs_RBCAL_CONST": {
+   "paired": {
+    "unit": "__macro__",
+    "n_cases": 1500,
+    "mean_diff": 0.0003976056361994696,
+    "ci_low": 4.0945427758886406e-05,
+    "ci_high": 0.0007980299043888778
+   },
+   "harm": [
+    0,
+    0
+   ],
+   "pass": false
+  }
+ },
+ "conflict": {
+  "E1_vs_MRTS": {
+   "paired": {
+    "unit": "__macro__",
+    "n_cases": 1500,
+    "mean_diff": -0.0029909838340301254,
+    "ci_low": -0.0041863466383071654,
+    "ci_high": -0.0017868952128553563
+   },
+   "harm": [
+    0,
+    0
+   ],
+   "pass": true
+  },
+  "E2_vs_POOLED_TS": {
+   "harm": [
+    0,
+    1
+   ],
+   "worst": [
+    0.0,
+    0.01689468811375241
+   ],
+   "gain_retained": 0.5727998590221807,
+   "pass": true
+  },
+  "E3_vs_RBCAL_CONST": {
+   "paired": {
+    "unit": "__macro__",
+    "n_cases": 1500,
+    "mean_diff": 0.0011928169085984087,
+    "ci_low": 0.0001228362832766592,
+    "ci_high": 0.0023940897131666332
+   },
+   "harm": [
+    0,
+    0
+   ],
+   "pass": false
+  }
+ },
+ "consensus": {
+  "E1_vs_MRTS": {
+   "paired": {
+    "unit": "__macro__",
+    "n_cases": 1500,
+    "mean_diff": 0.46946751182752017,
+    "ci_low": 0.4445115560091071,
+    "ci_high": 0.4951225344269077
+   },
+   "harm": [
+    0,
+    0
+   ],
+   "pass": false
+  },
+  "E2_vs_POOLED_TS": {
+   "harm": [
+    0,
+    0
+   ],
+   "worst": [
+    0.0,
+    -0.28695478231093036
+   ],
+   "gain_retained": -0.0,
+   "pass": false
+  },
+  "E3_vs_RBCAL_CONST": {
+   "paired": {
+    "unit": "__macro__",
+    "n_cases": 1500,
+    "mean_diff": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0
+   },
+   "harm": [
+    0,
+    0
+   ],
+   "pass": false
+  }
+ }
+}
+
+method                   macro dNLL    worst  harm     ECE
+IDENTITY                    +0.0000  +0.0000     0  0.1714
+MRTS                        -0.3130  +0.0000     0  0.1291
+MRTS_GATED                  -0.3130  +0.0000     0  0.1291
+POOLED_TS                   -0.4272  +0.0169     1  0.0661
+SHRINKAGE_LOSO              -0.0892  +0.0008     0  0.1483
+POOLED_AFFINE               +0.0000  +0.0000     0  0.1714
+POOLED_RBF                  +0.0000  +0.0000     0  0.1714
+POOLED_TOPGAP               +0.0000  +0.0000     0  0.1714
+RBCAL_CONST_e0.0            +0.0000  +0.0000     0  0.1714
+RBCAL_CONST_e0.0025         -0.0004  +0.0002     0  0.1712
+RBCAL_CONST_e0.005          -0.0008  +0.0005     0  0.1709
+RBCAL_CONST_e0.01           -0.0014  +0.0014     0  0.1702
+RBCAL_CONST_e0.02           -0.0021  +0.0042     0  0.1692
+RBCAL_RBF_e0.0              +0.0000  +0.0000     0  0.1714
+RBCAL_RBF_e0.0025           +0.0000  +0.0000     0  0.1714
+RBCAL_RBF_e0.005            -0.0006  +0.0000     0  0.1706
+RBCAL_RBF_e0.01             -0.0010  +0.0000     0  0.1704
+RBCAL_RBF_e0.02             -0.0023  +0.0042     0  0.1687
+RBCAL_TOPGAP_e0.0           +0.0000  +0.0000     0  0.1714
+RBCAL_TOPGAP_e0.0025        -0.0003  +0.0000     0  0.1712
+RBCAL_TOPGAP_e0.005         -0.0006  +0.0000     0  0.1709
+RBCAL_TOPGAP_e0.01          -0.0011  +0.0000     0  0.1704
+RBCAL_TOPGAP_e0.02          -0.0016  +0.0016     0  0.1698

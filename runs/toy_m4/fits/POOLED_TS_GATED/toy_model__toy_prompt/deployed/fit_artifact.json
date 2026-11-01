@@ -1,0 +1,33 @@
+{
+  "kind": "scalar_ts",
+  "params": {
+    "beta": 0.2973017787506803
+  },
+  "method_id": "POOLED_TS_GATED",
+  "summary": {
+    "method_id": "POOLED_TS_GATED",
+    "protocol": "source_only",
+    "parameters": {
+      "beta": 0.2973017787506803
+    },
+    "selected_hyperparameters": {},
+    "solver_status": "grid",
+    "solver_valid": true,
+    "source_gate": {
+      "accept": true,
+      "max_delta": -0.11462739518052321,
+      "deltas": {
+        "src_A": -0.11462739518052321,
+        "src_B": -0.4350059570128223,
+        "src_C": -0.16134036844114025
+      },
+      "epsilon_select": 0.0,
+      "scope": "finite_source_select_check"
+    },
+    "fallback_reason": null,
+    "diagnostic_scope": "observed_source_losses",
+    "feature_map": null,
+    "input_fingerprints": {},
+    "deployed_kind": "scalar_ts"
+  }
+}

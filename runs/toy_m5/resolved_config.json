@@ -1,0 +1,83 @@
+{
+  "config": {
+    "method": "M5",
+    "data_dir": "data/toy_m5_shared_temperature",
+    "out_dir": "runs/toy_m5",
+    "seed": 0,
+    "generate_toy": {
+      "scenario": "a_shared_temperature",
+      "seed": 1,
+      "K": 4
+    },
+    "m1": {
+      "centers": [
+        0,
+        2,
+        4
+      ],
+      "bandwidth": [
+        0.5
+      ],
+      "field_l2": [
+        0.01
+      ]
+    },
+    "m5": {
+      "budgets": [
+        0,
+        8,
+        16,
+        32,
+        64
+      ],
+      "random_seeds": 20,
+      "eta": 1e-06,
+      "candidates": [
+        "IDENTITY",
+        "POOLED_TS",
+        "MRTS",
+        "M1_MINIMAX",
+        "M3_MINIMAX"
+      ]
+    },
+    "exploratory": true
+  },
+  "method": "M5",
+  "seed": 0,
+  "beta_grid": [
+    0.25,
+    4.0,
+    241
+  ],
+  "units": [
+    [
+      "toy_model",
+      "toy_prompt"
+    ]
+  ],
+  "corruption": null,
+  "input_fingerprints": {
+    "source_train.jsonl": "c68a3805dd45e82318f3c28c9568b95421fc5eb8c1ec6b6f7c1fcd5e0e10d7cb",
+    "source_select.jsonl": "d0665d517147fe15a0410846af58f7d78be2e2d4ad64570be18e1b67752d3fb1",
+    "source_audit.jsonl": "a6443f9172633fa7e57dc83bf26d4d2c912b796f921333127c7b152493a3c3c1",
+    "target_inputs.jsonl": "1b54cd8964a9422c95d5206b39aec8319808f3c8523f88e54430e4b6e1349b83",
+    "manifest.json": "7e34ac9a96613b30dcc09f2da12690154980d67aa5fd32178ccd7354d3a7988f"
+  },
+  "protocols": {
+    "IDENTITY": "source_only",
+    "POOLED_TS": "source_only",
+    "POOLED_TS_GATED": "source_only",
+    "MRTS": "source_only",
+    "MRTS_GATED": "source_only",
+    "M1_MINIMAX": "source_only",
+    "M1_MEAN_SAFE": "source_only",
+    "M1_POOLED": "source_only",
+    "M1_MINIMAX_ENTROPY_AFFINE": "source_only",
+    "M3_MINIMAX": "source_only",
+    "M3_MEAN_SAFE": "source_only",
+    "M3_POOLED": "source_only",
+    "ENTROPY_AFFINE_POOLED": "source_only"
+  },
+  "gate_rule": "max_w Delta_w(select) <= epsilon_select + 1e-8, fixed before select is read",
+  "endpoint": "macro delta NLL vs MRTS, paired case bootstrap 95% CI excludes 0, harm_001 not higher"
+}

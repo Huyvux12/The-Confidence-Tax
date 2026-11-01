@@ -1,0 +1,13 @@
+{
+  "kind": "field_beta",
+  "params": {
+    "feature_map": {
+      "kind": "entropy_affine",
+      "sigma": null,
+      "n_centers": 0
+    },
+    "b0": 0.36294197549496643,
+    "field_norm": 2.0025562763052225
+  },
+  "method_id": "M1_MINIMAX_ENTROPY_AFFINE"
+}

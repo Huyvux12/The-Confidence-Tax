@@ -1,0 +1,59 @@
+{
+  "kind": "field_beta",
+  "params": {
+    "feature_map": {
+      "kind": "entropy_affine",
+      "sigma": null,
+      "n_centers": 0
+    },
+    "b0": 0.6826571378555245,
+    "field_norm": 0.10499758787573854
+  },
+  "method_id": "M1_MINIMAX_ENTROPY_AFFINE",
+  "summary": {
+    "method_id": "M1_MINIMAX_ENTROPY_AFFINE",
+    "protocol": "source_only",
+    "parameters": {
+      "feature_map": {
+        "kind": "entropy_affine",
+        "sigma": null,
+        "n_centers": 0
+      },
+      "b0": 0.6826571378555245,
+      "field_norm": 0.10499758787573854,
+      "theta": [
+        0.6826571378555245,
+        0.10499758787573854
+      ]
+    },
+    "selected_hyperparameters": {
+      "kind": "entropy_affine",
+      "J": 0,
+      "sigma": null,
+      "lam": 0.01,
+      "objective": "MINIMAX"
+    },
+    "solver_status": "CLARABEL:optimal",
+    "solver_valid": true,
+    "source_gate": {
+      "accept": true,
+      "max_delta": -0.013590668031735599,
+      "deltas": {
+        "src_A": -0.05326539778855927,
+        "src_B": -0.06924775011009705,
+        "src_C": -0.013590668031735599
+      },
+      "epsilon_select": 0.0,
+      "scope": "finite_source_select_check"
+    },
+    "fallback_reason": null,
+    "diagnostic_scope": "observed_source_loss_geometry_for_this_function_class",
+    "feature_map": {
+      "kind": "entropy_affine",
+      "sigma": null,
+      "n_centers": 0
+    },
+    "input_fingerprints": {},
+    "deployed_kind": "field_beta"
+  }
+}

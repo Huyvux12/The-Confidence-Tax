@@ -1,0 +1,13 @@
+{
+  "kind": "field_beta",
+  "params": {
+    "feature_map": {
+      "kind": "rbf",
+      "sigma": 0.5,
+      "n_centers": 4
+    },
+    "b0": 0.8719485154353412,
+    "field_norm": 0.2040266399155311
+  },
+  "method_id": "M4_FIELD_rho0.10"
+}

@@ -1,0 +1,9 @@
+# Keep data byte-identical on every platform: SHA-256 checks depend on it.
+*.jsonl -text
+*.json -text
+*.csv -text
+*.txt -text
+*.pkl binary
+*.npz binary
+*.pdf binary
+*.png binary

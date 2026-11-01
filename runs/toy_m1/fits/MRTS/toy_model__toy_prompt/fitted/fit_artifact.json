@@ -1,0 +1,7 @@
+{
+  "kind": "scalar_ts",
+  "params": {
+    "beta": 1.0
+  },
+  "method_id": "MRTS"
+}

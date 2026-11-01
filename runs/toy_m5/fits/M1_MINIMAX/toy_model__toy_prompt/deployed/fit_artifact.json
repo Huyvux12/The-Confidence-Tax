@@ -1,0 +1,58 @@
+{
+  "kind": "field_beta",
+  "params": {
+    "feature_map": {
+      "kind": "constant",
+      "sigma": null,
+      "n_centers": 0
+    },
+    "b0": 0.7416125281304596,
+    "field_norm": 0.0
+  },
+  "method_id": "M1_MINIMAX",
+  "summary": {
+    "method_id": "M1_MINIMAX",
+    "protocol": "source_only",
+    "parameters": {
+      "feature_map": {
+        "kind": "constant",
+        "sigma": null,
+        "n_centers": 0
+      },
+      "b0": 0.7416125281304596,
+      "field_norm": 0.0,
+      "theta": [
+        0.7416125281304596
+      ]
+    },
+    "selected_hyperparameters": {
+      "kind": "constant",
+      "J": 0,
+      "sigma": null,
+      "lam": 0.0,
+      "objective": "MINIMAX"
+    },
+    "solver_status": "CLARABEL:optimal",
+    "solver_valid": true,
+    "source_gate": {
+      "accept": true,
+      "max_delta": -0.014369477013214026,
+      "deltas": {
+        "src_A": -0.05633472510778417,
+        "src_B": -0.06791215828240044,
+        "src_C": -0.014369477013214026
+      },
+      "epsilon_select": 0.0,
+      "scope": "finite_source_select_check"
+    },
+    "fallback_reason": null,
+    "diagnostic_scope": "observed_source_loss_geometry_for_this_function_class",
+    "feature_map": {
+      "kind": "constant",
+      "sigma": null,
+      "n_centers": 0
+    },
+    "input_fingerprints": {},
+    "deployed_kind": "field_beta"
+  }
+}

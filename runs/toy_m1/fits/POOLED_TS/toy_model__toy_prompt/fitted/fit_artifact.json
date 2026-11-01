@@ -1,0 +1,7 @@
+{
+  "kind": "scalar_ts",
+  "params": {
+    "beta": 0.7666641723348003
+  },
+  "method_id": "POOLED_TS"
+}

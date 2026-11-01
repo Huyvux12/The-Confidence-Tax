@@ -1,0 +1,72 @@
+[
+  {
+    "method_id": "M5_ACTIVE_b0",
+    "implementation": "PASS",
+    "mechanism": "FAIL",
+    "target_benefit": "FAIL",
+    "reason": "mechanism: rule: no false certificate (True) and active certified 0.00 > random 0.00 | target: macro mean diff vs MRTS 0.04191 [0.01348, 0.07316]; harm_001 0 vs 0",
+    "claim_scope": "exploratory_toy_data",
+    "evidence_files": [
+      "checks.json",
+      "mechanism_metrics.csv",
+      "paired_comparisons.csv",
+      "target_metrics.csv"
+    ]
+  },
+  {
+    "method_id": "M5_ACTIVE_b8",
+    "implementation": "PASS",
+    "mechanism": "FAIL",
+    "target_benefit": "FAIL",
+    "reason": "mechanism: rule: no false certificate (True) and active certified 0.00 > random 0.00 | target: macro mean diff vs MRTS 0.04191 [0.01348, 0.07316]; harm_001 0 vs 0",
+    "claim_scope": "exploratory_toy_data",
+    "evidence_files": [
+      "checks.json",
+      "mechanism_metrics.csv",
+      "paired_comparisons.csv",
+      "target_metrics.csv"
+    ]
+  },
+  {
+    "method_id": "M5_ACTIVE_b16",
+    "implementation": "PASS",
+    "mechanism": "FAIL",
+    "target_benefit": "FAIL",
+    "reason": "mechanism: rule: no false certificate (True) and active certified 0.00 > random 0.00 | target: macro mean diff vs MRTS 0.04191 [0.01348, 0.07316]; harm_001 0 vs 0",
+    "claim_scope": "exploratory_toy_data",
+    "evidence_files": [
+      "checks.json",
+      "mechanism_metrics.csv",
+      "paired_comparisons.csv",
+      "target_metrics.csv"
+    ]
+  },
+  {
+    "method_id": "M5_ACTIVE_b32",
+    "implementation": "PASS",
+    "mechanism": "FAIL",
+    "target_benefit": "FAIL",
+    "reason": "mechanism: rule: no false certificate (True) and active certified 0.00 > random 0.00 | target: macro mean diff vs MRTS 0.04191 [0.01348, 0.07316]; harm_001 0 vs 0",
+    "claim_scope": "exploratory_toy_data",
+    "evidence_files": [
+      "checks.json",
+      "mechanism_metrics.csv",
+      "paired_comparisons.csv",
+      "target_metrics.csv"
+    ]
+  },
+  {
+    "method_id": "M5_ACTIVE_b64",
+    "implementation": "PASS",
+    "mechanism": "FAIL",
+    "target_benefit": "FAIL",
+    "reason": "mechanism: rule: no false certificate (True) and active certified 0.00 > random 0.00 | target: macro mean diff vs MRTS 0.04191 [0.01348, 0.07316]; harm_001 0 vs 0",
+    "claim_scope": "exploratory_toy_data",
+    "evidence_files": [
+      "checks.json",
+      "mechanism_metrics.csv",
+      "paired_comparisons.csv",
+      "target_metrics.csv"
+    ]
+  }
+]

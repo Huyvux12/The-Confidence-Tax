@@ -1,0 +1,89 @@
+{
+  "kind": "field_beta",
+  "params": {
+    "feature_map": {
+      "kind": "rbf",
+      "sigma": 0.5,
+      "n_centers": 4
+    },
+    "b0": 0.7085113863971746,
+    "field_norm": 0.35451217163514764
+  },
+  "method_id": "M4_FIELD_rho0.05",
+  "summary": {
+    "method_id": "M4_FIELD_rho0.05",
+    "protocol": "source_only",
+    "parameters": {
+      "feature_map": {
+        "kind": "rbf",
+        "sigma": 0.5,
+        "n_centers": 4
+      },
+      "b0": 0.7085113863971746,
+      "field_norm": 0.35451217163514764
+    },
+    "selected_hyperparameters": {
+      "rho_assumed": 0.05,
+      "function_class": "field",
+      "J": 4,
+      "sigma": 0.5,
+      "lam": 0.01
+    },
+    "solver_status": "CLARABEL:optimal",
+    "solver_valid": true,
+    "source_gate": {
+      "accept": true,
+      "max_R_rho": -0.056889032576287364,
+      "risk": {
+        "src_A": {
+          "n_states": 60,
+          "n_rows": 113,
+          "rho": 0.05,
+          "B": 3,
+          "R_obs": -0.1109281772265176,
+          "adversarial_increase": 0.054039144650230235,
+          "R_rho": -0.056889032576287364,
+          "dominating_cases": [
+            "source_select_src_A_c00043",
+            "source_select_src_A_c00016",
+            "source_select_src_A_c00004"
+          ]
+        },
+        "src_B": {
+          "n_states": 60,
+          "n_rows": 108,
+          "rho": 0.05,
+          "B": 3,
+          "R_obs": -0.24305388930234947,
+          "adversarial_increase": 0.09219656146933951,
+          "R_rho": -0.15085732783300998,
+          "dominating_cases": [
+            "source_select_src_B_c00005",
+            "source_select_src_B_c00017",
+            "source_select_src_B_c00006"
+          ]
+        },
+        "src_C": {
+          "n_states": 60,
+          "n_rows": 121,
+          "rho": 0.05,
+          "B": 3,
+          "R_obs": -0.13618768545982535,
+          "adversarial_increase": 0.07627463839724569,
+          "R_rho": -0.05991304706257966,
+          "dominating_cases": [
+            "source_select_src_C_c00051",
+            "source_select_src_C_c00004",
+            "source_select_src_C_c00005"
+          ]
+        }
+      },
+      "scope": "finite_source_select_check_under_assumed_state_budget"
+    },
+    "fallback_reason": null,
+    "diagnostic_scope": "assumed_state_budget_noise_set",
+    "feature_map": null,
+    "input_fingerprints": {},
+    "deployed_kind": "field_beta"
+  }
+}

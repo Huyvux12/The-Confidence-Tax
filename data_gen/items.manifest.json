@@ -1,0 +1,322 @@
+{
+ "seed": 20261031,
+ "cap": 500,
+ "n_orders": 2,
+ "tasks": {
+  "aqua_rat": {
+   "n": 247,
+   "role": "target_confirm",
+   "K": [
+    5
+   ]
+  },
+  "arc_challenge": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    4,
+    5
+   ]
+  },
+  "arc_easy": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    3,
+    4
+   ]
+  },
+  "boolq": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    2
+   ]
+  },
+  "commonsense_qa": {
+   "n": 500,
+   "role": "target_dev",
+   "K": [
+    5
+   ]
+  },
+  "hellaswag": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    4
+   ]
+  },
+  "logiqa": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    4
+   ]
+  },
+  "medmcqa": {
+   "n": 500,
+   "role": "target_dev",
+   "K": [
+    4
+   ]
+  },
+  "mmlu_humanities": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    4
+   ]
+  },
+  "mmlu_other": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    4
+   ]
+  },
+  "mmlu_social": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    4
+   ]
+  },
+  "mmlu_stem": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    4
+   ]
+  },
+  "mmlupro_biology": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  "mmlupro_business": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    4,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  "mmlupro_chemistry": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  "mmlupro_computer_science": {
+   "n": 410,
+   "role": "source",
+   "K": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  "mmlupro_economics": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  "mmlupro_engineering": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    4,
+    5,
+    8,
+    9,
+    10
+   ]
+  },
+  "mmlupro_health": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  "mmlupro_history": {
+   "n": 381,
+   "role": "source",
+   "K": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  "mmlupro_law": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  "mmlupro_math": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  "mmlupro_other": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  "mmlupro_philosophy": {
+   "n": 499,
+   "role": "source",
+   "K": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  "mmlupro_physics": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    4,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  "mmlupro_psychology": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  "openbookqa": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    4
+   ]
+  },
+  "piqa": {
+   "n": 500,
+   "role": "target_confirm",
+   "K": [
+    2
+   ]
+  },
+  "sciq": {
+   "n": 500,
+   "role": "target_confirm",
+   "K": [
+    4
+   ]
+  },
+  "truthfulqa_mc1": {
+   "n": 500,
+   "role": "target_dev",
+   "K": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ]
+  },
+  "winogrande": {
+   "n": 500,
+   "role": "source",
+   "K": [
+    2
+   ]
+  }
+ }
+}

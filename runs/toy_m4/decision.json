@@ -1,0 +1,86 @@
+[
+  {
+    "method_id": "M4_SCALAR_rho0.05",
+    "implementation": "PASS",
+    "mechanism": "PASS",
+    "target_benefit": "FAIL",
+    "reason": "mechanism: rule: clean-audit worst delta -0.01532 < M4_SCALAR_rho0.00 0.07051 (train/select corrupted: True) | target: macro mean diff vs MRTS -0.02149 [-0.05148, 0.009143]; harm_001 0 vs 0",
+    "claim_scope": "exploratory_toy_data",
+    "evidence_files": [
+      "checks.json",
+      "mechanism_metrics.csv",
+      "paired_comparisons.csv",
+      "target_metrics.csv"
+    ]
+  },
+  {
+    "method_id": "M4_SCALAR_rho0.10",
+    "implementation": "PASS",
+    "mechanism": "PASS",
+    "target_benefit": "FAIL",
+    "reason": "mechanism: rule: clean-audit worst delta -0.01676 < M4_SCALAR_rho0.00 0.07051 (train/select corrupted: True) | target: macro mean diff vs MRTS 0.006749 [-0.04297, 0.05766]; harm_001 0 vs 0",
+    "claim_scope": "exploratory_toy_data",
+    "evidence_files": [
+      "checks.json",
+      "mechanism_metrics.csv",
+      "paired_comparisons.csv",
+      "target_metrics.csv"
+    ]
+  },
+  {
+    "method_id": "M4_SCALAR_rho0.20",
+    "implementation": "PASS",
+    "mechanism": "PASS",
+    "target_benefit": "FAIL",
+    "reason": "mechanism: rule: clean-audit worst delta 1.314e-17 < M4_SCALAR_rho0.00 0.07051 (train/select corrupted: True) | target: macro mean diff vs MRTS 0.04971 [-0.01813, 0.1183]; harm_001 0 vs 0",
+    "claim_scope": "exploratory_toy_data",
+    "evidence_files": [
+      "checks.json",
+      "mechanism_metrics.csv",
+      "paired_comparisons.csv",
+      "target_metrics.csv"
+    ]
+  },
+  {
+    "method_id": "M4_FIELD_rho0.05",
+    "implementation": "PASS",
+    "mechanism": "PASS",
+    "target_benefit": "FAIL",
+    "reason": "mechanism: rule: clean-audit worst delta -0.002535 < M4_FIELD_rho0.00 0.07313 (train/select corrupted: True) | target: macro mean diff vs MRTS -0.01961 [-0.05378, 0.01644]; harm_001 0 vs 0",
+    "claim_scope": "exploratory_toy_data",
+    "evidence_files": [
+      "checks.json",
+      "mechanism_metrics.csv",
+      "paired_comparisons.csv",
+      "target_metrics.csv"
+    ]
+  },
+  {
+    "method_id": "M4_FIELD_rho0.10",
+    "implementation": "PASS",
+    "mechanism": "PASS",
+    "target_benefit": "FAIL",
+    "reason": "mechanism: rule: clean-audit worst delta -0.007546 < M4_FIELD_rho0.00 0.07313 (train/select corrupted: True) | target: macro mean diff vs MRTS 0.006976 [-0.0444, 0.0598]; harm_001 0 vs 0",
+    "claim_scope": "exploratory_toy_data",
+    "evidence_files": [
+      "checks.json",
+      "mechanism_metrics.csv",
+      "paired_comparisons.csv",
+      "target_metrics.csv"
+    ]
+  },
+  {
+    "method_id": "M4_FIELD_rho0.20",
+    "implementation": "PASS",
+    "mechanism": "PASS",
+    "target_benefit": "FAIL",
+    "reason": "mechanism: rule: clean-audit worst delta -4.117e-09 < M4_FIELD_rho0.00 0.07313 (train/select corrupted: True) | target: macro mean diff vs MRTS 0.04971 [-0.01813, 0.1183]; harm_001 0 vs 0",
+    "claim_scope": "exploratory_toy_data",
+    "evidence_files": [
+      "checks.json",
+      "mechanism_metrics.csv",
+      "paired_comparisons.csv",
+      "target_metrics.csv"
+    ]
+  }
+]

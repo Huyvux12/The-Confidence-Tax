@@ -1,0 +1,33 @@
+{
+  "kind": "scalar_ts",
+  "params": {
+    "beta": 0.7666641723348003
+  },
+  "method_id": "MRTS_GATED",
+  "summary": {
+    "method_id": "MRTS_GATED",
+    "protocol": "source_only",
+    "parameters": {
+      "beta": 0.7666641723348003
+    },
+    "selected_hyperparameters": {},
+    "solver_status": "grid",
+    "solver_valid": true,
+    "source_gate": {
+      "accept": true,
+      "max_delta": -0.04026861866678834,
+      "deltas": {
+        "src_A": -0.04026861866678834,
+        "src_B": -0.08933428708601722,
+        "src_C": -0.06117592700970956
+      },
+      "epsilon_select": 0.0,
+      "scope": "finite_source_select_check"
+    },
+    "fallback_reason": null,
+    "diagnostic_scope": "observed_source_losses",
+    "feature_map": null,
+    "input_fingerprints": {},
+    "deployed_kind": "scalar_ts"
+  }
+}

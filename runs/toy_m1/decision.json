@@ -1,0 +1,30 @@
+[
+  {
+    "method_id": "M1_MINIMAX",
+    "implementation": "PASS",
+    "mechanism": "PASS",
+    "target_benefit": "PASS",
+    "reason": "mechanism: rule: audit worst-source delta -0.03634 <= 0 and < MRTS_GATED 1.555e-17 | target: macro mean diff vs MRTS -0.04661 [-0.0763, -0.02085]; harm_001 0 vs 0",
+    "claim_scope": "exploratory_toy_data",
+    "evidence_files": [
+      "checks.json",
+      "mechanism_metrics.csv",
+      "paired_comparisons.csv",
+      "target_metrics.csv"
+    ]
+  },
+  {
+    "method_id": "M1_MEAN_SAFE",
+    "implementation": "PASS",
+    "mechanism": "PASS",
+    "target_benefit": "PASS",
+    "reason": "mechanism: rule: audit worst-source delta -0.02749 <= 0 and < MRTS_GATED 1.555e-17 | target: macro mean diff vs MRTS -0.06178 [-0.1111, -0.02342]; harm_001 0 vs 0",
+    "claim_scope": "exploratory_toy_data",
+    "evidence_files": [
+      "checks.json",
+      "mechanism_metrics.csv",
+      "paired_comparisons.csv",
+      "target_metrics.csv"
+    ]
+  }
+]

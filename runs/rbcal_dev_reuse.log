@@ -1,0 +1,13 @@
+10 units, 0 cached
+reusing menu selection from runs/rbcal_dev/units (sources identical)
+done ('Qwen/Qwen3.5-9B', 'paren') regime=conflict in 9.5 min
+done ('allenai/Olmo-3-7B-Instruct', 'paren') regime=consensus in 9.5 min
+done ('Qwen/Qwen3.5-9B', 'letter_colon') regime=conflict in 9.5 min
+done ('allenai/Olmo-3-7B-Instruct', 'letter_colon') regime=consensus in 9.7 min
+done ('google/gemma-4-12B-it', 'letter_colon') regime=consensus in 12.7 min
+done ('ibm-granite/granite-4.2-8b', 'letter_colon') regime=consensus in 12.8 min
+done ('google/gemma-4-12B-it', 'paren') regime=consensus in 12.9 min
+done ('ibm-granite/granite-4.2-8b', 'paren') regime=consensus in 12.8 min
+done ('mistralai/Ministral-3-8B-Instruct-2512', 'letter_colon') regime=consensus in 10.5 min
+done ('mistralai/Ministral-3-8B-Instruct-2512', 'paren') regime=conflict in 10.5 min
+FIT DONE

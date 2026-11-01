@@ -1,0 +1,279 @@
+{
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "identity_log_q_equals_log_p",
+      "method_id": "IDENTITY",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "IDENTITY",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 2.220446049250313e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "POOLED_TS",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 2.220446049250313e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "POOLED_TS_GATED",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 2.220446049250313e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "POOLED_TS_GATED__PREGATE",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 2.220446049250313e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "MRTS",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 2.220446049250313e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "MRTS_GATED",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 2.220446049250313e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "MRTS_GATED__PREGATE",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 2.220446049250313e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "M3_MINIMAX",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 6.661338147750939e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "M3_MEAN_SAFE",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 4.440892098500626e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "M3_POOLED",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 4.440892098500626e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "q_sums_to_one_and_finite",
+      "method_id": "ENTROPY_AFFINE_POOLED",
+      "passed": true,
+      "detail": {
+        "finite": true,
+        "max_sum_error": 2.220446049250313e-16,
+        "ok": true
+      }
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "IDENTITY",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "IDENTITY",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "POOLED_TS",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "grid"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "POOLED_TS",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "POOLED_TS_GATED",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "grid"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "POOLED_TS_GATED",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "MRTS",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "grid"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "MRTS",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "MRTS_GATED",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "grid"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "MRTS_GATED",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "M3_MINIMAX",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "CLARABEL:optimal"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "M3_MINIMAX",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "m3_rank_preserved",
+      "method_id": "M3_MINIMAX",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "M3_MEAN_SAFE",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "CLARABEL:optimal"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "M3_MEAN_SAFE",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "m3_rank_preserved",
+      "method_id": "M3_MEAN_SAFE",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "M3_POOLED",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "CLARABEL:optimal"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "M3_POOLED",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "m3_rank_preserved",
+      "method_id": "M3_POOLED",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "solver_valid",
+      "method_id": "ENTROPY_AFFINE_POOLED",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": "CLARABEL:optimal"
+    },
+    {
+      "check": "save_load_roundtrip",
+      "method_id": "ENTROPY_AFFINE_POOLED",
+      "unit": "toy_model__toy_prompt",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "target_inputs_have_no_y",
+      "passed": true
+    },
+    {
+      "check": "labels_opened_after_freeze",
+      "passed": true,
+      "detail": {
+        "prediction_sha256_before_labels": "b990030e780eb25dda263cc9d9ab3d1daf729bcb49a14f4938eda25a05b2debe"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+10 units, 3 cached
+done ('allenai/Olmo-3-7B-Instruct', 'paren') regime=consensus in 285.4 min
+done ('google/gemma-4-12B-it', 'letter_colon') regime=consensus in 90.4 min
+done ('google/gemma-4-12B-it', 'paren') regime=consensus in 90.2 min
+done ('ibm-granite/granite-4.2-8b', 'letter_colon') regime=consensus in 85.3 min
+done ('ibm-granite/granite-4.2-8b', 'paren') regime=consensus in 83.0 min
+done ('mistralai/Ministral-3-8B-Instruct-2512', 'letter_colon') regime=consensus in 87.0 min
+done ('mistralai/Ministral-3-8B-Instruct-2512', 'paren') regime=conflict in 89.0 min
+FIT DONE

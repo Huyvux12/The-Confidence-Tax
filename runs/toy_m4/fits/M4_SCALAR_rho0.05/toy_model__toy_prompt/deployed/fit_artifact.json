@@ -1,0 +1,74 @@
+{
+  "kind": "scalar_ts",
+  "params": {
+    "beta": 0.6674199270850172
+  },
+  "method_id": "M4_SCALAR_rho0.05",
+  "summary": {
+    "method_id": "M4_SCALAR_rho0.05",
+    "protocol": "source_only",
+    "parameters": {
+      "beta": 0.6674199270850172
+    },
+    "selected_hyperparameters": {
+      "rho_assumed": 0.05,
+      "function_class": "scalar"
+    },
+    "solver_status": "grid",
+    "solver_valid": true,
+    "source_gate": {
+      "accept": true,
+      "max_R_rho": -0.06530860516054286,
+      "risk": {
+        "src_A": {
+          "n_states": 60,
+          "n_rows": 113,
+          "rho": 0.05,
+          "B": 3,
+          "R_obs": -0.1297137717413445,
+          "adversarial_increase": 0.05714602899573146,
+          "R_rho": -0.07256774274561303,
+          "dominating_cases": [
+            "source_select_src_A_c00040",
+            "source_select_src_A_c00056",
+            "source_select_src_A_c00043"
+          ]
+        },
+        "src_B": {
+          "n_states": 60,
+          "n_rows": 108,
+          "rho": 0.05,
+          "B": 3,
+          "R_obs": -0.2914018186497747,
+          "adversarial_increase": 0.13253211669903753,
+          "R_rho": -0.15886970195073719,
+          "dominating_cases": [
+            "source_select_src_B_c00008",
+            "source_select_src_B_c00006",
+            "source_select_src_B_c00043"
+          ]
+        },
+        "src_C": {
+          "n_states": 60,
+          "n_rows": 121,
+          "rho": 0.05,
+          "B": 3,
+          "R_obs": -0.12180151368646382,
+          "adversarial_increase": 0.056492908525920954,
+          "R_rho": -0.06530860516054286,
+          "dominating_cases": [
+            "source_select_src_C_c00051",
+            "source_select_src_C_c00004",
+            "source_select_src_C_c00012"
+          ]
+        }
+      },
+      "scope": "finite_source_select_check_under_assumed_state_budget"
+    },
+    "fallback_reason": null,
+    "diagnostic_scope": "assumed_state_budget_noise_set",
+    "feature_map": null,
+    "input_fingerprints": {},
+    "deployed_kind": "scalar_ts"
+  }
+}

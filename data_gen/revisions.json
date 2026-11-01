@@ -1,0 +1,124 @@
+{
+ "note": "commit at the time of the 2026-10-31 run (repositories unchanged since); logiqa was read from refs/convert/parquet",
+ "run_started_utc": "2026-10-31T07:30:00Z",
+ "models": {
+  "Qwen/Qwen3.5-9B": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+  "google/gemma-4-12B-it": "43c9d014b231474fa7212dbb48a762566c2b255d",
+  "ibm-granite/granite-4.2-8b": "a7042144125ce5ae64f89610e8289647fc000b9a",
+  "mistralai/Ministral-3-8B-Instruct-2512": "5b26027e7b19eeb4b7352e1fed3926375dd2cb4d",
+  "allenai/Olmo-3-7B-Instruct": "6e5971d9eba42665f5bd5a0fcf047f299ce1dccc"
+ },
+ "datasets": {
+  "cais/mmlu": "c30699e8356da336a370243923dbaf21066bb9fe",
+  "TIGER-Lab/MMLU-Pro": "b189ec765aa7ed75c8acfea42df31fdae71f97be",
+  "allenai/ai2_arc": "210d026faf9955653af8916fad021475a3f00453",
+  "allenai/openbookqa": "388097ea7776314e93a529163e0fea805b8a6454",
+  "tau/commonsense_qa": "94630fe30dad47192a8546eb75f094926d47e155",
+  "Rowan/hellaswag": "218ec52e09a7e7462a5400043bb9a69a41d06b76",
+  "allenai/sciq": "2c94ad3e1aafab77146f384e23536f97a4849815",
+  "openlifescienceai/medmcqa": "91c6572c454088bf71b679ad90aa8dffcd0d5868",
+  "truthfulqa/truthful_qa": "741b8276f2d1982aa3d5b832d3ee81ed3b896490",
+  "google/boolq": "35b264d03638db9f4ce671b711558bf7ff0f80d5",
+  "deepmind/aqua_rat": "33301c6a050c96af81f63cad5562cb5363e88971",
+  "allenai/winogrande": "01e74176c63542e6b0bcb004dcdea22d94fb67b5",
+  "baber/piqa": "142f6d7367fd9877f0fb3b5734ea6a545f54cdd1",
+  "lucasmccabe/logiqa": "3c19b0488d794d30c36f73d132d8a22e64f42f2e"
+ },
+ "details": {
+  "Qwen/Qwen3.5-9B": {
+   "sha": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+   "last_modified": "2026-03-02T00:51:43.000Z",
+   "license": "apache-2.0"
+  },
+  "google/gemma-4-12B-it": {
+   "sha": "43c9d014b231474fa7212dbb48a762566c2b255d",
+   "last_modified": "2026-10-30T15:47:58.000Z",
+   "license": "apache-2.0"
+  },
+  "ibm-granite/granite-4.2-8b": {
+   "sha": "a7042144125ce5ae64f89610e8289647fc000b9a",
+   "last_modified": "2026-10-20T23:00:24.000Z",
+   "license": "apache-2.0"
+  },
+  "mistralai/Ministral-3-8B-Instruct-2512": {
+   "sha": "5b26027e7b19eeb4b7352e1fed3926375dd2cb4d",
+   "last_modified": "2026-07-15T12:22:08.000Z",
+   "license": "apache-2.0"
+  },
+  "allenai/Olmo-3-7B-Instruct": {
+   "sha": "6e5971d9eba42665f5bd5a0fcf047f299ce1dccc",
+   "last_modified": "2026-06-25T21:41:37.000Z",
+   "license": "apache-2.0"
+  },
+  "cais/mmlu": {
+   "sha": "c30699e8356da336a370243923dbaf21066bb9fe",
+   "last_modified": "2024-03-08T20:36:26.000Z",
+   "license": "mit"
+  },
+  "TIGER-Lab/MMLU-Pro": {
+   "sha": "b189ec765aa7ed75c8acfea42df31fdae71f97be",
+   "last_modified": "2026-05-02T06:26:05.000Z",
+   "license": "mit"
+  },
+  "allenai/ai2_arc": {
+   "sha": "210d026faf9955653af8916fad021475a3f00453",
+   "last_modified": "2023-12-21T15:09:48.000Z",
+   "license": "cc-by-sa-4.0"
+  },
+  "allenai/openbookqa": {
+   "sha": "388097ea7776314e93a529163e0fea805b8a6454",
+   "last_modified": "2024-01-04T16:09:20.000Z",
+   "license": "unknown"
+  },
+  "tau/commonsense_qa": {
+   "sha": "94630fe30dad47192a8546eb75f094926d47e155",
+   "last_modified": "2024-01-04T07:44:16.000Z",
+   "license": "mit"
+  },
+  "Rowan/hellaswag": {
+   "sha": "218ec52e09a7e7462a5400043bb9a69a41d06b76",
+   "last_modified": "2025-07-10T15:23:17.000Z",
+   "license": null
+  },
+  "allenai/sciq": {
+   "sha": "2c94ad3e1aafab77146f384e23536f97a4849815",
+   "last_modified": "2024-01-04T16:23:51.000Z",
+   "license": "cc-by-nc-3.0"
+  },
+  "openlifescienceai/medmcqa": {
+   "sha": "91c6572c454088bf71b679ad90aa8dffcd0d5868",
+   "last_modified": "2024-01-04T14:32:02.000Z",
+   "license": "apache-2.0"
+  },
+  "truthfulqa/truthful_qa": {
+   "sha": "741b8276f2d1982aa3d5b832d3ee81ed3b896490",
+   "last_modified": "2024-01-04T16:36:00.000Z",
+   "license": "apache-2.0"
+  },
+  "google/boolq": {
+   "sha": "35b264d03638db9f4ce671b711558bf7ff0f80d5",
+   "last_modified": "2024-01-22T09:16:26.000Z",
+   "license": "cc-by-sa-3.0"
+  },
+  "deepmind/aqua_rat": {
+   "sha": "33301c6a050c96af81f63cad5562cb5363e88971",
+   "last_modified": "2024-01-09T12:33:06.000Z",
+   "license": "apache-2.0"
+  },
+  "allenai/winogrande": {
+   "sha": "01e74176c63542e6b0bcb004dcdea22d94fb67b5",
+   "last_modified": "2025-07-11T17:33:56.000Z",
+   "license": null
+  },
+  "baber/piqa": {
+   "sha": "142f6d7367fd9877f0fb3b5734ea6a545f54cdd1",
+   "last_modified": "2025-03-14T08:09:54.000Z",
+   "license": null
+  },
+  "lucasmccabe/logiqa": {
+   "sha": "3c19b0488d794d30c36f73d132d8a22e64f42f2e",
+   "last_modified": "2023-02-08T01:51:31.000Z",
+   "license": null
+  }
+ }
+}

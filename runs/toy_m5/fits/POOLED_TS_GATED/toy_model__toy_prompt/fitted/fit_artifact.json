@@ -1,0 +1,7 @@
+{
+  "kind": "scalar_ts",
+  "params": {
+    "beta": 0.6989849670895096
+  },
+  "method_id": "POOLED_TS_GATED"
+}

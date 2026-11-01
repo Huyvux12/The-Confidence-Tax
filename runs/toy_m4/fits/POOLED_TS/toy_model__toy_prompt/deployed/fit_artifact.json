@@ -1,0 +1,25 @@
+{
+  "kind": "scalar_ts",
+  "params": {
+    "beta": 0.2973017787506803
+  },
+  "method_id": "POOLED_TS",
+  "summary": {
+    "method_id": "POOLED_TS",
+    "protocol": "source_only",
+    "parameters": {
+      "beta": 0.2973017787506803
+    },
+    "selected_hyperparameters": {
+      "grid": 241
+    },
+    "solver_status": "grid",
+    "solver_valid": true,
+    "source_gate": null,
+    "fallback_reason": null,
+    "diagnostic_scope": "observed_source_losses",
+    "feature_map": null,
+    "input_fingerprints": {},
+    "deployed_kind": "scalar_ts"
+  }
+}

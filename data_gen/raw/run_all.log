@@ -1,0 +1,278 @@
+=== START Qwen/Qwen3.5-9B
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:  25%|██▌       | 1/4 [00:54<02:43, 54.56s/it]Fetching 4 files: 100%|██████████| 4/4 [00:54<00:00, 13.64s/it]
+Loading weights:   0%|          | 0/427 [00:00<?, ?it/s]Loading weights:   0%|          | 1/427 [00:00<06:54,  1.03it/s]Loading weights:   3%|▎         | 14/427 [00:01<00:23, 17.25it/s]Loading weights:   7%|▋         | 29/427 [00:01<00:10, 36.78it/s]Loading weights:  10%|█         | 43/427 [00:01<00:07, 53.81it/s]Loading weights:  13%|█▎        | 54/427 [00:01<00:05, 64.43it/s]Loading weights:  16%|█▌        | 68/427 [00:01<00:04, 78.44it/s]Loading weights:  19%|█▉        | 82/427 [00:01<00:03, 90.12it/s]Loading weights:  22%|██▏       | 96/427 [00:01<00:03, 99.02it/s]Loading weights:  25%|██▌       | 108/427 [00:01<00:03, 102.94it/s]Loading weights:  28%|██▊       | 121/427 [00:01<00:02, 106.76it/s]Loading weights:  32%|███▏      | 135/427 [00:02<00:02, 111.34it/s]Loading weights:  35%|███▍      | 149/427 [00:02<00:02, 115.34it/s]Loading weights:  38%|███▊      | 162/427 [00:02<00:02, 117.02it/s]Loading weights:  41%|████      | 175/427 [00:02<00:02, 116.51it/s]Loading weights:  44%|████▍     | 188/427 [00:02<00:02, 116.27it/s]Loading weights:  47%|████▋     | 202/427 [00:02<00:01, 117.97it/s]Loading weights:  50%|█████     | 214/427 [00:02<00:01, 116.43it/s]Loading weights:  53%|█████▎    | 227/427 [00:02<00:01, 116.38it/s]Loading weights:  56%|█████▋    | 241/427 [00:02<00:01, 119.34it/s]Loading weights:  59%|█████▉    | 254/427 [00:03<00:01, 118.37it/s]Loading weights:  62%|██████▏   | 266/427 [00:03<00:01, 117.90it/s]Loading weights:  66%|██████▌   | 280/427 [00:03<00:01, 119.70it/s]Loading weights:  69%|██████▉   | 294/427 [00:03<00:01, 121.59it/s]Loading weights:  72%|███████▏  | 308/427 [00:03<00:00, 122.97it/s]Loading weights:  75%|███████▌  | 321/427 [00:03<00:00, 122.88it/s]Loading weights:  78%|███████▊  | 334/427 [00:03<00:00, 121.17it/s]Loading weights:  81%|████████▏ | 347/427 [00:03<00:00, 119.87it/s]Loading weights:  85%|████████▍ | 361/427 [00:03<00:00, 121.32it/s]Loading weights:  88%|████████▊ | 374/427 [00:04<00:00, 121.60it/s]Loading weights:  91%|█████████ | 387/427 [00:04<00:00, 119.85it/s]Loading weights:  94%|█████████▎| 400/427 [00:04<00:00, 118.20it/s]Loading weights:  97%|█████████▋| 414/427 [00:04<00:00, 120.43it/s]Loading weights: 100%|██████████| 427/427 [00:04<00:00, 121.03it/s]Loading weights: 100%|██████████| 427/427 [00:04<00:00, 94.56it/s] 
+loaded Qwen/Qwen3.5-9B via AutoModelForCausalLM in 67s; transformers 5.21.0; letter ids [[32, 357], [33, 417], [34, 351], [35, 414]]
+60148 rows to score (0 already done); first prompt:
+<|im_start|>user
+Goal: Concrete
+Which solution is better?
+
+A. seals chimney
+B. seals soil
+
+Answer with the letter of the correct option.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+Answer:
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+2048/60148 rows, 117.0 rows/s, eta 8.3 min
+4032/60148 rows, 115.4 rows/s, eta 8.1 min
+6016/60148 rows, 106.9 rows/s, eta 8.4 min
+8000/60148 rows, 99.6 rows/s, eta 8.7 min
+10048/60148 rows, 94.7 rows/s, eta 8.8 min
+12032/60148 rows, 91.6 rows/s, eta 8.8 min
+14016/60148 rows, 88.9 rows/s, eta 8.6 min
+16000/60148 rows, 86.7 rows/s, eta 8.5 min
+18048/60148 rows, 84.6 rows/s, eta 8.3 min
+20032/60148 rows, 82.6 rows/s, eta 8.1 min
+22016/60148 rows, 80.8 rows/s, eta 7.9 min
+24000/60148 rows, 79.0 rows/s, eta 7.6 min
+26048/60148 rows, 77.2 rows/s, eta 7.4 min
+28032/60148 rows, 75.5 rows/s, eta 7.1 min
+30016/60148 rows, 73.3 rows/s, eta 6.9 min
+32000/60148 rows, 70.9 rows/s, eta 6.6 min
+34048/60148 rows, 68.8 rows/s, eta 6.3 min
+36032/60148 rows, 66.8 rows/s, eta 6.0 min
+38016/60148 rows, 64.9 rows/s, eta 5.7 min
+40000/60148 rows, 63.0 rows/s, eta 5.3 min
+42048/60148 rows, 61.2 rows/s, eta 4.9 min
+44032/60148 rows, 59.1 rows/s, eta 4.5 min
+46016/60148 rows, 57.2 rows/s, eta 4.1 min
+48000/60148 rows, 55.4 rows/s, eta 3.7 min
+50048/60148 rows, 53.6 rows/s, eta 3.1 min
+52032/60148 rows, 51.6 rows/s, eta 2.6 min
+54016/60148 rows, 49.7 rows/s, eta 2.1 min
+56000/60148 rows, 47.7 rows/s, eta 1.4 min
+58017/60148 rows, 45.4 rows/s, eta 0.8 min
+60024/60148 rows, 42.4 rows/s, eta 0.0 min
+JOB DONE Qwen/Qwen3.5-9B rows=60148 seconds=1540
+=== END Qwen/Qwen3.5-9B rc=0
+=== START google/gemma-4-12B-it
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/677 [00:00<?, ?it/s]Loading weights:   0%|          | 1/677 [00:00<04:40,  2.41it/s]Loading weights:   2%|▏         | 12/677 [00:00<00:22, 29.56it/s]Loading weights:   3%|▎         | 22/677 [00:00<00:13, 47.39it/s]Loading weights:   5%|▌         | 36/677 [00:00<00:09, 69.28it/s]Loading weights:   7%|▋         | 49/677 [00:00<00:07, 82.09it/s]Loading weights:   9%|▉         | 64/677 [00:00<00:06, 96.40it/s]Loading weights:  12%|█▏        | 78/677 [00:01<00:05, 104.00it/s]Loading weights:  13%|█▎        | 91/677 [00:01<00:05, 103.39it/s]Loading weights:  16%|█▌        | 105/677 [00:01<00:05, 108.60it/s]Loading weights:  18%|█▊        | 119/677 [00:01<00:04, 112.49it/s]Loading weights:  19%|█▉        | 132/677 [00:01<00:04, 112.26it/s]Loading weights:  22%|██▏       | 147/677 [00:01<00:04, 117.24it/s]Loading weights:  24%|██▎       | 160/677 [00:01<00:04, 115.49it/s]Loading weights:  26%|██▌       | 173/677 [00:01<00:04, 111.77it/s]Loading weights:  28%|██▊       | 187/677 [00:02<00:04, 114.05it/s]Loading weights:  30%|██▉       | 202/677 [00:02<00:04, 118.58it/s]Loading weights:  32%|███▏      | 216/677 [00:02<00:03, 119.42it/s]Loading weights:  34%|███▍      | 230/677 [00:02<00:03, 120.23it/s]Loading weights:  36%|███▌      | 243/677 [00:02<00:03, 117.76it/s]Loading weights:  38%|███▊      | 257/677 [00:02<00:03, 116.17it/s]Loading weights:  40%|███▉      | 270/677 [00:02<00:03, 115.25it/s]Loading weights:  42%|████▏     | 285/677 [00:02<00:03, 119.67it/s]Loading weights:  44%|████▍     | 299/677 [00:02<00:03, 120.05it/s]Loading weights:  46%|████▌     | 313/677 [00:03<00:03, 120.72it/s]Loading weights:  48%|████▊     | 326/677 [00:03<00:02, 118.66it/s]Loading weights:  50%|█████     | 340/677 [00:03<00:02, 116.63it/s]Loading weights:  52%|█████▏    | 354/677 [00:03<00:02, 118.34it/s]Loading weights:  54%|█████▍    | 368/677 [00:03<00:02, 118.78it/s]Loading weights:  56%|█████▋    | 381/677 [00:03<00:02, 117.18it/s]Loading weights:  58%|█████▊    | 395/677 [00:03<00:02, 118.10it/s]Loading weights:  61%|██████    | 410/677 [00:03<00:02, 121.39it/s]Loading weights:  62%|██████▏   | 423/677 [00:04<00:02, 115.42it/s]Loading weights:  64%|██████▍   | 436/677 [00:04<00:02, 115.05it/s]Loading weights:  67%|██████▋   | 451/677 [00:04<00:01, 119.19it/s]Loading weights:  69%|██████▊   | 464/677 [00:04<00:01, 116.88it/s]Loading weights:  71%|███████   | 478/677 [00:04<00:01, 118.26it/s]Loading weights:  73%|███████▎  | 493/677 [00:04<00:01, 122.17it/s]Loading weights:  75%|███████▍  | 506/677 [00:04<00:01, 115.80it/s]Loading weights:  77%|███████▋  | 519/677 [00:04<00:01, 114.96it/s]Loading weights:  79%|███████▉  | 534/677 [00:04<00:01, 119.68it/s]Loading weights:  81%|████████  | 548/677 [00:05<00:01, 119.27it/s]Loading weights:  83%|████████▎ | 562/677 [00:05<00:00, 119.71it/s]Loading weights:  85%|████████▌ | 576/677 [00:05<00:00, 119.96it/s]Loading weights:  87%|████████▋ | 589/677 [00:05<00:00, 113.89it/s]Loading weights:  89%|████████▉ | 602/677 [00:05<00:00, 113.79it/s]Loading weights:  91%|█████████ | 617/677 [00:05<00:00, 118.44it/s]Loading weights:  93%|█████████▎| 631/677 [00:05<00:00, 118.81it/s]Loading weights:  95%|█████████▌| 645/677 [00:05<00:00, 119.04it/s]Loading weights:  97%|█████████▋| 658/677 [00:06<00:00, 117.00it/s]Loading weights: 100%|██████████| 677/677 [00:06<00:00, 111.40it/s]
+loaded google/gemma-4-12B-it via AutoModelForCausalLM in 84s; transformers 5.21.0; letter ids [[562, 236776], [603, 236799], [565, 236780], [622, 236796]]
+60148 rows to score (0 already done); first prompt:
+<bos><|turn>user
+Predators eat
+
+A. lions
+B. humans
+C. bunnies
+D. grass
+
+Answer with the letter of the correct option.<turn|>
+<|turn>model
+<|channel>thought
+<channel|>Answer:
+2048/60148 rows, 111.6 rows/s, eta 8.7 min
+4032/60148 rows, 107.8 rows/s, eta 8.7 min
+6016/60148 rows, 104.6 rows/s, eta 8.6 min
+8000/60148 rows, 100.7 rows/s, eta 8.6 min
+10048/60148 rows, 96.6 rows/s, eta 8.6 min
+12032/60148 rows, 93.4 rows/s, eta 8.6 min
+14016/60148 rows, 90.7 rows/s, eta 8.5 min
+16000/60148 rows, 88.2 rows/s, eta 8.3 min
+18048/60148 rows, 85.8 rows/s, eta 8.2 min
+20032/60148 rows, 83.5 rows/s, eta 8.0 min
+22016/60148 rows, 81.3 rows/s, eta 7.8 min
+24000/60148 rows, 78.9 rows/s, eta 7.6 min
+26048/60148 rows, 76.5 rows/s, eta 7.4 min
+28032/60148 rows, 74.3 rows/s, eta 7.2 min
+30016/60148 rows, 72.0 rows/s, eta 7.0 min
+32000/60148 rows, 69.8 rows/s, eta 6.7 min
+34048/60148 rows, 67.6 rows/s, eta 6.4 min
+36032/60148 rows, 65.4 rows/s, eta 6.1 min
+38016/60148 rows, 63.4 rows/s, eta 5.8 min
+40000/60148 rows, 61.3 rows/s, eta 5.5 min
+42048/60148 rows, 59.2 rows/s, eta 5.1 min
+44032/60148 rows, 57.3 rows/s, eta 4.7 min
+46016/60148 rows, 55.4 rows/s, eta 4.3 min
+48000/60148 rows, 53.5 rows/s, eta 3.8 min
+50048/60148 rows, 51.5 rows/s, eta 3.3 min
+52032/60148 rows, 49.6 rows/s, eta 2.7 min
+54016/60148 rows, 47.7 rows/s, eta 2.1 min
+56000/60148 rows, 45.7 rows/s, eta 1.5 min
+58007/60148 rows, 43.4 rows/s, eta 0.8 min
+60010/60148 rows, 40.3 rows/s, eta 0.1 min
+JOB DONE google/gemma-4-12B-it rows=60148 seconds=1632
+=== END google/gemma-4-12B-it rc=0
+=== START ibm-granite/granite-4.2-8b
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:  25%|██▌       | 1/4 [00:35<01:46, 35.42s/it]Fetching 4 files:  50%|█████     | 2/4 [00:50<00:46, 23.42s/it]Fetching 4 files: 100%|██████████| 4/4 [00:50<00:00, 12.61s/it]
+Loading weights:   0%|          | 0/363 [00:00<?, ?it/s]Loading weights:   0%|          | 1/363 [00:00<00:59,  6.04it/s]Loading weights:   1%|          | 2/363 [00:00<01:09,  5.19it/s]Loading weights:   3%|▎         | 10/363 [00:00<00:12, 27.62it/s]Loading weights:   6%|▌         | 20/363 [00:00<00:06, 49.02it/s]Loading weights:   8%|▊         | 29/363 [00:00<00:05, 60.96it/s]Loading weights:  10%|█         | 37/363 [00:00<00:04, 66.61it/s]Loading weights:  13%|█▎        | 46/363 [00:00<00:04, 73.32it/s]Loading weights:  15%|█▌        | 55/363 [00:00<00:03, 77.47it/s]Loading weights:  18%|█▊        | 64/363 [00:01<00:03, 80.02it/s]Loading weights:  20%|██        | 74/363 [00:01<00:03, 85.54it/s]Loading weights:  23%|██▎       | 83/363 [00:01<00:03, 86.52it/s]Loading weights:  25%|██▌       | 92/363 [00:01<00:03, 87.25it/s]Loading weights:  28%|██▊       | 101/363 [00:01<00:02, 88.00it/s]Loading weights:  30%|███       | 110/363 [00:01<00:02, 88.12it/s]Loading weights:  33%|███▎      | 119/363 [00:01<00:02, 88.36it/s]Loading weights:  35%|███▌      | 128/363 [00:01<00:02, 88.16it/s]Loading weights:  38%|███▊      | 137/363 [00:01<00:02, 88.16it/s]Loading weights:  40%|████      | 146/363 [00:02<00:02, 87.06it/s]Loading weights:  43%|████▎     | 155/363 [00:02<00:02, 86.43it/s]Loading weights:  45%|████▌     | 164/363 [00:02<00:02, 85.97it/s]Loading weights:  48%|████▊     | 173/363 [00:02<00:02, 85.74it/s]Loading weights:  50%|█████     | 182/363 [00:02<00:02, 86.27it/s]Loading weights:  53%|█████▎    | 191/363 [00:02<00:01, 87.06it/s]Loading weights:  55%|█████▌    | 200/363 [00:02<00:01, 87.45it/s]Loading weights:  58%|█████▊    | 209/363 [00:02<00:01, 87.75it/s]Loading weights:  60%|██████    | 218/363 [00:02<00:01, 88.11it/s]Loading weights:  63%|██████▎   | 227/363 [00:02<00:01, 88.30it/s]Loading weights:  65%|██████▌   | 236/363 [00:03<00:01, 88.59it/s]Loading weights:  67%|██████▋   | 245/363 [00:03<00:01, 88.51it/s]Loading weights:  70%|██████▉   | 254/363 [00:03<00:01, 88.68it/s]Loading weights:  72%|███████▏  | 263/363 [00:03<00:01, 88.46it/s]Loading weights:  75%|███████▍  | 272/363 [00:03<00:01, 88.70it/s]Loading weights:  77%|███████▋  | 281/363 [00:03<00:00, 88.80it/s]Loading weights:  80%|███████▉  | 290/363 [00:03<00:00, 89.06it/s]Loading weights:  82%|████████▏ | 299/363 [00:03<00:00, 89.06it/s]Loading weights:  85%|████████▍ | 308/363 [00:03<00:00, 88.99it/s]Loading weights:  87%|████████▋ | 317/363 [00:03<00:00, 89.14it/s]Loading weights:  90%|████████▉ | 326/363 [00:04<00:00, 89.04it/s]Loading weights:  92%|█████████▏| 335/363 [00:04<00:00, 89.05it/s]Loading weights:  95%|█████████▍| 344/363 [00:04<00:00, 89.30it/s]Loading weights:  97%|█████████▋| 353/363 [00:04<00:00, 89.19it/s]Loading weights: 100%|█████████▉| 362/363 [00:04<00:00, 88.89it/s]Loading weights: 100%|██████████| 363/363 [00:04<00:00, 81.43it/s]
+loaded ibm-granite/granite-4.2-8b via AutoModelForCausalLM in 62s; transformers 5.21.0; letter ids [[32, 362], [33, 426], [34, 356], [35, 423]]
+60148 rows to score (0 already done); first prompt:
+<|im_start|>system
+<|im_end|>
+<|im_start|>user
+Goal: Concrete
+Which solution is better?
+
+A. seals chimney
+B. seals soil
+
+Answer with the letter of the correct option.<|im_end|>
+<|im_start|>assistant
+<think></think>Answer:
+2048/60148 rows, 159.9 rows/s, eta 6.1 min
+4032/60148 rows, 157.0 rows/s, eta 6.0 min
+6016/60148 rows, 152.0 rows/s, eta 5.9 min
+8000/60148 rows, 147.3 rows/s, eta 5.9 min
+10048/60148 rows, 141.6 rows/s, eta 5.9 min
+12032/60148 rows, 137.6 rows/s, eta 5.8 min
+14016/60148 rows, 134.1 rows/s, eta 5.7 min
+16000/60148 rows, 130.8 rows/s, eta 5.6 min
+18048/60148 rows, 127.4 rows/s, eta 5.5 min
+20032/60148 rows, 124.3 rows/s, eta 5.4 min
+22016/60148 rows, 121.1 rows/s, eta 5.2 min
+24000/60148 rows, 117.9 rows/s, eta 5.1 min
+26048/60148 rows, 114.5 rows/s, eta 5.0 min
+28032/60148 rows, 111.4 rows/s, eta 4.8 min
+30016/60148 rows, 108.2 rows/s, eta 4.6 min
+32000/60148 rows, 105.2 rows/s, eta 4.5 min
+34048/60148 rows, 102.1 rows/s, eta 4.3 min
+36032/60148 rows, 99.2 rows/s, eta 4.1 min
+38016/60148 rows, 96.3 rows/s, eta 3.8 min
+40000/60148 rows, 93.5 rows/s, eta 3.6 min
+42048/60148 rows, 90.6 rows/s, eta 3.3 min
+44032/60148 rows, 87.8 rows/s, eta 3.1 min
+46016/60148 rows, 85.1 rows/s, eta 2.8 min
+48000/60148 rows, 82.3 rows/s, eta 2.5 min
+50048/60148 rows, 79.4 rows/s, eta 2.1 min
+52032/60148 rows, 76.6 rows/s, eta 1.8 min
+54016/60148 rows, 73.8 rows/s, eta 1.4 min
+56000/60148 rows, 70.8 rows/s, eta 1.0 min
+58017/60148 rows, 67.3 rows/s, eta 0.5 min
+60000/60148 rows, 62.8 rows/s, eta 0.0 min
+JOB DONE ibm-granite/granite-4.2-8b rows=60148 seconds=1068
+=== END ibm-granite/granite-4.2-8b rc=0
+=== START mistralai/Ministral-3-8B-Instruct-2512
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] The tokenizer you are loading from 'mistralai/Ministral-3-8B-Instruct-2512' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+[transformers] FP8 quantized models is only supported on GPUs with compute capability >= 8.9 (e.g 4090/H100), actual = `8.0`. We will default to dequantizing the model to bf16. Feel free to use a different quantization method like bitsandbytes or torchao
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s]Fetching 3 files:  33%|███▎      | 1/3 [00:09<00:19,  9.53s/it]Fetching 3 files:  67%|██████▋   | 2/3 [00:38<00:20, 20.91s/it]Fetching 3 files: 100%|██████████| 3/3 [00:38<00:00, 12.80s/it]
+Loading weights:   0%|          | 0/531 [00:00<?, ?it/s]Loading weights:   0%|          | 1/531 [00:00<00:58,  9.00it/s]Loading weights:   0%|          | 2/531 [00:00<01:49,  4.83it/s]Loading weights:   1%|          | 5/531 [00:00<00:45, 11.65it/s]Loading weights:   2%|▏         | 11/531 [00:00<00:21, 24.20it/s]Loading weights:   3%|▎         | 17/531 [00:00<00:15, 33.94it/s]Loading weights:   4%|▍         | 23/531 [00:00<00:12, 39.64it/s]Loading weights:   5%|▌         | 29/531 [00:00<00:12, 41.52it/s]Loading weights:   7%|▋         | 37/531 [00:01<00:09, 51.56it/s]Loading weights:   9%|▊         | 46/531 [00:01<00:08, 57.21it/s]Loading weights:  10%|▉         | 52/531 [00:01<00:08, 53.49it/s]Loading weights:  11%|█         | 58/531 [00:01<00:10, 46.13it/s]Loading weights:  12%|█▏        | 63/531 [00:01<00:10, 43.58it/s]Loading weights:  13%|█▎        | 68/531 [00:01<00:11, 40.43it/s]Loading weights:  14%|█▍        | 74/531 [00:01<00:10, 44.93it/s]Loading weights:  15%|█▌        | 81/531 [00:02<00:09, 49.11it/s]Loading weights:  16%|█▋        | 87/531 [00:02<00:08, 49.65it/s]Loading weights:  18%|█▊        | 94/531 [00:02<00:08, 52.41it/s]Loading weights:  19%|█▉        | 100/531 [00:02<00:08, 48.59it/s]Loading weights:  21%|██        | 110/531 [00:02<00:06, 61.08it/s]Loading weights:  23%|██▎       | 122/531 [00:02<00:05, 75.01it/s]Loading weights: 100%|██████████| 531/531 [00:02<00:00, 197.47it/s]
+loaded mistralai/Ministral-3-8B-Instruct-2512 via AutoModelForImageTextToText in 56s; transformers 5.21.0; letter ids [[1065, 1349], [1066, 1398], [1067, 1359], [1068, 1407]]
+60148 rows to score (0 already done); first prompt:
+<s>[SYSTEM_PROMPT]You are Ministral-3-8B-Instruct-2512, a Large Language Model (LLM) created by Mistral AI, a French startup headquartered in Paris.
+You power an AI assistant called Le Chat.
+Your knowledge base was last updated on 2023-10-01.
+The current date is {today}.
+
+When you're not sure about some information or when the user's request requires up-to-date or specific data, you must use the available tools to fetch the information. Do not hesitate to use tools whenever they can provide a more accurate or complete response. If no relevant tools are available, then clearly state that you don't have the information and avoid making up anything.
+If the user's question is not clear, ambiguous, or does not provide enough context for you to accurately answer the question, you do not try to answer it right away and you rather ask the user to clarify their request (e.g. "What are some good restaurants around me?" => "Where are you?" or "When is the next flight to Tokyo" => "Where do you travel from?").
+You are always very attentive to dates, in particular you try to resolve dates (e.g. "yesterday" is {yesterday}) and when asked about information at specific dates, you discard information that is at another date.
+You follow these instructions in all languages, and always respond to the user in the language they use or request.
+Next sections describe the capabilities that you have.
+
+# WEB BROWSING INSTRUCTIONS
+
+You cannot perform any web search or access internet to open URLs, links etc. If it seems like the user is expecting you to do so, you clarify the situation and ask the user to copy paste the text directly in the chat.
+
+# MULTI-MODAL INSTRUCTIONS
+
+You have the ability to read images, but you cannot generate images. You also cannot read nor transcribe audio files or videos.
+
+# TOOL CALLING INSTRUCTIONS
+
+You may have access to tools that you can use to fetch information or perform actions. You must use these tools in the following situations:
+
+1. When the request requires up-to-date information.
+2. When the request requires specific data that you do not have in your knowledge base.
+3. When the request involves actions that you cannot perform without tools.
+
+Always prioritize using tools to provide the most accurate and helpful response. If tools are not available, inform the user that you cannot perform the requested action at the moment.[/SYSTEM_PROMPT][INST]Goal: laser
+Which solution is better?
+
+A. burns face
+B. burns air
+
+Answer with the letter of the correct option.[/INST]Answer:
+2016/60148 rows, 22.4 rows/s, eta 43.3 min
+4036/60148 rows, 22.3 rows/s, eta 41.9 min
+6004/60148 rows, 22.2 rows/s, eta 40.6 min
+8013/60148 rows, 22.2 rows/s, eta 39.2 min
+10014/60148 rows, 22.1 rows/s, eta 37.9 min
+12014/60148 rows, 22.0 rows/s, eta 36.5 min
+14014/60148 rows, 21.9 rows/s, eta 35.1 min
+16012/60148 rows, 21.8 rows/s, eta 33.7 min
+18001/60148 rows, 21.8 rows/s, eta 32.3 min
+20029/60148 rows, 21.7 rows/s, eta 30.9 min
+22004/60148 rows, 21.6 rows/s, eta 29.5 min
+24018/60148 rows, 21.5 rows/s, eta 28.0 min
+26032/60148 rows, 21.4 rows/s, eta 26.6 min
+28007/60148 rows, 21.3 rows/s, eta 25.2 min
+30005/60148 rows, 21.2 rows/s, eta 23.7 min
+32015/60148 rows, 21.0 rows/s, eta 22.3 min
+34031/60148 rows, 20.9 rows/s, eta 20.8 min
+36022/60148 rows, 20.8 rows/s, eta 19.3 min
+38017/60148 rows, 20.7 rows/s, eta 17.8 min
+40011/60148 rows, 20.5 rows/s, eta 16.3 min
+42017/60148 rows, 20.4 rows/s, eta 14.8 min
+44004/60148 rows, 20.2 rows/s, eta 13.3 min
+46004/60148 rows, 20.1 rows/s, eta 11.7 min
+48020/60148 rows, 19.9 rows/s, eta 10.1 min
+50016/60148 rows, 19.8 rows/s, eta 8.5 min
+52023/60148 rows, 19.6 rows/s, eta 6.9 min
+54004/60148 rows, 19.4 rows/s, eta 5.3 min
+56023/60148 rows, 19.2 rows/s, eta 3.6 min
+58022/60148 rows, 18.9 rows/s, eta 1.9 min
+60012/60148 rows, 18.5 rows/s, eta 0.1 min
+JOB DONE mistralai/Ministral-3-8B-Instruct-2512 rows=60148 seconds=3431
+=== END mistralai/Ministral-3-8B-Instruct-2512 rc=0
+=== START allenai/Olmo-3-7B-Instruct
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s]Fetching 3 files:  33%|███▎      | 1/3 [00:42<01:24, 42.08s/it]Fetching 3 files: 100%|██████████| 3/3 [00:42<00:00, 14.03s/it]
+Loading weights:   0%|          | 0/355 [00:00<?, ?it/s]Loading weights:   0%|          | 1/355 [00:00<02:14,  2.62it/s]Loading weights:   4%|▎         | 13/355 [00:00<00:10, 32.25it/s]Loading weights:   7%|▋         | 25/355 [00:00<00:05, 55.14it/s]Loading weights:  10%|█         | 36/355 [00:00<00:04, 69.52it/s]Loading weights:  13%|█▎        | 46/355 [00:00<00:03, 77.33it/s]Loading weights:  16%|█▋        | 58/355 [00:00<00:03, 88.25it/s]Loading weights:  19%|█▉        | 69/355 [00:01<00:03, 93.48it/s]Loading weights:  23%|██▎       | 80/355 [00:01<00:02, 97.27it/s]Loading weights:  26%|██▌       | 91/355 [00:01<00:02, 100.28it/s]Loading weights:  29%|██▊       | 102/355 [00:01<00:02, 95.31it/s]Loading weights:  32%|███▏      | 114/355 [00:01<00:02, 100.76it/s]Loading weights:  35%|███▌      | 125/355 [00:01<00:02, 101.35it/s]Loading weights:  38%|███▊      | 136/355 [00:01<00:02, 101.64it/s]Loading weights:  41%|████▏     | 147/355 [00:01<00:02, 102.59it/s]Loading weights:  45%|████▍     | 158/355 [00:01<00:01, 103.66it/s]Loading weights:  48%|████▊     | 169/355 [00:01<00:01, 104.23it/s]Loading weights:  51%|█████     | 180/355 [00:02<00:01, 103.82it/s]Loading weights:  54%|█████▍    | 191/355 [00:02<00:01, 97.33it/s] Loading weights:  57%|█████▋    | 203/355 [00:02<00:01, 101.37it/s]Loading weights:  60%|██████    | 214/355 [00:02<00:01, 101.83it/s]Loading weights:  63%|██████▎   | 225/355 [00:02<00:01, 102.24it/s]Loading weights:  66%|██████▋   | 236/355 [00:02<00:01, 103.00it/s]Loading weights:  70%|██████▉   | 247/355 [00:02<00:01, 103.11it/s]Loading weights:  73%|███████▎  | 258/355 [00:02<00:00, 103.43it/s]Loading weights:  76%|███████▌  | 269/355 [00:02<00:00, 104.03it/s]Loading weights:  79%|███████▉  | 280/355 [00:03<00:00, 104.70it/s]Loading weights:  82%|████████▏ | 291/355 [00:03<00:00, 104.68it/s]Loading weights:  85%|████████▌ | 302/355 [00:03<00:00, 105.05it/s]Loading weights:  88%|████████▊ | 313/355 [00:03<00:00, 104.83it/s]Loading weights:  91%|█████████▏| 324/355 [00:03<00:00, 104.27it/s]Loading weights:  94%|█████████▍| 335/355 [00:03<00:00, 103.70it/s]Loading weights:  97%|█████████▋| 346/355 [00:03<00:00, 103.77it/s]Loading weights: 100%|██████████| 355/355 [00:03<00:00, 94.78it/s] 
+loaded allenai/Olmo-3-7B-Instruct via AutoModelForCausalLM in 53s; transformers 5.21.0; letter ids [[32, 362], [33, 426], [34, 356], [35, 423]]
+60148 rows to score (0 already done); first prompt:
+<|im_start|>system
+You are a helpful function-calling AI assistant. You do not currently have access to any functions. <functions></functions><|im_end|>
+<|im_start|>user
+Goal: Concrete
+Which solution is better?
+
+A. seals chimney
+B. seals soil
+
+Answer with the letter of the correct option.<|im_end|>
+<|im_start|>assistant
+Answer:
+2048/60148 rows, 135.2 rows/s, eta 7.2 min
+4032/60148 rows, 132.7 rows/s, eta 7.0 min
+6016/60148 rows, 129.9 rows/s, eta 6.9 min
+8000/60148 rows, 126.9 rows/s, eta 6.8 min
+10048/60148 rows, 123.8 rows/s, eta 6.7 min
+12032/60148 rows, 121.4 rows/s, eta 6.6 min
+14016/60148 rows, 119.3 rows/s, eta 6.4 min
+16000/60148 rows, 117.2 rows/s, eta 6.3 min
+18048/60148 rows, 114.7 rows/s, eta 6.1 min
+20032/60148 rows, 112.4 rows/s, eta 5.9 min
+22016/60148 rows, 110.0 rows/s, eta 5.8 min
+24000/60148 rows, 107.6 rows/s, eta 5.6 min
+26048/60148 rows, 105.0 rows/s, eta 5.4 min
+28032/60148 rows, 102.6 rows/s, eta 5.2 min
+30016/60148 rows, 100.3 rows/s, eta 5.0 min
+32000/60148 rows, 97.9 rows/s, eta 4.8 min
+34048/60148 rows, 95.5 rows/s, eta 4.6 min
+36032/60148 rows, 93.2 rows/s, eta 4.3 min
+38016/60148 rows, 90.9 rows/s, eta 4.1 min
+40000/60148 rows, 88.7 rows/s, eta 3.8 min
+42048/60148 rows, 86.3 rows/s, eta 3.5 min
+44032/60148 rows, 84.0 rows/s, eta 3.2 min
+46016/60148 rows, 81.7 rows/s, eta 2.9 min
+48000/60148 rows, 79.4 rows/s, eta 2.6 min
+50048/60148 rows, 76.9 rows/s, eta 2.2 min
+52032/60148 rows, 74.5 rows/s, eta 1.8 min
+54016/60148 rows, 72.0 rows/s, eta 1.4 min
+56000/60148 rows, 69.4 rows/s, eta 1.0 min
+58007/60148 rows, 66.4 rows/s, eta 0.5 min
+60029/60148 rows, 62.3 rows/s, eta 0.0 min
+JOB DONE allenai/Olmo-3-7B-Instruct rows=60148 seconds=1067
+=== END allenai/Olmo-3-7B-Instruct rc=0
+ALL DONE

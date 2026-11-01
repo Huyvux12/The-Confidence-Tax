@@ -1,0 +1,4 @@
+10 units, 0 cached
+done ('Qwen/Qwen3.5-9B', 'letter_colon') regime=conflict in 43.4 min
+done ('Qwen/Qwen3.5-9B', 'paren') regime=conflict in 43.2 min
+done ('allenai/Olmo-3-7B-Instruct', 'letter_colon') regime=consensus in 42.0 min

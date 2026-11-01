@@ -1,0 +1,25 @@
+{
+  "kind": "scalar_ts",
+  "params": {
+    "beta": 0.40612619817811774
+  },
+  "method_id": "MRTS",
+  "summary": {
+    "method_id": "MRTS",
+    "protocol": "source_only",
+    "parameters": {
+      "beta": 0.40612619817811774
+    },
+    "selected_hyperparameters": {
+      "grid": 241
+    },
+    "solver_status": "grid",
+    "solver_valid": true,
+    "source_gate": null,
+    "fallback_reason": null,
+    "diagnostic_scope": "observed_source_losses",
+    "feature_map": null,
+    "input_fingerprints": {},
+    "deployed_kind": "scalar_ts"
+  }
+}

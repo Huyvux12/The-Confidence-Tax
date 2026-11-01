@@ -1,0 +1,175 @@
+NOTE: running on the sealed confirmation split
+10 units, 0 cached
+reusing menu selection from runs/rbcal_dev/units (sources identical)
+done ('Qwen/Qwen3.5-9B', 'paren') regime=conflict in 14.4 min
+done ('allenai/Olmo-3-7B-Instruct', 'letter_colon') regime=consensus in 14.4 min
+done ('allenai/Olmo-3-7B-Instruct', 'paren') regime=consensus in 14.5 min
+done ('Qwen/Qwen3.5-9B', 'letter_colon') regime=conflict in 14.6 min
+done ('google/gemma-4-12B-it', 'paren') regime=consensus in 8.9 min
+done ('ibm-granite/granite-4.2-8b', 'letter_colon') regime=consensus in 8.9 min
+done ('google/gemma-4-12B-it', 'letter_colon') regime=consensus in 8.9 min
+done ('ibm-granite/granite-4.2-8b', 'paren') regime=consensus in 8.9 min
+done ('mistralai/Ministral-3-8B-Instruct-2512', 'paren') regime=conflict in 6.1 min
+done ('mistralai/Ministral-3-8B-Instruct-2512', 'letter_colon') regime=consensus in 6.2 min
+{
+ "all": {
+  "E1_vs_MRTS": {
+   "paired": {
+    "unit": "__macro__",
+    "n_cases": 1247,
+    "mean_diff": -0.029213835514687047,
+    "ci_low": -0.03354948551508276,
+    "ci_high": -0.025161454754911272
+   },
+   "harm": [
+    0,
+    0
+   ],
+   "pass": true
+  },
+  "E2_vs_POOLED_TS": {
+   "harm": [
+    0,
+    7
+   ],
+   "worst": [
+    0.005638714267216091,
+    0.04532107556237098
+   ],
+   "gain_retained": 0.8974860863186135,
+   "pass": true
+  },
+  "E3_vs_RBCAL_CONST": {
+   "paired": {
+    "unit": "__macro__",
+    "n_cases": 1247,
+    "mean_diff": -0.01065854550460897,
+    "ci_low": -0.01241911915908592,
+    "ci_high": -0.009039537787859918
+   },
+   "harm": [
+    0,
+    0
+   ],
+   "pass": true
+  }
+ },
+ "conflict": {
+  "E1_vs_MRTS": {
+   "paired": {
+    "unit": "__macro__",
+    "n_cases": 1247,
+    "mean_diff": -0.027168182487736964,
+    "ci_low": -0.03444459421413177,
+    "ci_high": -0.020669122943330745
+   },
+   "harm": [
+    0,
+    0
+   ],
+   "pass": true
+  },
+  "E2_vs_POOLED_TS": {
+   "harm": [
+    0,
+    4
+   ],
+   "worst": [
+    0.005638714267216091,
+    0.04532107556237098
+   ],
+   "gain_retained": 1.171105608895187,
+   "pass": true
+  },
+  "E3_vs_RBCAL_CONST": {
+   "paired": {
+    "unit": "__macro__",
+    "n_cases": 1247,
+    "mean_diff": -0.008682315976366362,
+    "ci_low": -0.012408927653624358,
+    "ci_high": -0.005321558511364621
+   },
+   "harm": [
+    0,
+    0
+   ],
+   "pass": true
+  }
+ },
+ "consensus": {
+  "E1_vs_MRTS": {
+   "paired": {
+    "unit": "__macro__",
+    "n_cases": 1247,
+    "mean_diff": -0.030090543954808518,
+    "ci_low": -0.0354446227548514,
+    "ci_high": -0.02456132902615902
+   },
+   "harm": [
+    0,
+    0
+   ],
+   "pass": true
+  },
+  "E2_vs_POOLED_TS": {
+   "harm": [
+    0,
+    3
+   ],
+   "worst": [
+    0.0,
+    0.03958269740208746
+   ],
+   "gain_retained": 0.8898621992221486,
+   "pass": true
+  },
+  "E3_vs_RBCAL_CONST": {
+   "paired": {
+    "unit": "__macro__",
+    "n_cases": 1247,
+    "mean_diff": -0.011505501016712947,
+    "ci_low": -0.01350790656832387,
+    "ci_high": -0.00951739156623525
+   },
+   "harm": [
+    0,
+    0
+   ],
+   "pass": true
+  }
+ }
+}
+
+method                   macro dNLL    worst  harm     ECE
+IDENTITY                    +0.0000  +0.0000     0  0.1401
+MRTS                        -0.2012  +0.0000     0  0.0898
+MRTS_GATED                  -0.1907  +0.0000     0  0.0921
+POOLED_TS                   -0.2567  +0.0453     7  0.0642
+SHRINKAGE_LOSO              -0.1165  +0.0063     0  0.1025
+POOLED_AFFINE               -0.0855  +0.0000     0  0.1135
+POOLED_RBF                  -0.0855  +0.0000     0  0.1134
+POOLED_TOPGAP               -0.0859  +0.0000     0  0.1129
+RBCAL_CONST_e0.0            -0.0855  +0.0000     0  0.1135
+RBCAL_CONST_e0.0025         -0.0891  +0.0017     0  0.1118
+RBCAL_CONST_e0.005          -0.0905  +0.0034     0  0.1111
+RBCAL_CONST_e0.01           -0.0920  +0.0068     0  0.1099
+RBCAL_CONST_e0.02           -0.0849  +0.0132     2  0.1133
+RBCAL_RBF_e0.0              -0.0855  +0.0000     0  0.1134
+RBCAL_RBF_e0.0025           -0.0934  +0.0000     0  0.1090
+RBCAL_RBF_e0.005            -0.0855  +0.0034     0  0.1133
+RBCAL_RBF_e0.01             -0.0854  +0.0070     0  0.1132
+RBCAL_RBF_e0.02             -0.0852  +0.0111     1  0.1133
+RBCAL_TOPGAP_e0.0           -0.0859  +0.0000     0  0.1129
+RBCAL_TOPGAP_e0.0025        -0.0859  +0.0016     0  0.1129
+RBCAL_TOPGAP_e0.005         -0.0859  +0.0032     0  0.1128
+RBCAL_TOPGAP_e0.01          -0.0858  +0.0063     0  0.1127
+RBCAL_TOPGAP_e0.02          -0.0855  +0.0124     1  0.1129
+RBCAL_UCB_CONST_e0.005      -0.2238  +0.0029     0  0.0797
+RBCAL_UCB_CONST_e0.01       -0.2198  +0.0058     0  0.0777
+RBCAL_UCB_CONST_e0.02       -0.2277  +0.0114     1  0.0726
+RBCAL_UCB_RBF_e0.005        -0.2410  +0.0017     0  0.0683
+RBCAL_UCB_RBF_e0.01         -0.2304  +0.0056     0  0.0692
+RBCAL_UCB_RBF_e0.02         -0.2355  +0.0096     0  0.0661
+RBCAL_UCB_TOPGAP_e0.005     -0.2162  +0.0028     0  0.0816
+RBCAL_UCB_TOPGAP_e0.01      -0.2219  +0.0056     0  0.0776
+RBCAL_UCB_TOPGAP_e0.02      -0.2262  +0.0110     1  0.0745

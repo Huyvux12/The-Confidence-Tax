@@ -1,0 +1,77 @@
+10 units x 25 tasks = 250 jobs, 0 cached
+10/250 jobs done
+20/250 jobs done
+30/250 jobs done
+40/250 jobs done
+50/250 jobs done
+60/250 jobs done
+70/250 jobs done
+80/250 jobs done
+90/250 jobs done
+100/250 jobs done
+110/250 jobs done
+120/250 jobs done
+130/250 jobs done
+140/250 jobs done
+150/250 jobs done
+160/250 jobs done
+170/250 jobs done
+180/250 jobs done
+190/250 jobs done
+200/250 jobs done
+210/250 jobs done
+220/250 jobs done
+230/250 jobs done
+240/250 jobs done
+250/250 jobs done
+
+== all (n=250)
+  IDENTITY                +0.0000 worst=+0.0000 harm=  0 ece=0.2190
+  POOLED_TS               -0.6045 worst=+0.0727 harm= 22 ece=0.0679
+  MRTS                    -0.4511 worst=+0.0010 harm=  0 ece=0.1458
+  SHRINKAGE_LOSO          -0.3055 worst=+0.0329 harm=  2 ece=0.1497
+  RBCAL_UCB_CONST_e0.01   -0.5087 worst=+0.0127 harm=  2 ece=0.1176
+  RBCAL_UCB_RBF_e0.01     -0.5241 worst=+0.0108 harm=  2 ece=0.1058
+  THERMO_P                -0.6073 worst=+0.0615 harm= 19 ece=0.0652
+  ATS_P                   -0.6002 worst=+0.1400 harm= 32 ece=0.0691
+  primary - IDENTITY              -0.5241 [-0.6398,-0.4196] W/T/L 208/25/17
+  primary - POOLED_TS             +0.0804 [+0.0542,+0.1075] W/T/L 61/25/164
+  primary - MRTS                  -0.0730 [-0.0943,-0.0535] W/T/L 198/0/52
+  primary - SHRINKAGE_LOSO        -0.2186 [-0.2676,-0.1711] W/T/L 131/55/64
+  primary - RBCAL_UCB_CONST_e0.01 -0.0154 [-0.0205,-0.0107] W/T/L 161/61/28
+  primary - THERMO_P              +0.0833 [+0.0569,+0.1108] W/T/L 72/0/178
+  primary - ATS_P                 +0.0762 [+0.0496,+0.1041] W/T/L 90/0/160
+
+== conflict (n=75)
+  IDENTITY                +0.0000 worst=+0.0000 harm=  0 ece=0.1004
+  POOLED_TS               -0.1019 worst=+0.0727 harm= 15 ece=0.0588
+  MRTS                    +0.0000 worst=+0.0010 harm=  0 ece=0.1005
+  SHRINKAGE_LOSO          -0.0558 worst=+0.0118 harm=  1 ece=0.0836
+  RBCAL_UCB_CONST_e0.01   -0.0552 worst=+0.0115 harm=  1 ece=0.0839
+  RBCAL_UCB_RBF_e0.01     -0.0703 worst=+0.0108 harm=  2 ece=0.0731
+  THERMO_P                -0.1042 worst=+0.0615 harm= 13 ece=0.0558
+  ATS_P                   -0.0897 worst=+0.1400 harm= 26 ece=0.0697
+  primary - IDENTITY              -0.0703 [-0.0908,-0.0510] W/T/L 60/0/15
+  primary - POOLED_TS             +0.0316 [+0.0139,+0.0510] W/T/L 27/0/48
+  primary - MRTS                  -0.0703 [-0.0908,-0.0511] W/T/L 60/0/15
+  primary - SHRINKAGE_LOSO        -0.0144 [-0.0208,-0.0084] W/T/L 45/5/25
+  primary - RBCAL_UCB_CONST_e0.01 -0.0150 [-0.0212,-0.0090] W/T/L 52/11/12
+  primary - THERMO_P              +0.0340 [+0.0166,+0.0529] W/T/L 27/0/48
+  primary - ATS_P                 +0.0194 [-0.0021,+0.0421] W/T/L 38/0/37
+
+== consensus (n=175)
+  IDENTITY                +0.0000 worst=+0.0000 harm=  0 ece=0.2699
+  POOLED_TS               -0.8199 worst=+0.0657 harm=  7 ece=0.0718
+  MRTS                    -0.6444 worst=-0.0087 harm=  0 ece=0.1653
+  SHRINKAGE_LOSO          -0.4125 worst=+0.0329 harm=  1 ece=0.1780
+  RBCAL_UCB_CONST_e0.01   -0.7031 worst=+0.0127 harm=  1 ece=0.1320
+  RBCAL_UCB_RBF_e0.01     -0.7186 worst=+0.0055 harm=  0 ece=0.1198
+  THERMO_P                -0.8230 worst=+0.0429 harm=  6 ece=0.0692
+  ATS_P                   -0.8191 worst=+0.0515 harm=  6 ece=0.0688
+  primary - IDENTITY              -0.7186 [-0.8747,-0.5768] W/T/L 148/25/2
+  primary - POOLED_TS             +0.1013 [+0.0696,+0.1328] W/T/L 34/25/116
+  primary - MRTS                  -0.0742 [-0.0963,-0.0533] W/T/L 138/0/37
+  primary - SHRINKAGE_LOSO        -0.3061 [-0.3735,-0.2403] W/T/L 86/50/39
+  primary - RBCAL_UCB_CONST_e0.01 -0.0155 [-0.0203,-0.0113] W/T/L 109/50/16
+  primary - THERMO_P              +0.1044 [+0.0725,+0.1362] W/T/L 45/0/130
+  primary - ATS_P                 +0.1005 [+0.0694,+0.1329] W/T/L 52/0/123

@@ -1,0 +1,47 @@
+{
+  "kind": "top_gap",
+  "params": {
+    "a": 1.1262710659907946,
+    "b": 0.6233459738413518
+  },
+  "method_id": "M3_POOLED",
+  "summary": {
+    "method_id": "M3_POOLED",
+    "protocol": "source_only",
+    "parameters": {
+      "a": 1.1262710659907946,
+      "b": 0.6233459738413518,
+      "effective_dof": 2,
+      "at_bound": [
+        false,
+        false
+      ]
+    },
+    "selected_hyperparameters": {
+      "lambda": 0.01,
+      "objective": "POOLED",
+      "box": [
+        0.25,
+        4.0
+      ]
+    },
+    "solver_status": "CLARABEL:optimal",
+    "solver_valid": true,
+    "source_gate": {
+      "accept": true,
+      "max_delta": -0.008852198019371928,
+      "deltas": {
+        "src_A": -0.008852198019371928,
+        "src_B": -0.039687227075930864,
+        "src_C": -0.05386076736253856
+      },
+      "epsilon_select": 0.0,
+      "scope": "finite_source_select_check"
+    },
+    "fallback_reason": null,
+    "diagnostic_scope": "observed_source_losses",
+    "feature_map": null,
+    "input_fingerprints": {},
+    "deployed_kind": "top_gap"
+  }
+}

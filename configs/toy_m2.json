@@ -1,0 +1,5 @@
+{"method": "M2", "data_dir": "data/toy_m2_shifted_target", "out_dir": "runs/toy_m2", "seed": 0,
+ "generate_toy": {"scenario": "m2_shifted_target", "seed": 0, "K": 4},
+ "m2": {"bin_options": [2, 4], "n_boot": 500, "min_cases": 5, "min_valid_frac": 0.8,
+        "batch_fields": ["model_id", "prompt_id", "task_id"]},
+ "exploratory": true}

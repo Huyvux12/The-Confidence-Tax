@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "E:\Dowload\project\AI project\100PRR\mrts\scripts\recheck_full_refit.py", line 47, in <module>
+    main()
+    ~~~~^^
+  File "E:\Dowload\project\AI project\100PRR\mrts\scripts\recheck_full_refit.py", line 27, in main
+    fresh = run_unit(("data/real/confirm_sealed", unit, EPS_GRID, None))
+  File "E:\Dowload\project\AI project\100PRR\mrts\scripts\run_rbcal.py", line 84, in run_unit
+    fits["POOLED_RBF"] = rbcal(RBF_MENU, None, "POOLED_RBF")
+                         ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Dowload\project\AI project\100PRR\mrts\scripts\run_rbcal.py", line 60, in rbcal
+    return fit_rbcal(tr, sel, menu, eps, mid, z=z)
+  File "E:\Dowload\project\AI project\100PRR\mrts\calibration_extensions\rb_calibration.py", line 216, in fit_rbcal
+    spec = specs[0] if len(specs) == 1 else select_by_loso(train, specs, eps, rank_eps, z)[0]
+                                            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Dowload\project\AI project\100PRR\mrts\calibration_extensions\rb_calibration.py", line 200, in select_by_loso
+    cal, _ = solve(trf, spec, eps, z)
+             ~~~~~^^^^^^^^^^^^^^^^^^^
+  File "E:\Dowload\project\AI project\100PRR\mrts\calibration_extensions\rb_calibration.py", line 123, in solve
+    oracle, x0, kind, fixed_a, make, fmap = build(ps, spec)
+                                            ~~~~~^^^^^^^^^^
+  File "E:\Dowload\project\AI project\100PRR\mrts\calibration_extensions\rb_calibration.py", line 117, in build
+    return (LinearLogitOracle(ps, basis), fmap.identity_theta(), fmap.kind, False,
+            ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "E:\Dowload\project\AI project\100PRR\mrts\calibration_extensions\rb_calibration.py", line 32, in __init__
+    self.W = np.stack([(keys == s) / (keys == s).sum() for s in self.srcs])
+             ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Dowload\project\AI project\100PRR\mrts\.venv\Lib\site-packages\numpy\_core\shape_base.py", line 465, in stack
+    return _nx.concatenate(expanded_arrays, axis=axis, out=out,
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           dtype=dtype, casting=casting)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 2.59 MiB for an array with shape (24, 14154) and data type float64

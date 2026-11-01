@@ -1,0 +1,15 @@
+{
+  "kind": "batch_beta",
+  "params": {
+    "batch_fields": [
+      "model_id",
+      "prompt_id",
+      "task_id"
+    ],
+    "betas": {
+      "toy_model|toy_prompt|target_task_0": 1.0,
+      "toy_model|toy_prompt|target_task_1": 1.0
+    }
+  },
+  "method_id": "M2_RAW"
+}

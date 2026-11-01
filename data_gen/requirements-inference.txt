@@ -1,0 +1,4 @@
+# GPU inference (data_gen/infer_mcq.py), run on a Colab A100 on 2026-10-31.
+# transformers was the version preinstalled on the Colab image; torch was not recorded and is
+# whatever that image shipped with on that date.
+transformers==5.21

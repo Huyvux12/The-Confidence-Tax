@@ -1,0 +1,118 @@
+[
+ {
+  "model": "Qwen/Qwen3.5-9B",
+  "prompt": "letter_colon",
+  "n_rows": 14744,
+  "n_sources": 25,
+  "mrts_beta": 1.0,
+  "mrts_worst_delta": 1.9480869862655925e-17,
+  "pooled_beta": 0.8029228818633763,
+  "sources_want_colder": 19,
+  "sources_want_hotter": 6,
+  "per_source_best_beta": {
+   "arc_challenge": 1.084,
+   "arc_easy": 1.231,
+   "boolq": 0.901,
+   "hellaswag": 1.625,
+   "logiqa": 0.675,
+   "mmlu_humanities": 0.715,
+   "mmlu_other": 0.785,
+   "mmlu_social": 1.023,
+   "mmlu_stem": 0.933,
+   "mmlupro_biology": 0.933,
+   "mmlupro_business": 0.749,
+   "mmlupro_chemistry": 0.812,
+   "mmlupro_computer_science": 0.944,
+   "mmlupro_economics": 0.749,
+   "mmlupro_engineering": 1.047,
+   "mmlupro_health": 0.741,
+   "mmlupro_history": 0.63,
+   "mmlupro_law": 0.683,
+   "mmlupro_math": 0.758,
+   "mmlupro_other": 0.675,
+   "mmlupro_philosophy": 0.667,
+   "mmlupro_physics": 0.851,
+   "mmlupro_psychology": 0.776,
+   "openbookqa": 1.304,
+   "winogrande": 0.803
+  },
+  "constant": {
+   "status": "NO_VERIFIED_COMMON_DESCENT",
+   "rho": 1.4529195159568104e-18,
+   "grad_check": 4.587308310988192e-11
+  },
+  "entropy_affine": {
+   "status": "NO_VERIFIED_COMMON_DESCENT",
+   "rho": 2.1350869462975923e-09,
+   "grad_check": 7.217764580458308e-12
+  },
+  "rbf4": {
+   "status": "NUMERICAL_UNRESOLVED",
+   "rho": 1.2959547188712576e-05,
+   "grad_check": 1.2411877081675016e-12
+  },
+  "rbf8": {
+   "status": "NUMERICAL_UNRESOLVED",
+   "rho": 0.00017899245808774566,
+   "grad_check": 3.786540525574367e-12
+  }
+ },
+ {
+  "model": "Qwen/Qwen3.5-9B",
+  "prompt": "paren",
+  "n_rows": 14744,
+  "n_sources": 25,
+  "mrts_beta": 1.0,
+  "mrts_worst_delta": 2.2910459153911223e-17,
+  "pooled_beta": 0.8408964152537145,
+  "sources_want_colder": 16,
+  "sources_want_hotter": 8,
+  "per_source_best_beta": {
+   "arc_challenge": 1.203,
+   "arc_easy": 1.382,
+   "boolq": 0.977,
+   "hellaswag": 1.569,
+   "logiqa": 0.699,
+   "mmlu_humanities": 0.707,
+   "mmlu_other": 0.794,
+   "mmlu_social": 1.084,
+   "mmlu_stem": 1.0,
+   "mmlupro_biology": 1.023,
+   "mmlupro_business": 0.822,
+   "mmlupro_chemistry": 0.989,
+   "mmlupro_computer_science": 0.955,
+   "mmlupro_economics": 0.831,
+   "mmlupro_engineering": 1.217,
+   "mmlupro_health": 0.749,
+   "mmlupro_history": 0.645,
+   "mmlupro_law": 0.616,
+   "mmlupro_math": 0.841,
+   "mmlupro_other": 0.683,
+   "mmlupro_philosophy": 0.699,
+   "mmlupro_physics": 0.977,
+   "mmlupro_psychology": 0.812,
+   "openbookqa": 1.464,
+   "winogrande": 1.059
+  },
+  "constant": {
+   "status": "NO_VERIFIED_COMMON_DESCENT",
+   "rho": 1.7924066164798468e-18,
+   "grad_check": 5.37287991875246e-11
+  },
+  "entropy_affine": {
+   "status": "NO_VERIFIED_COMMON_DESCENT",
+   "rho": 1.123238506315619e-16,
+   "grad_check": 9.909462139745528e-12
+  },
+  "rbf4": {
+   "status": "NUMERICAL_UNRESOLVED",
+   "rho": 9.918951634388573e-05,
+   "grad_check": 2.477455740557133e-12
+  },
+  "rbf8": {
+   "status": "NUMERICAL_UNRESOLVED",
+   "rho": 0.00016773905590674047,
+   "grad_check": 1.477956645956624e-12
+  }
+ }
+]

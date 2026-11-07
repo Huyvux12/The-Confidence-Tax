@@ -1,0 +1,18 @@
+{
+ "pooled TS fit (241-pt grid)": 1.3749825000122655,
+ "minimax TS fit (241-pt grid)": 1.4592552999965847,
+ "Thermometer-P fit (L-BFGS-B)": 0.21286040000268258,
+ "ATS-P fit (L-BFGS-B)": 0.2255524000065634,
+ "order-consistency features (train)": 0.17230299999937415,
+ "RB-Cal fit, fixed config (SLSQP)": 0.7147465000016382,
+ "RB-Cal LOSO, config 0 ('constant', 0)": 4.294088800001191,
+ "RB-Cal LOSO, config 4 ('rbf_oct', 1)": 17.65809579999768,
+ "RB-Cal LOSO, config 22 ('rbf_oct', 4)": 21.799505800008774,
+ "RB-Cal LOSO, config 31 ('rbf_oct', 8)": 22.511738499990315,
+ "Evo-RB fit (CMA-ES 300 x SLSQP)": 164.02179709999473,
+ "apply pooled TS to 3000 target rows": 0.02006680000340566,
+ "apply Thermometer-P to 3000 target rows": 0.04057019999891054,
+ "apply RB-Cal to 3000 target rows": 0.13330689999565948,
+ "apply Evo-RB to 3000 target rows": 0.09813939999730792,
+ "RB-Cal LOSO selection, 37 configs (estimate)": 739.5773569000012
+}

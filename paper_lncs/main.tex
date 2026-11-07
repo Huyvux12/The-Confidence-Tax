@@ -136,7 +136,8 @@ For each candidate structure the inner level solves~\eqref{eq:rbcal} exactly for
 The fitness is the mean regret on the selection split plus a penalty of 100 per unit of significant budget violation there.
 Because the selection split is now used for fitness, the deployment gate moves to the third, untouched audit split.
 Constant-temperature units (no structure) are left unchanged.
-Fitting one unit takes about 7 minutes on one CPU core.
+On one CPU thread and one unit (14{,}744 training rows), fitting Evo-RB takes \TimeEvo{}\,s, against \TimeRbFit{}\,s for one RB-Cal fit and \TimePooled{}\,s for pooled TS; the leave-one-source-out choice of $(J,\lambda)$, shared by both, takes about \TimeLosoMin{}\,min, and applying any calibrator to 3000 target rows takes under 0.2\,s.
+All of this is offline and per model--prompt pair; RB-Cal and Evo-RB additionally need both answer orders at prediction time, which doubles the language-model inference.
 Algorithm~\ref{alg:evorb} summarises the procedure.
 
 \begin{algorithm}[t]

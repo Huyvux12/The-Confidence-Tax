@@ -32,3 +32,10 @@ runs/colab_poll*.txt
 runs/rbcal_confirm2/units/
 runs/rbcal_confirm3/units/
 runs/rbcal_confirm4/units/
+
+# LNCS build files (paper_lncs/main.pdf is kept)
+paper_lncs/*.aux
+paper_lncs/*.bbl
+paper_lncs/*.blg
+paper_lncs/*.log
+paper_lncs/*.out

@@ -33,7 +33,7 @@ We cast calibration transfer as a many-objective problem with one regret objecti
 Evolution strategies enter in two ways.
 CMA-ES maps the empirical Pareto front between mean gain and worst-source regret and certifies that the gradient-based solutions of the non-convex constrained problem are not improved by a global search (0 of \FrontPairs{} problems).
 A bilevel variant, Evo-RB, evolves the structure of the field (radial-basis centres and bandwidth) with CMA-ES while the weights are solved exactly under the budget.
-On five open-weight models, two prompts and \NTotal{} target task units from five evaluation rosters, four of them sealed and pre-registered, Evo-RB harms \AggEvoHarm{} units (\AggEvoHarmRate\%), against \AggThermoHarm--\AggAtsHarm{} (\AggThermoHarmRate--\AggAtsHarmRate\%) for pooled temperature scaling, Thermometer and adaptive temperature scaling, lowers expected calibration error on \AggEvoEceDown\% of units against \AggThermoEceDown\%, and retains \RetainEvo\% of their mean log-loss gain: a confidence tax of about \TaxEvo\% of the gain buys roughly \HarmRatio{} times fewer harmed tasks.
+On five open-weight models, two prompts and \NTotal{} target task units from five evaluation rosters, four of them sealed and pre-registered, Evo-RB harms \AggEvoHarm{} units (\AggEvoHarmRate\%), against \AggThermoHarm--\AggAtsHarm{} (\AggThermoHarmRate--\AggAtsHarmRate\%) for pooled temperature scaling, Thermometer and adaptive temperature scaling, lowers expected calibration error on \AggEvoEceDown\% and the Brier score on \AggEvoBrierDown\% of units against \AggThermoEceDown\% and \AggThermoBrierDown\%, and retains \RetainEvo\% of their mean log-loss gain: a confidence tax of about \TaxEvo\% of the gain buys roughly \HarmRatio{} times fewer harmed tasks.
 \keywords{Calibration \and Evolution strategies \and Multi-objective optimisation \and Language models \and Transfer learning}
 \end{abstract}
 
@@ -184,20 +184,25 @@ Thermometer-P and ATS-P adapt Thermometer~\cite{shen2024thermometer} and ATS~\ci
 They are adaptations, not reproductions: the originals read hidden states.
 
 \paragraph{Metrics.}
-Per target task unit (model $\times$ prompt $\times$ task) we report the change in log-loss relative to the uncalibrated model ($\Delta$, lower is better), harm ($\Delta>0.01$), ECE with 15 equal-width bins, and whether ECE decreased.
+Per target task unit (model $\times$ prompt $\times$ task) we report the change in log-loss relative to the uncalibrated model ($\Delta$, lower is better), harm ($\Delta>0.01$), ECE with 15 equal-width bins on the top-1 confidence, and the Brier score
+\begin{equation}
+\mathrm{BS}=\sum_{k=1}^{K}\big(q_k-\mathbf{1}[y=k]\big)^2,
+\end{equation}
+a second strictly proper scoring rule, averaged over the rows of the unit; $q$ is the calibrated distribution ($q=p$ for the uncalibrated model), and the sum runs over the $K$ options without division by $K$.
+For ECE and Brier score we also report whether they decreased relative to the uncalibrated model.
 
 \section{Results}\label{sec:results}
 \begin{table}[t]
 \centering
-\caption{Mean $\Delta$NLL (nats; lower is better) and number of harmed task units (\#h, $\Delta>0.01$) on each roster, and the aggregate over all \NTotal{} units: harmed units, mean $\Delta$, mean ECE and share of units whose ECE decreased. C1/C2/C3/C4: \NCone/\NCtwo/\NCthree/\NCfour{} units; LOTO: \NLoto{} units.}
+\caption{Mean $\Delta$NLL (nats; lower is better) and number of harmed task units (\#h, $\Delta>0.01$) on each roster, and the aggregate over all \NTotal{} units: harmed units, mean $\Delta$, mean Brier score (uncalibrated: \AggIdBrier), mean ECE, and the shares of units whose Brier score and ECE decreased ($\downarrow$). C1/C2/C3/C4: \NCone/\NCtwo/\NCthree/\NCfour{} units; LOTO: \NLoto{} units.}
 \label{tab:main}
 \setlength{\tabcolsep}{3.2pt}
 \resizebox{\linewidth}{!}{%
-\begin{tabular}{lcccccccccccccc}
+\begin{tabular}{lcccccccccccccccc}
 \toprule
-& \multicolumn{2}{c}{C1} & \multicolumn{2}{c}{C2} & \multicolumn{2}{c}{C3} & \multicolumn{2}{c}{C4} & \multicolumn{2}{c}{LOTO} & \multicolumn{4}{c}{All \NTotal{} units}\\
-\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}\cmidrule(lr){10-11}\cmidrule(lr){12-15}
-Method & $\Delta$ & \#h & $\Delta$ & \#h & $\Delta$ & \#h & $\Delta$ & \#h & $\Delta$ & \#h & \#h & $\Delta$ & ECE & ECE$\downarrow$\\
+& \multicolumn{2}{c}{C1} & \multicolumn{2}{c}{C2} & \multicolumn{2}{c}{C3} & \multicolumn{2}{c}{C4} & \multicolumn{2}{c}{LOTO} & \multicolumn{6}{c}{All \NTotal{} units}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}\cmidrule(lr){10-11}\cmidrule(lr){12-17}
+Method & $\Delta$ & \#h & $\Delta$ & \#h & $\Delta$ & \#h & $\Delta$ & \#h & $\Delta$ & \#h & \#h & $\Delta$ & Brier & Brier$\downarrow$ & ECE & ECE$\downarrow$\\
 \midrule
 \inputtable{generated/tab_main.tex}
 \bottomrule
@@ -224,6 +229,8 @@ No method dominates Evo-RB on both axes on any roster.
 Fig.~\ref{fig:ece} plots the calibrated against the uncalibrated ECE of every held-out LOTO unit for Thermometer-P and Evo-RB.
 Thermometer-P maps most units to a nearly constant ECE of about 0.05--0.1, a flat cloud; this is good for strongly miscalibrated units and bad for units that were already calibrated, which it pushes above the diagonal (orange crosses mark log-loss harm).
 Evo-RB corrects strongly miscalibrated units less (its mean ECE is \AggEvoEce{} against \AggThermoEce{} over all units) but almost never moves a unit above the diagonal; it lowers ECE on \AggEvoEceDown\% of all units against \AggThermoEceDown\% for Thermometer-P, and on more units than every baseline on every roster.
+The Brier score tells the same story.
+The unconstrained methods have the lowest mean (\AggThermoBrier--\AggAtsBrier{} against \AggEvoBrier{} for Evo-RB and \AggIdBrier{} uncalibrated), a difference of half a hundredth, but Evo-RB lowers the Brier score on \AggEvoBrierDown\% of units, against \AggThermoBrierDown\% for Thermometer-P, \AggPooledBrierDown\% for pooled TS and \AggAtsBrierDown\% for ATS-P, again more units than every baseline on every roster.
 
 \begin{figure}[t]
 \centering

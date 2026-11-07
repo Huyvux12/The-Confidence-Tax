@@ -39,9 +39,82 @@ def write_macros():
     (GEN / "numbers.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
+def unit_metrics():
+    """roster -> method -> {(model, prompt, task): metrics} from the result files (labels already applied there)."""
+    keep = ("delta_nll", "ece_15", "brier", "nll")
+
+    def from_rows(rows):
+        return {(x["model_id"], x["prompt_id"], x["task_id"]): {k: x[k] for k in keep} for x in rows}
+
+    def from_records(path, variant=None):
+        out = {}
+        for l in Path(path).read_text(encoding="utf-8").splitlines():
+            r = json.loads(l)
+            if variant and r.get("variant") != variant:
+                continue
+            src = "V" if gate_study.accept(r["select"]["V"], "G-sig") else "IDENTITY"
+            for t, mt in r["target"][src].items():
+                out.setdefault((r["unit"][0], r["unit"][1], t), {k: mt[k] for k in keep})   # first record wins
+        return out
+
+    R = {}
+    c1 = json.loads((ROOT / "runs/extra_baselines/metrics_confirm.json").read_text(encoding="utf-8"))
+    R["confirm1"] = {mm: from_rows([x for x in c1 if x["method_id"] == mm and not x["task_id"].startswith("__")])
+                     for mm in ("IDENTITY", "POOLED_TS", "THERMO_P", "ATS_P", "MRTS")}
+    for ph in ("confirm2", "confirm3", "confirm4"):
+        u = json.loads((ROOT / f"runs/rbcal_{ph}/{ph}_report.json").read_text(encoding="utf-8"))["units"]
+        R[ph] = {mm: from_rows(u[mm]) for mm in ("IDENTITY", "POOLED_TS", "THERMO_P", "ATS_P", "MRTS")}
+    base = v4_study.load("base_loto_aug")       # LOTO baselines on the original probabilities (with Brier)
+    R["LOTO"] = {mm: {(x["unit"][0], x["unit"][1], x["task"]): {k: x[k] for k in keep}
+                      for x in base_study.rows_of(base, mm)} for mm in ("IDENTITY", "POOLED_TS", "THERMO_P", "ATS_P", "MRTS")}
+    v4 = {"confirm1": "final_confirm", "confirm2": "final_confirm2", "confirm3": "final_confirm3",
+          "confirm4": "final_confirm4", "LOTO": "loto"}
+    ev = {"confirm1": "evo_confirm", "confirm2": "evo_confirm2", "confirm3": "evo_confirm3",
+          "confirm4": "evo_confirm4", "LOTO": "evo_loto"}
+    for ro in R:
+        R[ro]["V4B"] = from_records(ROOT / f"runs/v4_study/{v4[ro]}.jsonl", "v4b")
+        R[ro]["EVO_RB"] = from_records(ROOT / f"runs/evo_study/{ev[ro]}.jsonl")
+    return R
+
+
+def aggregate(R):
+    per, tot = {}, {}
+    for key, _ in METHODS:
+        acc = {"units": 0, "harms": 0, "ece_down": 0, "brier_down": 0, "d": 0.0, "e": 0.0, "b": 0.0, "nll": 0.0}
+        for ro, _ in ROSTERS:
+            ident = R[ro]["IDENTITY"]
+            ks = sorted(ident)
+            assert set(ks) == set(R[ro][key]), (ro, key)
+            d = np.array([R[ro][key][k]["delta_nll"] for k in ks])
+            e = np.array([R[ro][key][k]["ece_15"] for k in ks])
+            b = np.array([R[ro][key][k]["brier"] for k in ks])
+            e0 = np.array([ident[k]["ece_15"] for k in ks])
+            b0 = np.array([ident[k]["brier"] for k in ks])
+            per.setdefault(ro, {})[key] = {"n": len(ks), "delta": float(d.mean()), "harm": int((d > 0.01).sum()),
+                                           "ece": float(e.mean()), "ece_down": int((e < e0).sum()),
+                                           "brier": float(b.mean()), "brier_down": int((b < b0).sum())}
+            per[ro].setdefault("IDENTITY", {"n": len(ks), "brier": float(b0.mean()), "ece": float(e0.mean())})
+            acc["units"] += len(ks)
+            acc["harms"] += int((d > 0.01).sum())
+            acc["ece_down"] += int((e < e0).sum())
+            acc["brier_down"] += int((b < b0).sum())
+            acc["d"] += d.sum()
+            acc["e"] += e.sum()
+            acc["b"] += b.sum()
+        n = acc["units"]
+        tot[key] = {"units": n, "harms": acc["harms"], "harm_rate": acc["harms"] / n, "mean_delta": acc["d"] / n,
+                    "mean_ece": acc["e"] / n, "ece_down_rate": acc["ece_down"] / n, "mean_brier": acc["b"] / n,
+                    "brier_down_rate": acc["brier_down"] / n}
+    n0 = sum(per[ro]["IDENTITY"]["n"] for ro, _ in ROSTERS)
+    tot["IDENTITY"] = {"units": n0, "mean_brier": sum(per[ro]["IDENTITY"]["brier"] * per[ro]["IDENTITY"]["n"]
+                                                      for ro, _ in ROSTERS) / n0}
+    (ROOT / "runs/evo_study/aggregate_500.json").write_text(json.dumps({"per_roster": per, "aggregate": tot}, indent=1),
+                                                            encoding="utf-8")
+    return per, tot
+
+
 def main_table():
-    agg = json.loads((ROOT / "runs/evo_study/aggregate_500.json").read_text(encoding="utf-8"))
-    per, tot = agg["per_roster"], agg["aggregate"]
+    per, tot = aggregate(unit_metrics())
     rows = []
     for key, name in METHODS:
         cells = []
@@ -50,7 +123,9 @@ def main_table():
             cells.append(f"{r['delta']:+.3f} & {r['harm']}")
         a = tot[key]
         bold = key == "EVO_RB"
-        row = f"{name} & " + " & ".join(cells) + f" & {a['harms']} ({100 * a['harm_rate']:.1f}\\%) & {a['mean_delta']:+.3f} & {a['mean_ece']:.3f} & {100 * a['ece_down_rate']:.0f}\\%"
+        row = (f"{name} & " + " & ".join(cells) + f" & {a['harms']} ({100 * a['harm_rate']:.1f}\\%) & {a['mean_delta']:+.3f}"
+               f" & {a['mean_brier']:.3f} & {100 * a['brier_down_rate']:.0f}\\% & {a['mean_ece']:.3f}"
+               f" & {100 * a['ece_down_rate']:.0f}\\%")
         rows.append(("\\textbf{" + name + "}" + row[len(name):]) if bold else row)
     (GEN / "tab_main.tex").write_text(" \\\\\n".join(rows) + " \\\\\n", encoding="utf-8")
     n = {ro: per[ro]["V4B"]["n"] for ro, _ in ROSTERS}
@@ -65,12 +140,16 @@ def main_table():
         m(f"Agg{short}Delta", a["mean_delta"])
         m(f"Agg{short}Ece", a["mean_ece"], "{:.3f}")
         m(f"Agg{short}EceDown", 100 * a["ece_down_rate"], "{:.0f}")
+        m(f"Agg{short}Brier", a["mean_brier"], "{:.3f}")
+        m(f"Agg{short}BrierDown", 100 * a["brier_down_rate"], "{:.0f}")
         for ro, rs in ROSTERS:
             r = per[ro][key]
+            m(f"{rs}{short}Brier", r["brier"], "{:.3f}")
             m(f"{rs}{short}Delta", r["delta"])
             m(f"{rs}{short}Harm", str(r["harm"]), "{}")
             m(f"{rs}{short}Ece", r["ece"], "{:.3f}")
             m(f"{rs}{short}EceDown", str(r["ece_down"]), "{}")
+    m("AggIdBrier", tot["IDENTITY"]["mean_brier"], "{:.3f}")
     retain = round(100 * tot["EVO_RB"]["mean_delta"] / tot["THERMO_P"]["mean_delta"])
     m("RetainEvo", str(retain), "{}")
     m("TaxEvo", str(100 - retain), "{}")          # share of the mean gain given up for safety

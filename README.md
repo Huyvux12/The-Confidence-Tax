@@ -71,11 +71,11 @@ Language Models*. Build: `sh paper_lncs/build.sh` (every number, table and figur
 
 ## Large artifacts (Hugging Face)
 
-The per-unit fits of the confirm2-4 rosters (`runs/rbcal_confirm{2,3,4}/units/`, 765 MB) are in the private
-dataset `huyvux3005/rbcal-confidence-tax-runs`, not in git:
+The per-unit fits of the confirm2-4 rosters (`runs/rbcal_confirm{2,3,4}/units/`, 765 MB) are in the public
+Hugging Face dataset [huyvux3005/rbcal-confidence-tax-runs](https://huggingface.co/datasets/huyvux3005/rbcal-confidence-tax-runs), not in git:
 
 ```bash
-hf download huyvux3005/rbcal-confidence-tax-runs --repo-type dataset --local-dir .   # needs access + hf auth login
+hf download huyvux3005/rbcal-confidence-tax-runs --repo-type dataset --local-dir .
 sha256sum -c runs/HF_SHA256SUMS.txt                                                   # 30 files must print OK
 ```
 

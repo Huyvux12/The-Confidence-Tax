@@ -1,0 +1,42 @@
+✓ Initialized. View run at 
+https://modal.com/apps/robertbr-1905/main/ap-eZgcjsx8LEf2n5t1OYXgMH
+✓ Created objects.
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\scripts\modal_v4.py
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\runs\gate_study\hypers.json
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\scripts\v4_study.py
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\scripts\gate_study.py
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\data\real\confirm3_sealed
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\data\real\confirm2_sealed
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\data\real\dev
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\data\real\confirm_sealed
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\calibration_extensions
+└── ✓ Created Function run.
+loto: 500 jobs, 0 done, 500 to run
+25/500
+50/500
+75/500
+100/500
+125/500
+150/500
+175/500
+200/500
+225/500
+250/500
+275/500
+300/500
+325/500
+350/500
+375/500
+400/500
+425/500
+450/500
+475/500
+500/500
+JOB DONE loto fails=0
+Stopping app - local entrypoint completed.
+✓ App completed. View run at 
+https://modal.com/apps/robertbr-1905/main/ap-eZgcjsx8LEf2n5t1OYXgMH

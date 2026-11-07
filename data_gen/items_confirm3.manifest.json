@@ -1,0 +1,53 @@
+{
+ "seed": 20261107,
+ "cap": 500,
+ "n_orders": 2,
+ "dropped_invalid": 1,
+ "role": "target_confirm3",
+ "tasks": {
+  "copa": {
+   "n": 500,
+   "pool": 500,
+   "K": [
+    2
+   ]
+  },
+  "lsat_lr": {
+   "n": 500,
+   "pool": 510,
+   "K": [
+    5
+   ]
+  },
+  "lsat_rc": {
+   "n": 268,
+   "pool": 268,
+   "K": [
+    5
+   ]
+  },
+  "pubmedqa": {
+   "n": 500,
+   "pool": 1000,
+   "K": [
+    3
+   ]
+  },
+  "quartz": {
+   "n": 384,
+   "pool": 384,
+   "K": [
+    2
+   ]
+  },
+  "scienceqa_text": {
+   "n": 500,
+   "pool": 2224,
+   "K": [
+    2,
+    3,
+    4
+   ]
+  }
+ }
+}

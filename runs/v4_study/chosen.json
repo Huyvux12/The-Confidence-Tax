@@ -1,0 +1,560 @@
+{
+ "v4a": {
+  "Qwen/Qwen3.5-9B|letter_colon": [
+   "rbf_oc",
+   4,
+   0.5,
+   0.0
+  ],
+  "Qwen/Qwen3.5-9B|paren": [
+   "rbf_oc",
+   4,
+   0.2,
+   0.0
+  ],
+  "allenai/Olmo-3-7B-Instruct|letter_colon": [
+   "rbf_oc",
+   8,
+   0.5,
+   0.01
+  ],
+  "allenai/Olmo-3-7B-Instruct|paren": [
+   "constant",
+   0,
+   null,
+   0.0
+  ],
+  "google/gemma-4-12B-it|letter_colon": [
+   "rbf_oc",
+   8,
+   0.5,
+   0.0
+  ],
+  "google/gemma-4-12B-it|paren": [
+   "rbf_oc",
+   8,
+   0.5,
+   0.0
+  ],
+  "ibm-granite/granite-4.2-8b|letter_colon": [
+   "rbf_oc",
+   8,
+   1.0,
+   0.0
+  ],
+  "ibm-granite/granite-4.2-8b|paren": [
+   "rbf_oc",
+   8,
+   1.0,
+   0.0
+  ],
+  "mistralai/Ministral-3-8B-Instruct-2512|letter_colon": [
+   "rbf_oc",
+   8,
+   1.0,
+   0.0
+  ],
+  "mistralai/Ministral-3-8B-Instruct-2512|paren": [
+   "rbf_oc",
+   2,
+   1.0,
+   0.0
+  ]
+ },
+ "v4b": {
+  "Qwen/Qwen3.5-9B|letter_colon": [
+   "rbf_oct",
+   4,
+   0.5,
+   0.0
+  ],
+  "Qwen/Qwen3.5-9B|paren": [
+   "rbf_oct",
+   8,
+   0.5,
+   0.1
+  ],
+  "allenai/Olmo-3-7B-Instruct|letter_colon": [
+   "rbf_oct",
+   4,
+   1.0,
+   0.0
+  ],
+  "allenai/Olmo-3-7B-Instruct|paren": [
+   "constant",
+   0,
+   null,
+   0.0
+  ],
+  "google/gemma-4-12B-it|letter_colon": [
+   "rbf_oct",
+   8,
+   0.5,
+   0.0
+  ],
+  "google/gemma-4-12B-it|paren": [
+   "rbf_oct",
+   4,
+   1.0,
+   0.0
+  ],
+  "ibm-granite/granite-4.2-8b|letter_colon": [
+   "rbf_oct",
+   8,
+   1.0,
+   0.0
+  ],
+  "ibm-granite/granite-4.2-8b|paren": [
+   "rbf_oct",
+   8,
+   1.0,
+   0.0
+  ],
+  "mistralai/Ministral-3-8B-Instruct-2512|letter_colon": [
+   "rbf_oct",
+   8,
+   1.0,
+   0.0
+  ],
+  "mistralai/Ministral-3-8B-Instruct-2512|paren": [
+   "rbf_oct",
+   8,
+   1.0,
+   0.0
+  ]
+ },
+ "v5a": {
+  "Qwen/Qwen3.5-9B|letter_colon": [
+   "rbf_oct",
+   4,
+   0.5,
+   0.0
+  ],
+  "Qwen/Qwen3.5-9B|paren": [
+   "rbf_oct",
+   1,
+   0.2,
+   0.1
+  ],
+  "allenai/Olmo-3-7B-Instruct|letter_colon": [
+   "rbf_oct",
+   8,
+   0.2,
+   0.1
+  ],
+  "allenai/Olmo-3-7B-Instruct|paren": [
+   "constant",
+   0,
+   null,
+   0.0
+  ],
+  "google/gemma-4-12B-it|letter_colon": [
+   "rbf_oct",
+   8,
+   0.5,
+   0.0
+  ],
+  "google/gemma-4-12B-it|paren": [
+   "rbf_oct",
+   8,
+   1.0,
+   0.0
+  ],
+  "ibm-granite/granite-4.2-8b|letter_colon": [
+   "rbf_oct",
+   8,
+   1.0,
+   0.0
+  ],
+  "ibm-granite/granite-4.2-8b|paren": [
+   "rbf_oct",
+   8,
+   1.0,
+   0.0
+  ],
+  "mistralai/Ministral-3-8B-Instruct-2512|letter_colon": [
+   "rbf_oct",
+   8,
+   1.0,
+   0.0
+  ],
+  "mistralai/Ministral-3-8B-Instruct-2512|paren": [
+   "rbf_oct",
+   8,
+   1.0,
+   0.0
+  ]
+ },
+ "v5b": {
+  "Qwen/Qwen3.5-9B|letter_colon": [
+   "rbf_oct",
+   4,
+   0.2,
+   0.0
+  ],
+  "Qwen/Qwen3.5-9B|paren": [
+   "rbf_oct",
+   8,
+   0.5,
+   0.0
+  ],
+  "allenai/Olmo-3-7B-Instruct|letter_colon": [
+   "rbf_oct",
+   8,
+   0.2,
+   0.1
+  ],
+  "allenai/Olmo-3-7B-Instruct|paren": [
+   "constant",
+   0,
+   null,
+   0.0
+  ],
+  "google/gemma-4-12B-it|letter_colon": [
+   "rbf_oct",
+   8,
+   0.5,
+   0.1
+  ],
+  "google/gemma-4-12B-it|paren": [
+   "rbf_oct",
+   8,
+   0.5,
+   0.0
+  ],
+  "ibm-granite/granite-4.2-8b|letter_colon": [
+   "rbf_oct",
+   8,
+   1.0,
+   0.1
+  ],
+  "ibm-granite/granite-4.2-8b|paren": [
+   "rbf_oct",
+   8,
+   1.0,
+   0.0
+  ],
+  "mistralai/Ministral-3-8B-Instruct-2512|letter_colon": [
+   "rbf_oct",
+   8,
+   1.0,
+   0.0
+  ],
+  "mistralai/Ministral-3-8B-Instruct-2512|paren": [
+   "rbf_oct",
+   8,
+   1.0,
+   0.0
+  ]
+ },
+ "v4b_avg": {
+  "Qwen/Qwen3.5-9B|letter_colon": [
+   "rbf_oct",
+   4,
+   0.5,
+   0.0
+  ],
+  "Qwen/Qwen3.5-9B|paren": [
+   "rbf_oct",
+   8,
+   0.5,
+   0.0
+  ],
+  "allenai/Olmo-3-7B-Instruct|letter_colon": [
+   "rbf_oct",
+   4,
+   0.2,
+   0.01
+  ],
+  "allenai/Olmo-3-7B-Instruct|paren": [
+   "rbf_oct",
+   4,
+   0.2,
+   0.1
+  ],
+  "google/gemma-4-12B-it|letter_colon": [
+   "rbf_oct",
+   8,
+   0.5,
+   0.0
+  ],
+  "google/gemma-4-12B-it|paren": [
+   "rbf_oct",
+   1,
+   0.5,
+   0.0
+  ],
+  "ibm-granite/granite-4.2-8b|letter_colon": [
+   "rbf_oct",
+   8,
+   1.0,
+   0.0
+  ],
+  "ibm-granite/granite-4.2-8b|paren": [
+   "rbf_oct",
+   8,
+   0.2,
+   0.01
+  ],
+  "mistralai/Ministral-3-8B-Instruct-2512|letter_colon": [
+   "rbf_oct",
+   8,
+   0.5,
+   0.0
+  ],
+  "mistralai/Ministral-3-8B-Instruct-2512|paren": [
+   "rbf_oct",
+   8,
+   0.5,
+   0.0
+  ]
+ },
+ "v6_aug": {
+  "Qwen/Qwen3.5-9B|letter_colon": [
+   "rbf_ocp",
+   1,
+   0.5,
+   0.0
+  ],
+  "Qwen/Qwen3.5-9B|paren": [
+   "rbf_ocp",
+   4,
+   1.0,
+   0.1
+  ],
+  "allenai/Olmo-3-7B-Instruct|letter_colon": [
+   "rbf_ocp",
+   8,
+   1.0,
+   0.0
+  ],
+  "allenai/Olmo-3-7B-Instruct|paren": [
+   "constant",
+   0,
+   null,
+   0.0
+  ],
+  "google/gemma-4-12B-it|letter_colon": [
+   "rbf_ocp",
+   8,
+   1.0,
+   0.0
+  ],
+  "google/gemma-4-12B-it|paren": [
+   "rbf_ocp",
+   8,
+   1.0,
+   0.0
+  ],
+  "ibm-granite/granite-4.2-8b|letter_colon": [
+   "rbf_ocp",
+   4,
+   1.0,
+   0.0
+  ],
+  "ibm-granite/granite-4.2-8b|paren": [
+   "rbf_ocp",
+   4,
+   1.0,
+   0.0
+  ],
+  "mistralai/Ministral-3-8B-Instruct-2512|letter_colon": [
+   "rbf_ocp",
+   4,
+   1.0,
+   0.0
+  ],
+  "mistralai/Ministral-3-8B-Instruct-2512|paren": [
+   "rbf_ocp",
+   4,
+   1.0,
+   0.0
+  ]
+ },
+ "v6_avg": {
+  "Qwen/Qwen3.5-9B|letter_colon": [
+   "rbf_ocp",
+   4,
+   0.5,
+   0.0
+  ],
+  "Qwen/Qwen3.5-9B|paren": [
+   "rbf_ocp",
+   8,
+   0.5,
+   0.0
+  ],
+  "allenai/Olmo-3-7B-Instruct|letter_colon": [
+   "rbf_ocp",
+   4,
+   1.0,
+   0.0
+  ],
+  "allenai/Olmo-3-7B-Instruct|paren": [
+   "rbf_ocp",
+   8,
+   0.5,
+   0.1
+  ],
+  "google/gemma-4-12B-it|letter_colon": [
+   "rbf_ocp",
+   1,
+   0.5,
+   0.0
+  ],
+  "google/gemma-4-12B-it|paren": [
+   "rbf_ocp",
+   8,
+   1.0,
+   0.0
+  ],
+  "ibm-granite/granite-4.2-8b|letter_colon": [
+   "rbf_ocp",
+   8,
+   1.0,
+   0.0
+  ],
+  "ibm-granite/granite-4.2-8b|paren": [
+   "rbf_ocp",
+   8,
+   1.0,
+   0.0
+  ],
+  "mistralai/Ministral-3-8B-Instruct-2512|letter_colon": [
+   "rbf_ocp",
+   8,
+   1.0,
+   0.0
+  ],
+  "mistralai/Ministral-3-8B-Instruct-2512|paren": [
+   "rbf_ocp",
+   8,
+   1.0,
+   0.0
+  ]
+ },
+ "v6p1_aug": {
+  "Qwen/Qwen3.5-9B|letter_colon": [
+   "rbf_ocp1",
+   4,
+   1.0,
+   0.0
+  ],
+  "Qwen/Qwen3.5-9B|paren": [
+   "rbf_ocp1",
+   4,
+   0.2,
+   0.0
+  ],
+  "allenai/Olmo-3-7B-Instruct|letter_colon": [
+   "rbf_ocp1",
+   4,
+   1.0,
+   0.0
+  ],
+  "allenai/Olmo-3-7B-Instruct|paren": [
+   "constant",
+   0,
+   null,
+   0.0
+  ],
+  "google/gemma-4-12B-it|letter_colon": [
+   "rbf_ocp1",
+   8,
+   1.0,
+   0.0
+  ],
+  "google/gemma-4-12B-it|paren": [
+   "rbf_ocp1",
+   8,
+   1.0,
+   0.0
+  ],
+  "ibm-granite/granite-4.2-8b|letter_colon": [
+   "rbf_ocp1",
+   8,
+   1.0,
+   0.0
+  ],
+  "ibm-granite/granite-4.2-8b|paren": [
+   "rbf_ocp1",
+   8,
+   1.0,
+   0.0
+  ],
+  "mistralai/Ministral-3-8B-Instruct-2512|letter_colon": [
+   "rbf_ocp1",
+   2,
+   1.0,
+   0.01
+  ],
+  "mistralai/Ministral-3-8B-Instruct-2512|paren": [
+   "rbf_ocp1",
+   2,
+   1.0,
+   0.0
+  ]
+ },
+ "v6p1_avg": {
+  "Qwen/Qwen3.5-9B|letter_colon": [
+   "rbf_ocp1",
+   8,
+   0.2,
+   0.0
+  ],
+  "Qwen/Qwen3.5-9B|paren": [
+   "rbf_ocp1",
+   8,
+   0.5,
+   0.0
+  ],
+  "allenai/Olmo-3-7B-Instruct|letter_colon": [
+   "rbf_ocp1",
+   8,
+   0.5,
+   0.01
+  ],
+  "allenai/Olmo-3-7B-Instruct|paren": [
+   "rbf_ocp1",
+   4,
+   1.0,
+   0.1
+  ],
+  "google/gemma-4-12B-it|letter_colon": [
+   "rbf_ocp1",
+   8,
+   1.0,
+   0.0
+  ],
+  "google/gemma-4-12B-it|paren": [
+   "rbf_ocp1",
+   4,
+   1.0,
+   0.0
+  ],
+  "ibm-granite/granite-4.2-8b|letter_colon": [
+   "rbf_ocp1",
+   2,
+   1.0,
+   0.0
+  ],
+  "ibm-granite/granite-4.2-8b|paren": [
+   "rbf_ocp1",
+   2,
+   1.0,
+   0.0
+  ],
+  "mistralai/Ministral-3-8B-Instruct-2512|letter_colon": [
+   "rbf_ocp1",
+   4,
+   1.0,
+   0.0
+  ],
+  "mistralai/Ministral-3-8B-Instruct-2512|paren": [
+   "rbf_ocp1",
+   8,
+   1.0,
+   0.0
+  ]
+ }
+}

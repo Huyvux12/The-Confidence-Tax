@@ -1,0 +1,52 @@
+{
+ "n_units": 250,
+ "macro": {
+  "IDENTITY": 0.0,
+  "POOLED_TS": -0.6045198060140257,
+  "THERMO_P": -0.6073428195748825,
+  "ATS_P": -0.6002467788026319,
+  "MRTS": -0.451051155817935,
+  "V4B": -0.5730974271856453
+ },
+ "harms": {
+  "IDENTITY": 0,
+  "POOLED_TS": 22,
+  "THERMO_P": 19,
+  "ATS_P": 32,
+  "MRTS": 0,
+  "V4B": 0
+ },
+ "oracle_any": -0.6173417644215426,
+ "oracle_safe": -0.6173417644215426,
+ "oracle_v4b_or_pooled_safe": -0.6129077878233518,
+ "oracle_gain_over_v4b": 0.03981036063770649,
+ "gap_decomposition": {
+  "total_gap_mean": 0.03142237882838029,
+  "share_from_units_where_pooled_harms": -0.11748505368164237,
+  "share_from_tasks_where_pooled_harms_some_unit": -0.2324594017951974,
+  "units_pooled_better": 160
+ },
+ "auroc": {
+  "pooled_harms": {
+   "n_pos": 22,
+   "entropy": 0.6933811802232854,
+   "maxprob": 0.7438197767145136,
+   "order_tv": 0.8915470494417863,
+   "peer_argmax_agree": 0.8859649122807017,
+   "peer_prob_on_top": 0.8883572567783095,
+   "position_prior_entropy": 0.8492132867132867,
+   "template_tv": 0.9234449760765551
+  },
+  "pooled_beats_v4b_by_0.01": {
+   "n_pos": 134,
+   "entropy": 0.5309444158517757,
+   "maxprob": 0.5683221821924859,
+   "order_tv": 0.6560730828615543,
+   "peer_argmax_agree": 0.6792653113741637,
+   "peer_prob_on_top": 0.6903628409675759,
+   "position_prior_entropy": 0.630464480874317,
+   "template_tv": 0.6271551724137931
+  }
+ },
+ "go": true
+}

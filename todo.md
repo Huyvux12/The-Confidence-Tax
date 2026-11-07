@@ -148,3 +148,115 @@ Báo cáo: `paper/RECHECK.md` (mọi phát hiện có nguồn). Lỗi rõ ràng 
 - Dữ kiện: 3 lỗi trích dẫn + 2 con số gõ tay đã sửa; model/dataset đúng; revision + giấy phép đã ghi (`data_gen/revisions.json`).
 - Tái lập: 18/18 số liệu tính lại khớp; fit lại từ đầu 1 đơn vị confirm khớp (33/33 cùng cấu hình/cổng, lệch ≤ 8e-12);
   thêm README, requirements, `--revision`. 84/84 test pass, paper 14 trang build sạch.
+
+## Giai đoạn 6 — Gate mới để giữ cải thiện ngang pooled mà vẫn 0 hại (chốt 2026-11-06, không mở rộng thêm)
+Lý do: bản fit RB-Cal-RBF (ε=0.01, z=0) TRƯỚC gate đã đạt ngang pooled với 0 hại trên cả dev (Δ −0.529 vs pooled −0.529)
+lẫn confirm (NLL 0.679 vs 0.686). Gate hiện tại (max_w Δ̂_select ≤ ε, không tính nhiễu, 25 nguồn) từ chối phần lớn
+→ mất cải thiện. Cần một gate có cơ sở thống kê, chọn trên dev, không chọn trên confirm.
+Biến thể (khai báo trước khi xem kết quả): ứng viên {C0: z=0, C1: z=1.645 (hiện tại)} × gate {G-mean: hiện tại,
+G-sig: chỉ từ chối khi ∃w: Δ̂_select,w − 1.645·SE_select,w > ε (vi phạm có ý nghĩa)} × fallback {identity, MRTS} = 8.
+Quy tắc chọn trên dev: trong các biến thể có 0 unit hại (>0.01) trên dev, lấy cải thiện macro lớn nhất;
+hòa → ưu tiên fallback identity, rồi G-mean, rồi C1.
+- [x] 6.1 `scripts/gate_study.py`: fit lại cấu hình đã chọn (không tìm lại menu), lưu Δ̂_select,w + SE theo cụm, áp 8 biến thể.
+- [x] 6.2 Chạy trên dev → bảng 8 biến thể; ghi lựa chọn đóng băng vào `data_gen/PROTOCOL_LOG.md` TRƯỚC khi chấm confirm.
+- [x] 6.3 Áp biến thể đã đóng băng lên confirm và LOTO (250 job) → số liệu ghi là "v2, sau khi đã mở confirm; thứ cấp".
+- [ ] 6.4 Thêm v2 vào paper (Bảng 5/6 + đoạn công bố) — KHÔNG thay phương pháp chính.
+Xong khi: 6.1–6.4 xong, test pass, paper build sạch, báo cáo cả khi v2 không tốt hơn.
+Ngoài phạm vi: bộ confirm mới (cần để v2 thành phương pháp chính) — quyết định riêng sau.
+### Kết quả giai đoạn 6 (`runs/gate_study/`, chi tiết trong PROTOCOL_LOG 2026-11-06)
+| Biến thể | Dev Δ / hại | Confirm Δ / hại / NLL | LOTO Δ / hại / worst |
+|---|---|---|---|
+| Chính hiện tại (C1, G-mean, identity) | −0.472 / 0 | −0.230 / 0 / 0.712 | −0.524 / 2 / +0.011 |
+| v2 đóng băng (C0, G-sig, MRTS) | −0.512 / 0 | −0.249 / 0 / 0.693 | −0.572 / **7** / +0.044 |
+| C1, G-sig (thấy sau, chưa đóng băng) | −0.498 / 0 | −0.251 / 0 / 0.692 | −0.560 / 2 / +0.011 |
+| Pooled TS (so sánh) | −0.529 / 1 | −0.257 / 7 / 0.686 | −0.605 / 22 / +0.073 |
+- v2 không được dùng: LOTO tăng từ 2 lên 7 unit hại. C1 + G-sig tốt hơn bản chính trên cả 3 tập với cùng số hại,
+  nhưng chọn sau khi đã xem → cần bộ confirm mới. 6.4 (sửa paper) chờ bạn quyết vì kết quả đổi hướng viết.
+
+## Giai đoạn 7 — Bộ confirm thứ hai (confirm2) cho biến thể v3 = C1 + G-sig (chốt 2026-11-06)
+Tiền đăng ký: PROTOCOL_LOG 2026-11-06 (task, endpoint P1–P3, viết trước khi có dữ liệu).
+- [x] 7.1 `data_gen/build_items_confirm2.py` → `data_gen/items_confirm2.jsonl` + revision dataset.
+- [x] 7.2 Inference 5 model trên Modal A100 (acc3) → `data_gen/raw_confirm2/`.
+- [x] 7.3 `data/real/confirm2_sealed` (nguồn giữ nguyên từng byte) + SHA256.
+- [x] 7.4 Chấm: run_rbcal --reuse-selection, gate_study (v3), Thermometer-P/ATS-P; endpoint P1–P3.
+- [x] 7.5 Báo cáo + ghi PROTOCOL_LOG (kể cả khi thất bại).
+Xong khi: 7.1–7.5 xong, không còn app Modal nào chạy.
+### Kết quả giai đoạn 7 (confirm2, 60 unit; `runs/rbcal_confirm2/confirm2_report.json`)
+| Phương pháp | Δ | hại | worst | NLL | Brier | ECE |
+|---|---|---|---|---|---|---|
+| Identity | 0 | 0 | 0 | 0.941 | 0.355 | 0.136 |
+| Pooled TS | −0.319 | 9 | +0.051 | 0.622 | 0.314 | 0.071 |
+| Thermometer-P | −0.323 | 7 | +0.031 | 0.619 | 0.313 | 0.067 |
+| ATS-P | −0.315 | 12 | +0.068 | 0.626 | 0.315 | 0.072 |
+| MRTS | −0.266 | 0 | 0 | 0.676 | 0.326 | 0.088 |
+| v1 (bản chính cũ) | −0.296 | 0 | +0.009 | 0.645 | 0.318 | 0.073 |
+| **v3 (C1 + G-sig)** | **−0.310** | **0** | +0.009 | **0.631** | **0.315** | **0.068** |
+P1, P2, P3 đều PASS. Bỏ Gemma (post hoc): v3 −0.256 / 0 hại, pooled −0.253 / 9 hại.
+
+## Giai đoạn 8 — Đặc trưng nhất quán theo thứ tự đáp án (v4), chốt 2026-11-06, không mở rộng thêm
+Lý do: trên source_train, câu nhất quán khi đảo đáp án ở arc_easy/openbookqa/hellaswag đã chuẩn (gap +0.007..+0.022),
+câu không nhất quán lệch nặng (+0.21..+0.25); chính các nguồn này chặn budget của v3.
+Biến thể (khai báo trước): v4a = v3 + đặc trưng theo câu tv (TV giữa 2 thứ tự đáp án, quy về nhãn ngữ nghĩa);
+v4b = v4a + đặc trưng theo task: tv trung bình của batch (nguồn: theo task nguồn; target: theo task target, không nhãn).
+Cả hai: ứng viên C1 (z=1.645, eps=0.01), menu RBF như cũ trên đặc trưng mở rộng, chọn bằng LOSO, gate G-sig, fallback identity.
+Quy tắc chọn trên dev: 0 unit hại, rồi cải thiện lớn nhất; hòa -> v4a. Cổng LOTO: v4 chỉ đi tiếp confirm3 nếu
+LOTO hại <= 2 (v3) VÀ cải thiện LOTO >= v3 (-0.5599). Không đạt -> dừng, báo cáo.
+- [x] 8.1 Code đặc trưng + test (tv ghép cặp theo case, bất biến hoán vị, cận beta vẫn đúng).
+- [x] 8.2 Dev: chọn cấu hình LOSO (Modal CPU, acc3) cho v4a, v4b; bảng dev; chốt vào PROTOCOL_LOG.
+- [x] 8.3 LOTO 250 job cho biến thể đã chốt; áp cổng LOTO.
+- [x] 8.4 (nếu qua cổng) Tiền đăng ký confirm3 -> build 5-6 task mới -> inference Modal A100 -> chấm.
+- [x] 8.5 Báo cáo + PROTOCOL_LOG, kể cả khi thất bại; không còn app Modal nào chạy.
+### Kết quả giai đoạn 8
+| Phương pháp | Dev Δ/hại | LOTO Δ/hại | Confirm3 Δ/hại | Confirm3 NLL/Brier/ECE | ECE giảm (C3) |
+|---|---|---|---|---|---|
+| Pooled TS | −0.529/1 | −0.605/22 | −0.305/7 | 0.492/0.257/0.051 | 45/60 |
+| Thermometer-P | — | −0.607/19 | −0.306/5 | 0.490/0.256/0.049 | 45/60 |
+| ATS-P | — | −0.600/32 | −0.304/9 | 0.492/0.257/0.052 | 43/60 |
+| v3 | −0.498/0 | −0.560/2 | −0.279/0 | 0.518/0.262/0.062 | 50/60 |
+| **v4b** | −0.505/0 | −0.573/**0** | −0.285/0 | 0.512/0.261/0.061 | 47/60 |
+Q1–Q3 PASS. v4b nhích hơn v3 (+0.006 nats, CI loại 0; LOTO 0/250 hại) nhưng chưa xóa trade-off với SOTA.
+
+## Giai đoạn 9 — Điểm vận hành "nới" (v5): ngang SOTA về cải thiện, ít hại hơn hẳn (chốt 2026-11-06)
+Biến thể (khai báo trước): đặc trưng v4b (rbf_oct), KHÔNG margin (z=0), gate G-sig với ngưỡng = ε, fallback identity;
+v5a: ε=0.01, v5b: ε=0.02. Chọn cấu hình bằng LOSO trên dev (ngưỡng xếp hạng 0.01 như cũ).
+Quy tắc chốt: biến thể đủ điều kiện nếu dev hại <= 1/30 VÀ LOTO hại <= 7/250 (2.8%); trong đó lấy cải thiện LOTO lớn nhất;
+hòa -> ε nhỏ hơn. Không biến thể nào đủ -> dừng, báo cáo.
+- [x] 9.1 Code: ε/z theo biến thể trong v4_study, ngưỡng gate = ε.
+- [x] 9.2 LOSO + fit dev + LOTO cho v5a, v5b (Modal CPU, acc3) -> chốt theo quy tắc.
+- [-] 9.3 (bỏ: v5a thua v4b trên dev và LOTO, xem PROTOCOL_LOG) Tiền đăng ký confirm4 (6 task mới) -> build -> inference Modal A100 -> chấm.
+- [x] 9.4 Đường đánh đổi đầy đủ trên confirm2/confirm3 (mọi biến thể, phân tích phụ) + báo cáo + PROTOCOL_LOG.
+
+## Giai đoạn 10 — Theo báo cáo `reports/Hướng hiệu chỉnh chuyển giao mới.md` (chốt 2026-11-06)
+- [x] 10.0 Chẩn đoán (local CPU): cận oracle của bộ chọn trên LOTO; AUROC của tín hiệu cấp task (tv trung bình,
+      TV giữa 2 template, đồng thuận peer, entropy prior vị trí kiểu PriDe, entropy trung bình) cho 2 nhãn:
+      "pooled hại" (Δ_pooled > 0.01) và "pooled hơn v4b > 0.01". ĐI TIẾP nếu oracle hơn v4b >= 0.01 nats
+      VÀ có tín hiệu AUROC >= 0.75; không thì dừng và báo cáo.
+- [x] 10.1 Hướng 3: base = trung bình xác suất 2 thứ tự; chạy lại identity/pooled/Thermo-P/ATS-P/v4b trên dev + LOTO.
+- [x] 10.2 (cổng LOTO KHÔNG đạt) Hướng 1: v6 (peer feature) trên base đã chốt; LOSO dev -> LOTO; nhánh công bằng (baseline + peer); biến thể 1 peer.
+      Cổng LOTO khai báo trước: hại <= 2/250 VÀ lợi <= -0.588.
+- [-] 10.3 (dừng theo khai báo) Hướng 2: bộ chọn + LTT, frontier lợi-hại.
+- [-] 10.4 (dừng theo khai báo) Tiền đăng ký confirm4 (8-12 task mới) -> inference Modal A100 -> chấm.
+- [x] 10.5 Báo cáo + PROTOCOL_LOG; dừng ở bất kỳ cổng nào không đạt.
+### Kết quả giai đoạn 10 (LOTO 250 unit)
+| | Base gốc (1 thứ tự): Δ / hại | Base trung bình 2 thứ tự: Δ so với identity cùng base / hại | Δ so với identity gốc |
+|---|---|---|---|
+| Identity | 0 / 0 | 0 / 0 | −0.290 |
+| Pooled TS | −0.605 / 22 | −0.362 / 22 | −0.652 |
+| Thermometer-P (+peer) | −0.607 / 19 (−0.607 / 18) | −0.364 / 17 (−0.364 / 18) | −0.654 |
+| ATS-P (+peer) | −0.600 / 32 (−0.636 / 19) | −0.351 / 44 (−0.382 / 29) | −0.641 |
+| v4b | −0.573 / 0 | −0.298 / 0 | −0.587 |
+| **v6 (peer)** | −0.583 / 1 | −0.316 / 0 | **−0.605 / 0 hại** |
+Cổng v6 không đạt -> dừng trước confirm4 (xem PROTOCOL_LOG).
+
+## Giai đoạn 11 — RB-Switch (chuyển theo task giữa pooled TS và v4b), chốt 2026-11-06
+- [x] 11.0 Kiểm tra khả thi trên LOTO (lồng nhau): -0.607 / 2 hại / ECE 0.063 (pooled -0.605/22/0.068).
+- [x] 11.1 Chốt quy tắc + tiền đăng ký confirm4 (10 task, S1-S3) trong PROTOCOL_LOG.
+- [x] 11.2 Build items confirm4 -> inference Modal A100 (acc3) -> data/real/confirm4_sealed.
+- [x] 11.3 (S1, S2 KHÔNG đạt; S3 đạt) Fit (pooled TS, Thermo-P, ATS-P, MRTS, v4b) -> tín hiệu target không nhãn -> áp quy tắc -> chấm S1-S3 + biểu đồ ECE.
+- [x] 11.4 Báo cáo + PROTOCOL_LOG; không còn app Modal nào chạy.
+
+## Giai đoạn 12 — Thành phần EC cho EvoLearn 2027 (hạn 16/11/2026)
+- [x] 12.0 CMA-ES solver (evo_calibration.py) + khai báo PROTOCOL_LOG.
+- [x] 12.1 Front: CMA-ES vs SLSQP theo eps, mặt Pareto (10 unit dev).
+- [x] 12.2 (quy tắc đạt: Evo-RB tốt hơn v4b) Evo-RB (tiến hóa tâm/độ rộng RBF): dev, LOTO 250, confirm1-4; áp quy tắc quyết định.
+- [x] 12.3 Paper LNCS 14 trang: thêm phần EC + bảng 500 unit + roster confirm4, ẩn danh, khai báo AI.

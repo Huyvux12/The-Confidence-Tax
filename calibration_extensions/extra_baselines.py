@@ -121,8 +121,8 @@ def ats_objective(theta, Phi, ps):
     return float(loss.mean() + L2 * reg @ reg), grad + 2 * L2 * reg
 
 
-def fit_thermometer_p(train: ProbSet) -> tuple[ThermometerP, dict]:
-    fmap = fit_feature_map(train, *FEATURES)
+def fit_thermometer_p(train: ProbSet, kind: str = FEATURES[0]) -> tuple[ThermometerP, dict]:
+    fmap = fit_feature_map(train, kind, *FEATURES[1:])
     Phi = fmap.phi(train)
     src_inv, n_src = _batch_index(train, ("source_id",))
     x0 = np.zeros(Phi.shape[1])
@@ -132,8 +132,8 @@ def fit_thermometer_p(train: ProbSet) -> tuple[ThermometerP, dict]:
     return ThermometerP(fmap, res.x), {"status": f"LBFGS:{res.status}", "fun": float(res.fun)}
 
 
-def fit_ats_p(train: ProbSet) -> tuple[ATSP, dict]:
-    fmap = fit_feature_map(train, *FEATURES)
+def fit_ats_p(train: ProbSet, kind: str = FEATURES[0]) -> tuple[ATSP, dict]:
+    fmap = fit_feature_map(train, kind, *FEATURES[1:])
     Phi = fmap.phi(train)
     res = minimize(ats_objective, np.zeros(Phi.shape[1]), args=(Phi, train), jac=True,
                    method="L-BFGS-B", options={"maxiter": 500})

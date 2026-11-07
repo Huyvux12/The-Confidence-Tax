@@ -1,0 +1,11 @@
+{
+ "note": "dataset commits at item build time for confirm4 (2026-11-06)",
+ "datasets": {
+  "tasksource/bigbench": "b8ee34693560a13a9feac6aa5540449e18b7eddb",
+  "hails/agieval-sat-en": "848ee12cf003124f5a1e33446fa3cc6d2ec028e4"
+ },
+ "licenses": {
+  "tasksource/bigbench": "apache-2.0",
+  "hails/agieval-sat-en": "unspecified on hub (AGIEval: MIT)"
+ }
+}

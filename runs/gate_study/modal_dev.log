@@ -1,0 +1,77 @@
+Building image im-iv2rtS2Bjlca4usd7Tl2Sq
+
+=> Step 0: FROM base
+
+=> Step 1: COPY --from=ghcr.io/astral-sh/uv:latest /uv /.uv/uv
+Getting image source signatures
+Copying blob sha256:bdbfbf3496bcb9c5725b0509a7c4bb40674c6869416a79bc486e59f75ca10739
+Copying blob sha256:ff982e30065956cc3e779acc221fc1002d5158bd1299e59b1e3e437abd2f60cc
+Copying config sha256:1ff6c2a573a5da512aabfaa7705a8827b3f460b2eff01a84b4b1641fbb1eb0b5
+Writing manifest to image destination
+Unpacking OCI image
+   • unpacking rootfs ...     
+   • ... done                 
+   • unpacked image rootfs: /tmp/task-data/ta-01M6PB2Y1F9H4ZW7XRXAQ6G99B/registry-unpackSDg57N
+
+=> Step 2: RUN /.uv/uv pip install --python $(command -v python) --compile-bytecode clarabel==0.11.1 cvxpy==1.9.3 numpy==2.5.4 scipy==1.18.1
+Using Python 3.13.3 environment at: /usr/local
+Resolved 16 packages in 93ms
+Downloading scipy (33.7MiB)
+Downloading highspy (4.8MiB)
+Downloading numpy (15.9MiB)
+Downloading clarabel (1.1MiB)
+Downloading sparsediffpy (11.6MiB)
+Downloading qdldl (1.4MiB)
+Downloading cvxpy (4.2MiB)
+Downloading scs (41.2MiB)
+ Downloaded clarabel
+ Downloaded qdldl
+ Downloaded highspy
+ Downloaded sparsediffpy
+ Downloaded cvxpy
+ Downloaded scs
+ Downloaded numpy
+ Downloaded scipy
+Prepared 16 packages in 617ms
+Installed 16 packages in 174ms
+Bytecode compiled 2312 files in 822ms
+ + cffi==2.1.1
+ + clarabel==0.11.1
+ + cloudpickle==3.1.2
+ + cvxpy==1.9.3
+ + highspy==1.15.1
+ + jinja2==3.1.6
+ + joblib==1.6.0
+ + markupsafe==3.0.4
+ + numpy==2.5.4
+ + osqp==1.1.3
+ + pycparser==3.12
+ + qdldl==0.1.9.post1
+ + scipy==1.18.1
+ + scs==3.3.1
+ + setuptools==84.2.1
+ + sparsediffpy==0.6.1
+Saving image...
+Image saved, took 1.51s
+
+Built image im-iv2rtS2Bjlca4usd7Tl2Sq in 5.58s
+
+
+Building image im-m1M8hot8GmHR1nH74yDpfJ
+
+=> Step 0: FROM base
+
+=> Step 1: ENV OPENBLAS_NUM_THREADS=1
+
+=> Step 2: ENV OMP_NUM_THREADS=1
+
+=> Step 3: ENV MKL_NUM_THREADS=1
+Saving image...
+Image saved, took 751.54ms
+
+Built image im-m1M8hot8GmHR1nH74yDpfJ in 1.44s
+
+
+dev: 10 jobs
+10/10 done
+JOB DONE E:\Dowload\project\AI project\100PRR\mrts\runs\gate_study\dev.jsonl

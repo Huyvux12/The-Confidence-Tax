@@ -1,0 +1,19 @@
+{
+ "note": "dataset commits at item build time for confirm3 (2026-11-06)",
+ "datasets": {
+  "allenai/quartz": "28c1dbb56caf81799296cb17892fa73402e23464",
+  "tasksource/ScienceQA_text_only": "37ca6a0e9f35a7002e46afe5c2bbc047c7c3598f",
+  "qiaojin/PubMedQA": "9001f2853fb87cab8d220904e0de81ac6973b318",
+  "pkavumba/balanced-copa": "813bd03cd6e07d9bd8d7333896ad5d40abb95ea9",
+  "hails/agieval-lsat-lr": "d876c675a8d47aa4d8a6d682ca8400b7d2ffe1c4",
+  "hails/agieval-lsat-rc": "432868ea4fa7b50db66d14524d42472dd052b53c"
+ },
+ "licenses": {
+  "allenai/quartz": "cc-by-4.0",
+  "tasksource/ScienceQA_text_only": "unspecified on hub (ScienceQA: CC BY-NC-SA 4.0)",
+  "qiaojin/PubMedQA": "mit",
+  "pkavumba/balanced-copa": "cc-by-4.0",
+  "hails/agieval-lsat-lr": "unspecified on hub (AGIEval: MIT)",
+  "hails/agieval-lsat-rc": "unspecified on hub (AGIEval: MIT)"
+ }
+}

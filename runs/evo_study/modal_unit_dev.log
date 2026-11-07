@@ -1,0 +1,49 @@
+✓ Initialized. View run at 
+https://modal.com/apps/robertbr-1905/main/ap-uJTJBv92tGPejHZmZqoERl
+✓ Created objects.
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\scripts\modal_v4.py
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\data\real\confirm4_sealed
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\data\real\confirm2_sealed
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\data\real\confirm3_sealed
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\data\real\confirm_sealed
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\data\real\dev_avg
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\data\real\dev_aug
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\data\real\dev
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\runs\gate_study\hypers.json
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\scripts\evo_study.py
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\scripts\base_study.py
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\scripts\v4_study.py
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\scripts\gate_study.py
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\calibration_extensions
+└── ✓ Created Function run.
+evo_unit: 10 jobs, 0 done, 10 to run
+/usr/local/lib/python3.13/site-packages/cma/s.py:15: UserWarning: Could not import matplotlib.pyplot, therefore ``cma.plot()`` etc. is not available
+  _warnings.warn('Could not import matplotlib.pyplot, therefore'
+/usr/local/lib/python3.13/site-packages/cma/s.py:15: UserWarning: Could not import matplotlib.pyplot, therefore ``cma.plot()`` etc. is not available
+  _warnings.warn('Could not import matplotlib.pyplot, therefore'
+/usr/local/lib/python3.13/site-packages/cma/s.py:15: UserWarning: Could not import matplotlib.pyplot, therefore ``cma.plot()`` etc. is not available
+  _warnings.warn('Could not import matplotlib.pyplot, therefore'
+/usr/local/lib/python3.13/site-packages/cma/s.py:15: UserWarning: Could not import matplotlib.pyplot, therefore ``cma.plot()`` etc. is not available
+  _warnings.warn('Could not import matplotlib.pyplot, therefore'
+/usr/local/lib/python3.13/site-packages/cma/s.py:15: UserWarning: Could not import matplotlib.pyplot, therefore ``cma.plot()`` etc. is not available
+  _warnings.warn('Could not import matplotlib.pyplot, therefore'
+/usr/local/lib/python3.13/site-packages/cma/s.py:15: UserWarning: Could not import matplotlib.pyplot, therefore ``cma.plot()`` etc. is not available
+  _warnings.warn('Could not import matplotlib.pyplot, therefore'
+/usr/local/lib/python3.13/site-packages/cma/s.py:15: UserWarning: Could not import matplotlib.pyplot, therefore ``cma.plot()`` etc. is not available
+  _warnings.warn('Could not import matplotlib.pyplot, therefore'
+/usr/local/lib/python3.13/site-packages/cma/s.py:15: UserWarning: Could not import matplotlib.pyplot, therefore ``cma.plot()`` etc. is not available
+  _warnings.warn('Could not import matplotlib.pyplot, therefore'
+/usr/local/lib/python3.13/site-packages/cma/s.py:15: UserWarning: Could not import matplotlib.pyplot, therefore ``cma.plot()`` etc. is not available
+  _warnings.warn('Could not import matplotlib.pyplot, therefore'
+/usr/local/lib/python3.13/site-packages/cma/s.py:15: UserWarning: Could not import matplotlib.pyplot, therefore ``cma.plot()`` etc. is not available
+  _warnings.warn('Could not import matplotlib.pyplot, therefore'
+10/10
+JOB DONE evo_unit fails=0
+Stopping app - local entrypoint completed.
+✓ App completed. View run at 
+https://modal.com/apps/robertbr-1905/main/ap-uJTJBv92tGPejHZmZqoERl

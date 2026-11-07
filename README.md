@@ -54,6 +54,31 @@ checks their SHA-256 and refuses otherwise. `scripts/recheck_full_refit.py` refi
 **Checks.** `scripts/recheck_numbers.py` recomputes the paper's main numbers without the evaluator;
 `runs/*/prediction_hash.txt` holds the SHA-256 of all target predictions of each run.
 
+## EvoLearn 2027 version (`paper_lncs/`)
+
+LNCS paper *The Confidence Tax: Evolving Regret-Budgeted Temperature Fields for Safe Calibration Transfer in
+Language Models*. Build: `sh paper_lncs/build.sh` (every number, table and figure comes from `runs/` through
+`scripts/make_lncs_assets.py`). Later phases are logged in `data_gen/PROTOCOL_LOG.md` and `todo.md` (phases 6-12):
+
+| Path | Content |
+|---|---|
+| `data_gen/build_items_confirm{2,3,4}.py`, `data_gen/raw_confirm{2,3,4}/` | three further sealed rosters (items, raw probabilities) |
+| `data/real/confirm{2,3,4}_SHA256SUMS.txt` | rebuild with `data_gen/make_confirm2.py --raw ... --out ... --role target_confirmN` |
+| `calibration_extensions/features.py` | order-consistency (`rbf_oc`, `rbf_oct`) and peer (`rbf_ocp*`) feature maps |
+| `calibration_extensions/evo_calibration.py`, `scripts/evo_study.py` | CMA-ES solver, Pareto fronts, Evo-RB |
+| `scripts/v4_study.py`, `base_study.py`, `gate_study.py`, `modal_*.py` | experiment drivers (Modal CPU/GPU) |
+| `runs/v4_study`, `runs/evo_study`, `runs/rbcal_confirm{2,3,4}`, `runs/step0` | outputs and reports |
+
+## Large artifacts (Hugging Face)
+
+The per-unit fits of the confirm2-4 rosters (`runs/rbcal_confirm{2,3,4}/units/`, 765 MB) are in the private
+dataset `huyvux3005/rbcal-confidence-tax-runs`, not in git:
+
+```bash
+hf download huyvux3005/rbcal-confidence-tax-runs --repo-type dataset --local-dir .   # needs access + hf auth login
+sha256sum -c runs/HF_SHA256SUMS.txt                                                   # 30 files must print OK
+```
+
 **From scratch (GPU).** `data_gen/build_items.py` rebuilds `data_gen/items.jsonl` from Hugging Face datasets;
 `data_gen/run_all.py` with `data_gen/infer_mcq.py` scores the five models (one A100 40GB, about 2.6 hours;
 `data_gen/requirements-inference.txt`); `data_gen/make_splits.py` writes `data/real/`. The model and dataset

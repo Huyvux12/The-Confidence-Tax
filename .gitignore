@@ -23,3 +23,12 @@ runs/*/unit_results.pkl
 
 # polling scratch files
 runs/colab_poll*.txt
+
+# credentials (Kaggle / Hugging Face tokens) - never commit
+.env
+.env.*
+
+# large per-unit fits of the confirm2-4 rosters (765 MB): hosted on Hugging Face, see README "Large artifacts"
+runs/rbcal_confirm2/units/
+runs/rbcal_confirm3/units/
+runs/rbcal_confirm4/units/

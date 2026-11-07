@@ -1,0 +1,60 @@
+{
+ "seed": 20261106,
+ "cap": 500,
+ "n_orders": 2,
+ "dropped_invalid": {
+  "load_race_high": 2,
+  "load_social_iqa": 5,
+  "load_belebele": 2
+ },
+ "tasks": {
+  "belebele_eng": {
+   "n": 500,
+   "pool": 898,
+   "role": "target_confirm2",
+   "K": [
+    4
+   ]
+  },
+  "cosmos_qa": {
+   "n": 500,
+   "pool": 2985,
+   "role": "target_confirm2",
+   "K": [
+    4
+   ]
+  },
+  "medqa_usmle": {
+   "n": 500,
+   "pool": 1273,
+   "role": "target_confirm2",
+   "K": [
+    4
+   ]
+  },
+  "qasc": {
+   "n": 500,
+   "pool": 926,
+   "role": "target_confirm2",
+   "K": [
+    8
+   ]
+  },
+  "race_high": {
+   "n": 500,
+   "pool": 3496,
+   "role": "target_confirm2",
+   "K": [
+    4
+   ]
+  },
+  "social_iqa": {
+   "n": 500,
+   "pool": 1949,
+   "role": "target_confirm2",
+   "K": [
+    3
+   ]
+  }
+ }
+}

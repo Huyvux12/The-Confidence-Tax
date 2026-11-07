@@ -1,0 +1,83 @@
+{
+ "seed": 20261108,
+ "cap": 500,
+ "n_orders": 2,
+ "dropped_invalid": 0,
+ "role": "target_confirm4",
+ "tasks": {
+  "date_understanding": {
+   "n": 369,
+   "pool": 369,
+   "K": [
+    5,
+    6
+   ]
+  },
+  "disambiguation_qa": {
+   "n": 258,
+   "pool": 258,
+   "K": [
+    3,
+    4
+   ]
+  },
+  "epistemic_reasoning": {
+   "n": 500,
+   "pool": 2000,
+   "K": [
+    2
+   ]
+  },
+  "implicatures": {
+   "n": 492,
+   "pool": 492,
+   "K": [
+    2
+   ]
+  },
+  "logical_deduction": {
+   "n": 500,
+   "pool": 1500,
+   "K": [
+    3,
+    7
+   ]
+  },
+  "navigate": {
+   "n": 500,
+   "pool": 1000,
+   "K": [
+    2
+   ]
+  },
+  "sat_en": {
+   "n": 206,
+   "pool": 206,
+   "K": [
+    4
+   ]
+  },
+  "strategyqa": {
+   "n": 500,
+   "pool": 2289,
+   "K": [
+    2
+   ]
+  },
+  "temporal_sequences": {
+   "n": 500,
+   "pool": 1000,
+   "K": [
+    4
+   ]
+  },
+  "tracking_shuffled_objects": {
+   "n": 500,
+   "pool": 3750,
+   "K": [
+    3,
+    7
+   ]
+  }
+ }
+}

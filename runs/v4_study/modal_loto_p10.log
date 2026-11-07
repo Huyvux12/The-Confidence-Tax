@@ -1,0 +1,75 @@
+✓ Initialized. View run at 
+https://modal.com/apps/robertbr-1905/main/ap-e9S7jpe8fa9KUDYXsGZGkH
+✓ Created objects.
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\scripts\modal_v4.py
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\runs\gate_study\hypers.json
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\scripts\base_study.py
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\data\real\confirm3_sealed
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\scripts\v4_study.py
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\data\real\confirm_sealed
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\scripts\gate_study.py
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\data\real\confirm2_sealed
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\data\real\dev_avg
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\data\real\dev
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\data\real\dev_aug
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\calibration_extensions
+└── ✓ Created Function run.
+loto: 1250 jobs, 0 done, 1250 to run
+25/1250
+50/1250
+75/1250
+100/1250
+125/1250
+150/1250
+175/1250
+200/1250
+225/1250
+250/1250
+275/1250
+300/1250
+325/1250
+350/1250
+375/1250
+400/1250
+425/1250
+450/1250
+475/1250
+500/1250
+525/1250
+550/1250
+575/1250
+600/1250
+625/1250
+650/1250
+675/1250
+700/1250
+725/1250
+750/1250
+775/1250
+800/1250
+825/1250
+850/1250
+875/1250
+900/1250
+925/1250
+950/1250
+975/1250
+1000/1250
+1025/1250
+1050/1250
+1075/1250
+1100/1250
+1125/1250
+1150/1250
+1175/1250
+1200/1250
+1225/1250
+1250/1250
+JOB DONE loto fails=0
+Stopping app - local entrypoint completed.
+✓ App completed. View run at 
+https://modal.com/apps/robertbr-1905/main/ap-e9S7jpe8fa9KUDYXsGZGkH

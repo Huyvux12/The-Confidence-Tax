@@ -1,0 +1,27 @@
+✓ Initialized. View run at 
+https://modal.com/apps/robertbr-1905/main/ap-SyJP81fmjgsHDzcQDVhny1
+✓ Created objects.
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\scripts\modal_v4.py
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\runs\gate_study\hypers.json
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\scripts\base_study.py
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\scripts\v4_study.py
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\scripts\gate_study.py
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\data\real\confirm_sealed
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\data\real\confirm3_sealed
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\data\real\dev_avg
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\data\real\confirm2_sealed
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\data\real\dev
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\data\real\dev_aug
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\calibration_extensions
+└── ✓ Created Function run.
+final: 50 jobs, 0 done, 50 to run
+25/50
+50/50
+JOB DONE final fails=0
+Stopping app - local entrypoint completed.
+✓ App completed. View run at 
+https://modal.com/apps/robertbr-1905/main/ap-SyJP81fmjgsHDzcQDVhny1

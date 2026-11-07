@@ -1,0 +1,2232 @@
+{
+"Qwen/Qwen3.5-9B|letter_colon|arc_challenge": {
+"entropy": 0.12763317173193406,
+"maxprob": 0.9402490590214729,
+"order_tv": 0.04819282544841303,
+"template_tv": 0.03257633532219518,
+"peer_prob_on_top": 0.8770880872280707,
+"peer_argmax_agree": 0.885,
+"position_prior_entropy": 0.9991383740702091
+},
+"Qwen/Qwen3.5-9B|letter_colon|arc_easy": {
+"entropy": 0.07401822917980261,
+"maxprob": 0.9680896851718426,
+"order_tv": 0.025619917975599493,
+"template_tv": 0.018819760348296542,
+"peer_prob_on_top": 0.9349831654732601,
+"peer_argmax_agree": 0.942,
+"position_prior_entropy": 0.9995218002402784
+},
+"Qwen/Qwen3.5-9B|letter_colon|boolq": {
+"entropy": 0.34283482541816057,
+"maxprob": 0.9033015629649163,
+"order_tv": 0.044352036963391586,
+"template_tv": 0.049803067543223736,
+"peer_prob_on_top": 0.8642150138900847,
+"peer_argmax_agree": 0.875
+},
+"Qwen/Qwen3.5-9B|letter_colon|hellaswag": {
+"entropy": 0.29298447774791436,
+"maxprob": 0.8657153774833968,
+"order_tv": 0.07807239270354946,
+"template_tv": 0.0522981391328842,
+"peer_prob_on_top": 0.8000042697541773,
+"peer_argmax_agree": 0.8172883064516129,
+"position_prior_entropy": 0.9986878726186206
+},
+"Qwen/Qwen3.5-9B|letter_colon|logiqa": {
+"entropy": 0.5287766963407005,
+"maxprob": 0.6991484377682209,
+"order_tv": 0.16080689878611337,
+"template_tv": 0.09570600229696083,
+"peer_prob_on_top": 0.5676959396622885,
+"peer_argmax_agree": 0.59275,
+"position_prior_entropy": 0.9938292891909302
+},
+"Qwen/Qwen3.5-9B|letter_colon|mmlu_humanities": {
+"entropy": 0.4204893683543531,
+"maxprob": 0.7773229819238185,
+"order_tv": 0.15778869177554725,
+"template_tv": 0.08220847844881178,
+"peer_prob_on_top": 0.6541858079821513,
+"peer_argmax_agree": 0.66575,
+"position_prior_entropy": 0.9961051390779065
+},
+"Qwen/Qwen3.5-9B|letter_colon|mmlu_other": {
+"entropy": 0.313686863107806,
+"maxprob": 0.8355843903720379,
+"order_tv": 0.10737760857380635,
+"template_tv": 0.06487092917495875,
+"peer_prob_on_top": 0.7536654607917397,
+"peer_argmax_agree": 0.766,
+"position_prior_entropy": 0.9986227601495788
+},
+"Qwen/Qwen3.5-9B|letter_colon|mmlu_social": {
+"entropy": 0.25224071807537946,
+"maxprob": 0.8725046268701553,
+"order_tv": 0.09791882597061795,
+"template_tv": 0.06071488536519382,
+"peer_prob_on_top": 0.7696523849626412,
+"peer_argmax_agree": 0.77975,
+"position_prior_entropy": 0.9970411765750872
+},
+"Qwen/Qwen3.5-9B|letter_colon|mmlu_stem": {
+"entropy": 0.3698616070054545,
+"maxprob": 0.796878525853157,
+"order_tv": 0.12850228410404588,
+"template_tv": 0.07162217160106024,
+"peer_prob_on_top": 0.6884701140265578,
+"peer_argmax_agree": 0.70275,
+"position_prior_entropy": 0.9995596437688805
+},
+"Qwen/Qwen3.5-9B|letter_colon|mmlupro_biology": {
+"entropy": 0.22741456302286409,
+"maxprob": 0.8391113571226597,
+"order_tv": 0.13742078671319694,
+"template_tv": 0.07018100547201775,
+"peer_prob_on_top": 0.7252303537994267,
+"peer_argmax_agree": 0.74525,
+"position_prior_entropy": 0.9884207436544479
+},
+"Qwen/Qwen3.5-9B|letter_colon|mmlupro_business": {
+"entropy": 0.6838870407862648,
+"maxprob": 0.4479707323163748,
+"order_tv": 0.33531907198055705,
+"template_tv": 0.14640702035925188,
+"peer_prob_on_top": 0.368149074683565,
+"peer_argmax_agree": 0.39,
+"position_prior_entropy": 0.9836812590061537
+},
+"Qwen/Qwen3.5-9B|letter_colon|mmlupro_chemistry": {
+"entropy": 0.7009716018767199,
+"maxprob": 0.4334621620327234,
+"order_tv": 0.3293723721903793,
+"template_tv": 0.1466540170625519,
+"peer_prob_on_top": 0.3220451181886883,
+"peer_argmax_agree": 0.33825,
+"position_prior_entropy": 0.9625685874529041
+},
+"Qwen/Qwen3.5-9B|letter_colon|mmlupro_computer_science": {
+"entropy": 0.5450444661430784,
+"maxprob": 0.5928749650716781,
+"order_tv": 0.2532544940983138,
+"template_tv": 0.1276944544081411,
+"peer_prob_on_top": 0.5165252246955826,
+"peer_argmax_agree": 0.5417682926829268,
+"position_prior_entropy": 0.9951851211197624
+},
+"Qwen/Qwen3.5-9B|letter_colon|mmlupro_economics": {
+"entropy": 0.343714515035769,
+"maxprob": 0.7517758375257254,
+"order_tv": 0.19828174262566212,
+"template_tv": 0.09881983571551559,
+"peer_prob_on_top": 0.5983592818321989,
+"peer_argmax_agree": 0.6105,
+"position_prior_entropy": 0.9981122438089887
+},
+"Qwen/Qwen3.5-9B|letter_colon|mmlupro_engineering": {
+"entropy": 0.747891849536157,
+"maxprob": 0.40605681796371934,
+"order_tv": 0.3366880578047144,
+"template_tv": 0.13562733781867406,
+"peer_prob_on_top": 0.35585517650417026,
+"peer_argmax_agree": 0.377,
+"position_prior_entropy": 0.9830518758014678
+},
+"Qwen/Qwen3.5-9B|letter_colon|mmlupro_health": {
+"entropy": 0.37937496040258795,
+"maxprob": 0.7326267925351858,
+"order_tv": 0.20796806559298694,
+"template_tv": 0.11295066784695132,
+"peer_prob_on_top": 0.5574791079567555,
+"peer_argmax_agree": 0.5755,
+"position_prior_entropy": 0.998205464998801
+},
+"Qwen/Qwen3.5-9B|letter_colon|mmlupro_history": {
+"entropy": 0.34608066461810055,
+"maxprob": 0.7665569111509273,
+"order_tv": 0.21893907087147196,
+"template_tv": 0.10162526282650883,
+"peer_prob_on_top": 0.5590782653970426,
+"peer_argmax_agree": 0.5757874015748031,
+"position_prior_entropy": 0.9950157028912817
+},
+"Qwen/Qwen3.5-9B|letter_colon|mmlupro_law": {
+"entropy": 0.5263228265943123,
+"maxprob": 0.6146448103487492,
+"order_tv": 0.29432044153793413,
+"template_tv": 0.14735944576089652,
+"peer_prob_on_top": 0.4024601631719789,
+"peer_argmax_agree": 0.4205,
+"position_prior_entropy": 0.9881511072046192
+},
+"Qwen/Qwen3.5-9B|letter_colon|mmlupro_math": {
+"entropy": 0.6708558624091643,
+"maxprob": 0.4629040053859353,
+"order_tv": 0.31785502220221223,
+"template_tv": 0.1472039175065779,
+"peer_prob_on_top": 0.345146774360666,
+"peer_argmax_agree": 0.36025,
+"position_prior_entropy": 0.9548937114797502
+},
+"Qwen/Qwen3.5-9B|letter_colon|mmlupro_other": {
+"entropy": 0.47245285153787797,
+"maxprob": 0.6486411484628916,
+"order_tv": 0.24852929081851263,
+"template_tv": 0.12409849264983527,
+"peer_prob_on_top": 0.48925727491365545,
+"peer_argmax_agree": 0.50925,
+"position_prior_entropy": 0.95468684792623
+},
+"Qwen/Qwen3.5-9B|letter_colon|mmlupro_philosophy": {
+"entropy": 0.42402382695769997,
+"maxprob": 0.7044191894705645,
+"order_tv": 0.25694522109117923,
+"template_tv": 0.12701946913636025,
+"peer_prob_on_top": 0.5215324829600817,
+"peer_argmax_agree": 0.5415831663326653,
+"position_prior_entropy": 0.9975739468855667
+},
+"Qwen/Qwen3.5-9B|letter_colon|mmlupro_physics": {
+"entropy": 0.6587904015893894,
+"maxprob": 0.46845832623541356,
+"order_tv": 0.3130237649371556,
+"template_tv": 0.13955506261591014,
+"peer_prob_on_top": 0.33603208445529265,
+"peer_argmax_agree": 0.358,
+"position_prior_entropy": 0.9899755418820502
+},
+"Qwen/Qwen3.5-9B|letter_colon|mmlupro_psychology": {
+"entropy": 0.27311683878225307,
+"maxprob": 0.8093415847867728,
+"order_tv": 0.174752603905406,
+"template_tv": 0.09735799886994802,
+"peer_prob_on_top": 0.6676079355694213,
+"peer_argmax_agree": 0.683,
+"position_prior_entropy": 0.9378744141977852
+},
+"Qwen/Qwen3.5-9B|letter_colon|openbookqa": {
+"entropy": 0.2342509356089949,
+"maxprob": 0.8900328617990017,
+"order_tv": 0.09499418458745049,
+"template_tv": 0.06085548479158911,
+"peer_prob_on_top": 0.8237522548428904,
+"peer_argmax_agree": 0.8375,
+"position_prior_entropy": 0.9985063166335547
+},
+"Qwen/Qwen3.5-9B|letter_colon|winogrande": {
+"entropy": 0.6568399177885101,
+"maxprob": 0.7793078157901764,
+"order_tv": 0.17457185516593746,
+"template_tv": 0.08246168161390233,
+"peer_prob_on_top": 0.6787093435064566,
+"peer_argmax_agree": 0.69375
+},
+"Qwen/Qwen3.5-9B|paren|arc_challenge": {
+"entropy": 0.15359768318425268,
+"maxprob": 0.9341548762023449,
+"order_tv": 0.05004818642855389,
+"template_tv": 0.03257633532219518,
+"peer_prob_on_top": 0.8773308478604389,
+"peer_argmax_agree": 0.887,
+"position_prior_entropy": 0.9988572993305885
+},
+"Qwen/Qwen3.5-9B|paren|arc_easy": {
+"entropy": 0.09191168001351833,
+"maxprob": 0.9662687333524227,
+"order_tv": 0.02366247397745383,
+"template_tv": 0.018819760348296542,
+"peer_prob_on_top": 0.925708999864901,
+"peer_argmax_agree": 0.92825,
+"position_prior_entropy": 0.9995865507267151
+},
+"Qwen/Qwen3.5-9B|paren|boolq": {
+"entropy": 0.3623576647483352,
+"maxprob": 0.9028776153326035,
+"order_tv": 0.028989154093666,
+"template_tv": 0.049803067543223736,
+"peer_prob_on_top": 0.8626408198398767,
+"peer_argmax_agree": 0.86625
+},
+"Qwen/Qwen3.5-9B|paren|hellaswag": {
+"entropy": 0.3048676143980537,
+"maxprob": 0.8626469863398422,
+"order_tv": 0.08235831849539511,
+"template_tv": 0.0522981391328842,
+"peer_prob_on_top": 0.8057816450917604,
+"peer_argmax_agree": 0.8266129032258065,
+"position_prior_entropy": 0.9982251899821282
+},
+"Qwen/Qwen3.5-9B|paren|logiqa": {
+"entropy": 0.5311810134075681,
+"maxprob": 0.6994307418763638,
+"order_tv": 0.14328667007889453,
+"template_tv": 0.09570600229696083,
+"peer_prob_on_top": 0.5836231200044834,
+"peer_argmax_agree": 0.607,
+"position_prior_entropy": 0.9981786944503015
+},
+"Qwen/Qwen3.5-9B|paren|mmlu_humanities": {
+"entropy": 0.4014348725370572,
+"maxprob": 0.7872962248027324,
+"order_tv": 0.14992370779405337,
+"template_tv": 0.08220847844881178,
+"peer_prob_on_top": 0.6523523427233856,
+"peer_argmax_agree": 0.666,
+"position_prior_entropy": 0.9966555955863375
+},
+"Qwen/Qwen3.5-9B|paren|mmlu_other": {
+"entropy": 0.30519054125691114,
+"maxprob": 0.8468792358934879,
+"order_tv": 0.0970855512553644,
+"template_tv": 0.06487092917495875,
+"peer_prob_on_top": 0.7569185432184394,
+"peer_argmax_agree": 0.77125,
+"position_prior_entropy": 0.9994002314651921
+},
+"Qwen/Qwen3.5-9B|paren|mmlu_social": {
+"entropy": 0.2578955007691644,
+"maxprob": 0.874088914334774,
+"order_tv": 0.08921949069723814,
+"template_tv": 0.06071488536519382,
+"peer_prob_on_top": 0.7680972200174255,
+"peer_argmax_agree": 0.7835,
+"position_prior_entropy": 0.9983630524693525
+},
+"Qwen/Qwen3.5-9B|paren|mmlu_stem": {
+"entropy": 0.3979111232289863,
+"maxprob": 0.7848282141387463,
+"order_tv": 0.11159962910881586,
+"template_tv": 0.07162217160106024,
+"peer_prob_on_top": 0.6934074324417586,
+"peer_argmax_agree": 0.7145,
+"position_prior_entropy": 0.9991228829793188
+},
+"Qwen/Qwen3.5-9B|paren|mmlupro_biology": {
+"entropy": 0.24751243426386804,
+"maxprob": 0.8311846497803926,
+"order_tv": 0.13538043991986545,
+"template_tv": 0.07018100547201775,
+"peer_prob_on_top": 0.7258824355819368,
+"peer_argmax_agree": 0.74,
+"position_prior_entropy": 0.9896961310272442
+},
+"Qwen/Qwen3.5-9B|paren|mmlupro_business": {
+"entropy": 0.7039547417583193,
+"maxprob": 0.4320473937988281,
+"order_tv": 0.28260859423841794,
+"template_tv": 0.14640702035925188,
+"peer_prob_on_top": 0.3778911031217682,
+"peer_argmax_agree": 0.41475,
+"position_prior_entropy": 0.9907093187675384
+},
+"Qwen/Qwen3.5-9B|paren|mmlupro_chemistry": {
+"entropy": 0.7279453549655034,
+"maxprob": 0.4098583720624447,
+"order_tv": 0.27064841255423744,
+"template_tv": 0.1466540170625519,
+"peer_prob_on_top": 0.3411679495973184,
+"peer_argmax_agree": 0.38625,
+"position_prior_entropy": 0.9595488278725809
+},
+"Qwen/Qwen3.5-9B|paren|mmlupro_computer_science": {
+"entropy": 0.529806003681309,
+"maxprob": 0.6023502740372971,
+"order_tv": 0.23534387270131157,
+"template_tv": 0.1276944544081411,
+"peer_prob_on_top": 0.5195859668731638,
+"peer_argmax_agree": 0.5521341463414634,
+"position_prior_entropy": 0.9979108683640281
+},
+"Qwen/Qwen3.5-9B|paren|mmlupro_economics": {
+"entropy": 0.36041479812220295,
+"maxprob": 0.7443142231851816,
+"order_tv": 0.18516386014321984,
+"template_tv": 0.09881983571551559,
+"peer_prob_on_top": 0.6036347607942839,
+"peer_argmax_agree": 0.62225,
+"position_prior_entropy": 0.9994494822947646
+},
+"Qwen/Qwen3.5-9B|paren|mmlupro_engineering": {
+"entropy": 0.7599299164231574,
+"maxprob": 0.3953171456605196,
+"order_tv": 0.28979378090780483,
+"template_tv": 0.13562733781867406,
+"peer_prob_on_top": 0.37447323420981293,
+"peer_argmax_agree": 0.42725,
+"position_prior_entropy": 0.9885915748870675
+},
+"Qwen/Qwen3.5-9B|paren|mmlupro_health": {
+"entropy": 0.3529906315467387,
+"maxprob": 0.7562013517320156,
+"order_tv": 0.1943655224537306,
+"template_tv": 0.11295066784695132,
+"peer_prob_on_top": 0.5491614577456116,
+"peer_argmax_agree": 0.56525,
+"position_prior_entropy": 0.9967024654953252
+},
+"Qwen/Qwen3.5-9B|paren|mmlupro_history": {
+"entropy": 0.33796494955240763,
+"maxprob": 0.7704144977717575,
+"order_tv": 0.21375121149271417,
+"template_tv": 0.10162526282650883,
+"peer_prob_on_top": 0.5633612677895394,
+"peer_argmax_agree": 0.5826771653543307,
+"position_prior_entropy": 0.9938769165254552
+},
+"Qwen/Qwen3.5-9B|paren|mmlupro_law": {
+"entropy": 0.457302031451393,
+"maxprob": 0.6599909399598837,
+"order_tv": 0.2872149444891002,
+"template_tv": 0.14735944576089652,
+"peer_prob_on_top": 0.406657259644358,
+"peer_argmax_agree": 0.42425,
+"position_prior_entropy": 0.9878581252449314
+},
+"Qwen/Qwen3.5-9B|paren|mmlupro_math": {
+"entropy": 0.6852048264028474,
+"maxprob": 0.45235959891974925,
+"order_tv": 0.27479215349305014,
+"template_tv": 0.1472039175065779,
+"peer_prob_on_top": 0.3653064174071894,
+"peer_argmax_agree": 0.399,
+"position_prior_entropy": 0.9735197619668744
+},
+"Qwen/Qwen3.5-9B|paren|mmlupro_other": {
+"entropy": 0.4642472852169787,
+"maxprob": 0.657410370439291,
+"order_tv": 0.23356677776405194,
+"template_tv": 0.12409849264983527,
+"peer_prob_on_top": 0.4915322680182763,
+"peer_argmax_agree": 0.51975,
+"position_prior_entropy": 0.9526805592357251
+},
+"Qwen/Qwen3.5-9B|paren|mmlupro_philosophy": {
+"entropy": 0.42679378386110944,
+"maxprob": 0.7030694025581729,
+"order_tv": 0.2346778098716985,
+"template_tv": 0.12701946913636025,
+"peer_prob_on_top": 0.5238489345090105,
+"peer_argmax_agree": 0.5458416833667334,
+"position_prior_entropy": 0.9978288511397544
+},
+"Qwen/Qwen3.5-9B|paren|mmlupro_physics": {
+"entropy": 0.681560101235761,
+"maxprob": 0.4508089592009783,
+"order_tv": 0.2736224664474012,
+"template_tv": 0.13955506261591014,
+"peer_prob_on_top": 0.35546085598847377,
+"peer_argmax_agree": 0.39675,
+"position_prior_entropy": 0.9724512890227454
+},
+"Qwen/Qwen3.5-9B|paren|mmlupro_psychology": {
+"entropy": 0.2783007730734864,
+"maxprob": 0.8094151509106159,
+"order_tv": 0.16664646306285386,
+"template_tv": 0.09735799886994802,
+"peer_prob_on_top": 0.6716322575544371,
+"peer_argmax_agree": 0.68475,
+"position_prior_entropy": 0.9373272664023033
+},
+"Qwen/Qwen3.5-9B|paren|openbookqa": {
+"entropy": 0.25183502312746114,
+"maxprob": 0.8910662600696087,
+"order_tv": 0.08287824671443013,
+"template_tv": 0.06085548479158911,
+"peer_prob_on_top": 0.835369491955905,
+"peer_argmax_agree": 0.85275,
+"position_prior_entropy": 0.9990019393560069
+},
+"Qwen/Qwen3.5-9B|paren|winogrande": {
+"entropy": 0.7111279124507396,
+"maxprob": 0.7583282024860382,
+"order_tv": 0.1680006554531865,
+"template_tv": 0.08246168161390233,
+"peer_prob_on_top": 0.6854990164878452,
+"peer_argmax_agree": 0.7025
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|arc_challenge": {
+"entropy": 0.11601123389793816,
+"maxprob": 0.9363059591948986,
+"order_tv": 0.16447310537311927,
+"template_tv": 0.12166246496925315,
+"peer_prob_on_top": 0.7833506455873637,
+"peer_argmax_agree": 0.7915,
+"position_prior_entropy": 0.9952227508266649
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|arc_easy": {
+"entropy": 0.059910060054974554,
+"maxprob": 0.9674534321725369,
+"order_tv": 0.080388255836083,
+"template_tv": 0.07689002013131965,
+"peer_prob_on_top": 0.8973370449738015,
+"peer_argmax_agree": 0.90275,
+"position_prior_entropy": 0.9993880388794525
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|boolq": {
+"entropy": 0.24731837973963447,
+"maxprob": 0.9258752267360687,
+"order_tv": 0.09400595612748,
+"template_tv": 0.12766771036070101,
+"peer_prob_on_top": 0.8390364159557275,
+"peer_argmax_agree": 0.85025
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|hellaswag": {
+"entropy": 0.24971297473616288,
+"maxprob": 0.8655822341961246,
+"order_tv": 0.2886980846185218,
+"template_tv": 0.19303349935487538,
+"peer_prob_on_top": 0.673919831042607,
+"peer_argmax_agree": 0.6902721774193549,
+"position_prior_entropy": 0.9693231757517281
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|logiqa": {
+"entropy": 0.39071832476961676,
+"maxprob": 0.7802659935355186,
+"order_tv": 0.30935635234710684,
+"template_tv": 0.26105411564607117,
+"peer_prob_on_top": 0.46867321391863515,
+"peer_argmax_agree": 0.49425,
+"position_prior_entropy": 0.9853394908419942
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|mmlu_humanities": {
+"entropy": 0.2594689020717771,
+"maxprob": 0.8539268719255925,
+"order_tv": 0.2803846181358301,
+"template_tv": 0.2739647396961683,
+"peer_prob_on_top": 0.5251089545871657,
+"peer_argmax_agree": 0.53875,
+"position_prior_entropy": 0.9965307945223739
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|mmlu_other": {
+"entropy": 0.19508506905501558,
+"maxprob": 0.8928040117025375,
+"order_tv": 0.2195079415020138,
+"template_tv": 0.16618537976017422,
+"peer_prob_on_top": 0.6796014517734789,
+"peer_argmax_agree": 0.696,
+"position_prior_entropy": 0.9976708744881626
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|mmlu_social": {
+"entropy": 0.17630194035946403,
+"maxprob": 0.9052065013945103,
+"order_tv": 0.22914521039124747,
+"template_tv": 0.16938743628110342,
+"peer_prob_on_top": 0.6851002648781932,
+"peer_argmax_agree": 0.69525,
+"position_prior_entropy": 0.9983734786626355
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|mmlu_stem": {
+"entropy": 0.2727584270633286,
+"maxprob": 0.8463302364349365,
+"order_tv": 0.2903615938093817,
+"template_tv": 0.19400519305863448,
+"peer_prob_on_top": 0.5900923573862804,
+"peer_argmax_agree": 0.60475,
+"position_prior_entropy": 0.9945902885462664
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|mmlupro_biology": {
+"entropy": 0.16719090016210061,
+"maxprob": 0.8668630170673132,
+"order_tv": 0.31314163395819,
+"template_tv": 0.2241343653429287,
+"peer_prob_on_top": 0.611963408116131,
+"peer_argmax_agree": 0.628,
+"position_prior_entropy": 0.997744682745387
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|mmlupro_business": {
+"entropy": 0.49592819218330964,
+"maxprob": 0.6107248125374317,
+"order_tv": 0.5250653747302896,
+"template_tv": 0.3479090484374917,
+"peer_prob_on_top": 0.2867954590487241,
+"peer_argmax_agree": 0.31375,
+"position_prior_entropy": 0.9934631264724617
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|mmlupro_chemistry": {
+"entropy": 0.48046895579536353,
+"maxprob": 0.6247057316899299,
+"order_tv": 0.5338084883363217,
+"template_tv": 0.36218079595669805,
+"peer_prob_on_top": 0.24935630911427353,
+"peer_argmax_agree": 0.27625,
+"position_prior_entropy": 0.9706401119966069
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|mmlupro_computer_science": {
+"entropy": 0.34202671544851765,
+"maxprob": 0.7340585029161558,
+"order_tv": 0.4583749163232263,
+"template_tv": 0.3336878290625176,
+"peer_prob_on_top": 0.4022497561757457,
+"peer_argmax_agree": 0.4320121951219512,
+"position_prior_entropy": 0.9904351059248352
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|mmlupro_economics": {
+"entropy": 0.2544552280353068,
+"maxprob": 0.8031510181725026,
+"order_tv": 0.41527584361422654,
+"template_tv": 0.26733764368120966,
+"peer_prob_on_top": 0.48217710423622223,
+"peer_argmax_agree": 0.49725,
+"position_prior_entropy": 0.9985027471529109
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|mmlupro_engineering": {
+"entropy": 0.4917462045465345,
+"maxprob": 0.6240753911957144,
+"order_tv": 0.5123778357355439,
+"template_tv": 0.34236145067331725,
+"peer_prob_on_top": 0.3041664191858483,
+"peer_argmax_agree": 0.3435,
+"position_prior_entropy": 0.9712462555207908
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|mmlupro_health": {
+"entropy": 0.23459696414166847,
+"maxprob": 0.82291703286767,
+"order_tv": 0.4376826236192607,
+"template_tv": 0.31248754142963214,
+"peer_prob_on_top": 0.4026775166190453,
+"peer_argmax_agree": 0.4145,
+"position_prior_entropy": 0.9888590170670902
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|mmlupro_history": {
+"entropy": 0.22448067316830045,
+"maxprob": 0.8277433497581895,
+"order_tv": 0.40747208186238826,
+"template_tv": 0.27559297073243216,
+"peer_prob_on_top": 0.40469571627399353,
+"peer_argmax_agree": 0.421259842519685,
+"position_prior_entropy": 0.983653187570056
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|mmlupro_law": {
+"entropy": 0.31047843204418424,
+"maxprob": 0.7600142148137092,
+"order_tv": 0.46991840136957397,
+"template_tv": 0.3447729248795148,
+"peer_prob_on_top": 0.2982901517481697,
+"peer_argmax_agree": 0.31825,
+"position_prior_entropy": 0.9458831904253029
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|mmlupro_math": {
+"entropy": 0.4336519935263171,
+"maxprob": 0.6630290232300758,
+"order_tv": 0.5040958888019289,
+"template_tv": 0.34983952018795594,
+"peer_prob_on_top": 0.2827908476884294,
+"peer_argmax_agree": 0.30675,
+"position_prior_entropy": 0.995309173402651
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|mmlupro_other": {
+"entropy": 0.31102573455304416,
+"maxprob": 0.7634717868715525,
+"order_tv": 0.42746367981489214,
+"template_tv": 0.3249213490859969,
+"peer_prob_on_top": 0.39898160883596995,
+"peer_argmax_agree": 0.42325,
+"position_prior_entropy": 0.9857136605403757
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|mmlupro_philosophy": {
+"entropy": 0.25158947266926723,
+"maxprob": 0.8101482107966601,
+"order_tv": 0.45610601155577113,
+"template_tv": 0.3415325033141176,
+"peer_prob_on_top": 0.4021211987625148,
+"peer_argmax_agree": 0.42109218436873747,
+"position_prior_entropy": 0.9968533079519316
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|mmlupro_physics": {
+"entropy": 0.4775608885119115,
+"maxprob": 0.6244705915153027,
+"order_tv": 0.518089514407349,
+"template_tv": 0.3570840987808301,
+"peer_prob_on_top": 0.26990952921162914,
+"peer_argmax_agree": 0.29075,
+"position_prior_entropy": 0.9630490400116382
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|mmlupro_psychology": {
+"entropy": 0.15987942921757667,
+"maxprob": 0.8752710744142532,
+"order_tv": 0.33529868219182674,
+"template_tv": 0.2614024273901756,
+"peer_prob_on_top": 0.5466345801015378,
+"peer_argmax_agree": 0.56375,
+"position_prior_entropy": 0.8116931612149931
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|openbookqa": {
+"entropy": 0.15492139842001418,
+"maxprob": 0.9178292827606201,
+"order_tv": 0.2082078561159668,
+"template_tv": 0.16239332319535094,
+"peer_prob_on_top": 0.7345950466516541,
+"peer_argmax_agree": 0.751,
+"position_prior_entropy": 0.9992152790641257
+},
+"allenai/Olmo-3-7B-Instruct|letter_colon|winogrande": {
+"entropy": 0.5586730520986466,
+"maxprob": 0.8177026983499527,
+"order_tv": 0.28328948556972955,
+"template_tv": 0.22081871906598746,
+"peer_prob_on_top": 0.600506563226627,
+"peer_argmax_agree": 0.61625
+},
+"allenai/Olmo-3-7B-Instruct|paren|arc_challenge": {
+"entropy": 0.10188471926899194,
+"maxprob": 0.9422721888124943,
+"order_tv": 0.18329060725026192,
+"template_tv": 0.12166246496925313,
+"peer_prob_on_top": 0.7812733960640521,
+"peer_argmax_agree": 0.79225,
+"position_prior_entropy": 0.990633888986047
+},
+"allenai/Olmo-3-7B-Instruct|paren|arc_easy": {
+"entropy": 0.05028951834422644,
+"maxprob": 0.9720135840475559,
+"order_tv": 0.1251685138722759,
+"template_tv": 0.07689002013131965,
+"peer_prob_on_top": 0.856879991916658,
+"peer_argmax_agree": 0.86225,
+"position_prior_entropy": 0.9977257893937174
+},
+"allenai/Olmo-3-7B-Instruct|paren|boolq": {
+"entropy": 0.16633629707272796,
+"maxprob": 0.9508971582651138,
+"order_tv": 0.1370236075294696,
+"template_tv": 0.12766771036070104,
+"peer_prob_on_top": 0.8225769283501179,
+"peer_argmax_agree": 0.8325
+},
+"allenai/Olmo-3-7B-Instruct|paren|hellaswag": {
+"entropy": 0.15852046584869092,
+"maxprob": 0.9104125574832002,
+"order_tv": 0.2762286396590465,
+"template_tv": 0.19303349935487538,
+"peer_prob_on_top": 0.6957262896820359,
+"peer_argmax_agree": 0.7172379032258065,
+"position_prior_entropy": 0.973110589727851
+},
+"allenai/Olmo-3-7B-Instruct|paren|logiqa": {
+"entropy": 0.35955203576146516,
+"maxprob": 0.7990626619458199,
+"order_tv": 0.3273329808742334,
+"template_tv": 0.26105411564607117,
+"peer_prob_on_top": 0.4781762732249761,
+"peer_argmax_agree": 0.50425,
+"position_prior_entropy": 0.9856392145152523
+},
+"allenai/Olmo-3-7B-Instruct|paren|mmlu_humanities": {
+"entropy": 0.2281116320675822,
+"maxprob": 0.8720857681930065,
+"order_tv": 0.34166774378629955,
+"template_tv": 0.2739647396961683,
+"peer_prob_on_top": 0.5348007200554288,
+"peer_argmax_agree": 0.54675,
+"position_prior_entropy": 0.9679343311932441
+},
+"allenai/Olmo-3-7B-Instruct|paren|mmlu_other": {
+"entropy": 0.17470529825689313,
+"maxprob": 0.9041734324991703,
+"order_tv": 0.2282476342303802,
+"template_tv": 0.16618537976017422,
+"peer_prob_on_top": 0.6742768857860417,
+"peer_argmax_agree": 0.68975,
+"position_prior_entropy": 0.9925923208256067
+},
+"allenai/Olmo-3-7B-Instruct|paren|mmlu_social": {
+"entropy": 0.15502752687614943,
+"maxprob": 0.9141997569203377,
+"order_tv": 0.24039710025804903,
+"template_tv": 0.16938743628110342,
+"peer_prob_on_top": 0.6803893566284385,
+"peer_argmax_agree": 0.69475,
+"position_prior_entropy": 0.9975051136640611
+},
+"allenai/Olmo-3-7B-Instruct|paren|mmlu_stem": {
+"entropy": 0.24494370573083765,
+"maxprob": 0.8610111897885799,
+"order_tv": 0.30804955179757415,
+"template_tv": 0.1940051930586345,
+"peer_prob_on_top": 0.5812382116517681,
+"peer_argmax_agree": 0.60175,
+"position_prior_entropy": 0.9826166926819552
+},
+"allenai/Olmo-3-7B-Instruct|paren|mmlupro_biology": {
+"entropy": 0.17344494995343382,
+"maxprob": 0.8598729274868965,
+"order_tv": 0.29829457436384893,
+"template_tv": 0.22413436534292872,
+"peer_prob_on_top": 0.5969755975148503,
+"peer_argmax_agree": 0.6095,
+"position_prior_entropy": 0.9942490452028585
+},
+"allenai/Olmo-3-7B-Instruct|paren|mmlupro_business": {
+"entropy": 0.5232220757809954,
+"maxprob": 0.5823125728368759,
+"order_tv": 0.5220182794554232,
+"template_tv": 0.3479090484374917,
+"peer_prob_on_top": 0.2820526480215888,
+"peer_argmax_agree": 0.3115,
+"position_prior_entropy": 0.9762886067088767
+},
+"allenai/Olmo-3-7B-Instruct|paren|mmlupro_chemistry": {
+"entropy": 0.5121762389318545,
+"maxprob": 0.5934161075502634,
+"order_tv": 0.5002103122862399,
+"template_tv": 0.36218079595669805,
+"peer_prob_on_top": 0.244864556654031,
+"peer_argmax_agree": 0.2755,
+"position_prior_entropy": 0.939829809210087
+},
+"allenai/Olmo-3-7B-Instruct|paren|mmlupro_computer_science": {
+"entropy": 0.35460953204041257,
+"maxprob": 0.7211983761227713,
+"order_tv": 0.46607477024121285,
+"template_tv": 0.3336878290625176,
+"peer_prob_on_top": 0.3872099177094401,
+"peer_argmax_agree": 0.41310975609756095,
+"position_prior_entropy": 0.9948270291530357
+},
+"allenai/Olmo-3-7B-Instruct|paren|mmlupro_economics": {
+"entropy": 0.2545186084280949,
+"maxprob": 0.799976531997323,
+"order_tv": 0.413936666890776,
+"template_tv": 0.26733764368120966,
+"peer_prob_on_top": 0.4656892074062459,
+"peer_argmax_agree": 0.4845,
+"position_prior_entropy": 0.9985301061483867
+},
+"allenai/Olmo-3-7B-Instruct|paren|mmlupro_engineering": {
+"entropy": 0.5452920867713115,
+"maxprob": 0.5785975844413042,
+"order_tv": 0.47999019711166657,
+"template_tv": 0.34236145067331725,
+"peer_prob_on_top": 0.2947032127091173,
+"peer_argmax_agree": 0.34225,
+"position_prior_entropy": 0.9383382326468941
+},
+"allenai/Olmo-3-7B-Instruct|paren|mmlupro_health": {
+"entropy": 0.2402058043531142,
+"maxprob": 0.8129970716685057,
+"order_tv": 0.4442491960495097,
+"template_tv": 0.31248754142963214,
+"peer_prob_on_top": 0.37140946158208066,
+"peer_argmax_agree": 0.381,
+"position_prior_entropy": 0.9639154379524864
+},
+"allenai/Olmo-3-7B-Instruct|paren|mmlupro_history": {
+"entropy": 0.2216180791098993,
+"maxprob": 0.8208708902747612,
+"order_tv": 0.40402239685957825,
+"template_tv": 0.27559297073243216,
+"peer_prob_on_top": 0.4144250453686312,
+"peer_argmax_agree": 0.42454068241469817,
+"position_prior_entropy": 0.9840957653138059
+},
+"allenai/Olmo-3-7B-Instruct|paren|mmlupro_law": {
+"entropy": 0.3319653219325055,
+"maxprob": 0.7329305850565434,
+"order_tv": 0.4514483224279336,
+"template_tv": 0.3447729248795148,
+"peer_prob_on_top": 0.2868174461023366,
+"peer_argmax_agree": 0.3,
+"position_prior_entropy": 0.943182596206467
+},
+"allenai/Olmo-3-7B-Instruct|paren|mmlupro_math": {
+"entropy": 0.4496660969454616,
+"maxprob": 0.6424966231435537,
+"order_tv": 0.49721478566939553,
+"template_tv": 0.34983952018795594,
+"peer_prob_on_top": 0.2724658121741534,
+"peer_argmax_agree": 0.303,
+"position_prior_entropy": 0.9494547600090935
+},
+"allenai/Olmo-3-7B-Instruct|paren|mmlupro_other": {
+"entropy": 0.32126664990297205,
+"maxprob": 0.7484709160774946,
+"order_tv": 0.4451315378882625,
+"template_tv": 0.3249213490859969,
+"peer_prob_on_top": 0.385073667840318,
+"peer_argmax_agree": 0.40725,
+"position_prior_entropy": 0.9789956553869776
+},
+"allenai/Olmo-3-7B-Instruct|paren|mmlupro_philosophy": {
+"entropy": 0.2515790852451894,
+"maxprob": 0.8064726647400187,
+"order_tv": 0.47160310372847825,
+"template_tv": 0.3415325033141176,
+"peer_prob_on_top": 0.3819880385390434,
+"peer_argmax_agree": 0.4000501002004008,
+"position_prior_entropy": 0.9933436211960616
+},
+"allenai/Olmo-3-7B-Instruct|paren|mmlupro_physics": {
+"entropy": 0.5117706482087986,
+"maxprob": 0.5888921653479338,
+"order_tv": 0.49459537652401203,
+"template_tv": 0.3570840987808301,
+"peer_prob_on_top": 0.2519668180898099,
+"peer_argmax_agree": 0.28625,
+"position_prior_entropy": 0.9491129691424974
+},
+"allenai/Olmo-3-7B-Instruct|paren|mmlupro_psychology": {
+"entropy": 0.16189865608142082,
+"maxprob": 0.8687584791034461,
+"order_tv": 0.3381361884788015,
+"template_tv": 0.2614024273901756,
+"peer_prob_on_top": 0.5262992143066765,
+"peer_argmax_agree": 0.54125,
+"position_prior_entropy": 0.7750840826472137
+},
+"allenai/Olmo-3-7B-Instruct|paren|openbookqa": {
+"entropy": 0.1320122790759692,
+"maxprob": 0.9281026723384858,
+"order_tv": 0.21417139293917456,
+"template_tv": 0.16239332319535094,
+"peer_prob_on_top": 0.7299178333002246,
+"peer_argmax_agree": 0.74975,
+"position_prior_entropy": 0.9973249599245281
+},
+"allenai/Olmo-3-7B-Instruct|paren|winogrande": {
+"entropy": 0.364212867601452,
+"maxprob": 0.8843124852776527,
+"order_tv": 0.5021550241927997,
+"template_tv": 0.22081871906598746,
+"peer_prob_on_top": 0.5764086086815546,
+"peer_argmax_agree": 0.598
+},
+"google/gemma-4-12B-it|letter_colon|arc_challenge": {
+"entropy": 0.025853695580961015,
+"maxprob": 0.9876152089238167,
+"order_tv": 0.04015742227496631,
+"template_tv": 0.04810727802728195,
+"peer_prob_on_top": 0.8733768180362745,
+"peer_argmax_agree": 0.88825,
+"position_prior_entropy": 0.9978337782292301
+},
+"google/gemma-4-12B-it|letter_colon|arc_easy": {
+"entropy": 0.019111006946648693,
+"maxprob": 0.9911816547811031,
+"order_tv": 0.029156738388742724,
+"template_tv": 0.028248715438129693,
+"peer_prob_on_top": 0.9306321783479463,
+"peer_argmax_agree": 0.9415,
+"position_prior_entropy": 0.9997326313771013
+},
+"google/gemma-4-12B-it|letter_colon|boolq": {
+"entropy": 0.04535981547056562,
+"maxprob": 0.9879553002119065,
+"order_tv": 0.05751597718196065,
+"template_tv": 0.05149118986438527,
+"peer_prob_on_top": 0.854391076637043,
+"peer_argmax_agree": 0.87575
+},
+"google/gemma-4-12B-it|letter_colon|hellaswag": {
+"entropy": 0.05420331918150279,
+"maxprob": 0.9719338791084385,
+"order_tv": 0.0819170194228521,
+"template_tv": 0.09152840335088257,
+"peer_prob_on_top": 0.7825158089691789,
+"peer_argmax_agree": 0.8162802419354839,
+"position_prior_entropy": 0.9980416267536372
+},
+"google/gemma-4-12B-it|letter_colon|logiqa": {
+"entropy": 0.1269324523092332,
+"maxprob": 0.9350778088271617,
+"order_tv": 0.21510837253895693,
+"template_tv": 0.18447707367645044,
+"peer_prob_on_top": 0.5634537861820486,
+"peer_argmax_agree": 0.61175,
+"position_prior_entropy": 0.9829110293510156
+},
+"google/gemma-4-12B-it|letter_colon|mmlu_humanities": {
+"entropy": 0.08378253717238547,
+"maxprob": 0.9570106074810029,
+"order_tv": 0.15521570513465147,
+"template_tv": 0.12704729362877207,
+"peer_prob_on_top": 0.6276507537841864,
+"peer_argmax_agree": 0.65675,
+"position_prior_entropy": 0.9987356530084228
+},
+"google/gemma-4-12B-it|letter_colon|mmlu_other": {
+"entropy": 0.07307880246931776,
+"maxprob": 0.9617419275939465,
+"order_tv": 0.11824639741561481,
+"template_tv": 0.08983610777743689,
+"peer_prob_on_top": 0.7420828676015085,
+"peer_argmax_agree": 0.7675,
+"position_prior_entropy": 0.9992152043306193
+},
+"google/gemma-4-12B-it|letter_colon|mmlu_social": {
+"entropy": 0.05935776948747489,
+"maxprob": 0.9683208900392055,
+"order_tv": 0.09923185822057001,
+"template_tv": 0.09098497685740427,
+"peer_prob_on_top": 0.7670612266986495,
+"peer_argmax_agree": 0.78975,
+"position_prior_entropy": 0.9953509745571296
+},
+"google/gemma-4-12B-it|letter_colon|mmlu_stem": {
+"entropy": 0.09705017264275201,
+"maxprob": 0.9487394887506961,
+"order_tv": 0.15423973697094795,
+"template_tv": 0.12497860439983244,
+"peer_prob_on_top": 0.6783334289410916,
+"peer_argmax_agree": 0.708,
+"position_prior_entropy": 0.9980441942377662
+},
+"google/gemma-4-12B-it|letter_colon|mmlupro_biology": {
+"entropy": 0.05357400160775197,
+"maxprob": 0.9574304918944836,
+"order_tv": 0.14751785885912724,
+"template_tv": 0.1110108060977101,
+"peer_prob_on_top": 0.7076600800366653,
+"peer_argmax_agree": 0.74025,
+"position_prior_entropy": 0.9779642401216414
+},
+"google/gemma-4-12B-it|letter_colon|mmlupro_business": {
+"entropy": 0.21962596878107724,
+"maxprob": 0.8262053282856942,
+"order_tv": 0.461772801336915,
+"template_tv": 0.26895595180105036,
+"peer_prob_on_top": 0.333270684821817,
+"peer_argmax_agree": 0.3885,
+"position_prior_entropy": 0.9825257351764441
+},
+"google/gemma-4-12B-it|letter_colon|mmlupro_chemistry": {
+"entropy": 0.26508109967066085,
+"maxprob": 0.7865018946677447,
+"order_tv": 0.4846412972001002,
+"template_tv": 0.29507718532246535,
+"peer_prob_on_top": 0.29950746226302316,
+"peer_argmax_agree": 0.3445,
+"position_prior_entropy": 0.9112404610186783
+},
+"google/gemma-4-12B-it|letter_colon|mmlupro_computer_science": {
+"entropy": 0.09668107516333804,
+"maxprob": 0.9263494498846008,
+"order_tv": 0.251716212147898,
+"template_tv": 0.16972879052263284,
+"peer_prob_on_top": 0.47147480777322953,
+"peer_argmax_agree": 0.5204268292682926,
+"position_prior_entropy": 0.9965127784186756
+},
+"google/gemma-4-12B-it|letter_colon|mmlupro_economics": {
+"entropy": 0.08221539373177976,
+"maxprob": 0.9361095792651176,
+"order_tv": 0.20490540637869134,
+"template_tv": 0.15615466338103204,
+"peer_prob_on_top": 0.5846483359458532,
+"peer_argmax_agree": 0.61375,
+"position_prior_entropy": 0.9970438648092635
+},
+"google/gemma-4-12B-it|letter_colon|mmlupro_engineering": {
+"entropy": 0.23204837298031708,
+"maxprob": 0.8209833329319954,
+"order_tv": 0.47348464921723343,
+"template_tv": 0.25406971888530544,
+"peer_prob_on_top": 0.325011939109632,
+"peer_argmax_agree": 0.39025,
+"position_prior_entropy": 0.9886482206105495
+},
+"google/gemma-4-12B-it|letter_colon|mmlupro_health": {
+"entropy": 0.07916750828544132,
+"maxprob": 0.9400978582501411,
+"order_tv": 0.2090344116651695,
+"template_tv": 0.15454077099332006,
+"peer_prob_on_top": 0.528905848339998,
+"peer_argmax_agree": 0.56625,
+"position_prior_entropy": 0.9960265474436367
+},
+"google/gemma-4-12B-it|letter_colon|mmlupro_history": {
+"entropy": 0.06800660649095895,
+"maxprob": 0.9500426732179686,
+"order_tv": 0.21810373911313374,
+"template_tv": 0.1483515556062146,
+"peer_prob_on_top": 0.536340313640541,
+"peer_argmax_agree": 0.5685695538057742,
+"position_prior_entropy": 0.9872802694395011
+},
+"google/gemma-4-12B-it|letter_colon|mmlupro_law": {
+"entropy": 0.08608357113986143,
+"maxprob": 0.9357875680923462,
+"order_tv": 0.2864009770380063,
+"template_tv": 0.2141965520601659,
+"peer_prob_on_top": 0.3691339754100652,
+"peer_argmax_agree": 0.413,
+"position_prior_entropy": 0.9836109438410681
+},
+"google/gemma-4-12B-it|letter_colon|mmlupro_math": {
+"entropy": 0.2053089915916164,
+"maxprob": 0.8380047047436238,
+"order_tv": 0.4460154664203897,
+"template_tv": 0.2818599042964956,
+"peer_prob_on_top": 0.32285713462950366,
+"peer_argmax_agree": 0.36925,
+"position_prior_entropy": 0.9562381665196856
+},
+"google/gemma-4-12B-it|letter_colon|mmlupro_other": {
+"entropy": 0.12010264880676406,
+"maxprob": 0.909077197805047,
+"order_tv": 0.3084685867776618,
+"template_tv": 0.19129178297655164,
+"peer_prob_on_top": 0.45978559414322956,
+"peer_argmax_agree": 0.50375,
+"position_prior_entropy": 0.9629885379284465
+},
+"google/gemma-4-12B-it|letter_colon|mmlupro_philosophy": {
+"entropy": 0.1043768995201482,
+"maxprob": 0.9234856898804944,
+"order_tv": 0.2858050949772109,
+"template_tv": 0.19789880470744964,
+"peer_prob_on_top": 0.4947613437544353,
+"peer_argmax_agree": 0.531563126252505,
+"position_prior_entropy": 0.991199406110138
+},
+"google/gemma-4-12B-it|letter_colon|mmlupro_physics": {
+"entropy": 0.24612660857913543,
+"maxprob": 0.7999954424500465,
+"order_tv": 0.47241034310995667,
+"template_tv": 0.29315156796856967,
+"peer_prob_on_top": 0.3234829752212613,
+"peer_argmax_agree": 0.37125,
+"position_prior_entropy": 0.5659859734469894
+},
+"google/gemma-4-12B-it|letter_colon|mmlupro_psychology": {
+"entropy": 0.0541440303371743,
+"maxprob": 0.9586810089945793,
+"order_tv": 0.1520222227044032,
+"template_tv": 0.11997425542968024,
+"peer_prob_on_top": 0.6465362839494394,
+"peer_argmax_agree": 0.68025,
+"position_prior_entropy": 0.9522880342310726
+},
+"google/gemma-4-12B-it|letter_colon|openbookqa": {
+"entropy": 0.03492386432603303,
+"maxprob": 0.983053475856781,
+"order_tv": 0.06445437689210161,
+"template_tv": 0.05845281740790842,
+"peer_prob_on_top": 0.8066090801250959,
+"peer_argmax_agree": 0.836,
+"position_prior_entropy": 0.999046116182627
+},
+"google/gemma-4-12B-it|letter_colon|winogrande": {
+"entropy": 0.13652990909661508,
+"maxprob": 0.963810871720314,
+"order_tv": 0.1388207416140329,
+"template_tv": 0.12903918247574697,
+"peer_prob_on_top": 0.6673590698468433,
+"peer_argmax_agree": 0.70125
+},
+"google/gemma-4-12B-it|paren|arc_challenge": {
+"entropy": 0.03726978215811828,
+"maxprob": 0.9794885376393795,
+"order_tv": 0.05362698939710513,
+"template_tv": 0.04810727802728195,
+"peer_prob_on_top": 0.862160947366506,
+"peer_argmax_agree": 0.87975,
+"position_prior_entropy": 0.9987351241511018
+},
+"google/gemma-4-12B-it|paren|arc_easy": {
+"entropy": 0.02264470428399858,
+"maxprob": 0.9880518922805787,
+"order_tv": 0.02761266013196545,
+"template_tv": 0.028248715438129693,
+"peer_prob_on_top": 0.9181137481207164,
+"peer_argmax_agree": 0.92675,
+"position_prior_entropy": 0.9996363460808627
+},
+"google/gemma-4-12B-it|paren|boolq": {
+"entropy": 0.05783202745986161,
+"maxprob": 0.9863481069803238,
+"order_tv": 0.058655197574018304,
+"template_tv": 0.05149118986438527,
+"peer_prob_on_top": 0.8441297913590226,
+"peer_argmax_agree": 0.86375
+},
+"google/gemma-4-12B-it|paren|hellaswag": {
+"entropy": 0.077314088759605,
+"maxprob": 0.9593030856621843,
+"order_tv": 0.094817243341889,
+"template_tv": 0.09152840335088257,
+"peer_prob_on_top": 0.7734762888378522,
+"peer_argmax_agree": 0.8102318548387096,
+"position_prior_entropy": 0.9990498753169035
+},
+"google/gemma-4-12B-it|paren|logiqa": {
+"entropy": 0.15094673322316857,
+"maxprob": 0.9213381767570973,
+"order_tv": 0.21919891402425354,
+"template_tv": 0.18447707367645044,
+"peer_prob_on_top": 0.5416525372741071,
+"peer_argmax_agree": 0.5865,
+"position_prior_entropy": 0.9905921806563233
+},
+"google/gemma-4-12B-it|paren|mmlu_humanities": {
+"entropy": 0.10522113041289248,
+"maxprob": 0.9493222413659096,
+"order_tv": 0.15611230045078223,
+"template_tv": 0.12704729362877207,
+"peer_prob_on_top": 0.6199680349753209,
+"peer_argmax_agree": 0.652,
+"position_prior_entropy": 0.9973472766626742
+},
+"google/gemma-4-12B-it|paren|mmlu_other": {
+"entropy": 0.09259672754756998,
+"maxprob": 0.9512891852259636,
+"order_tv": 0.12561513201289023,
+"template_tv": 0.08983610777743689,
+"peer_prob_on_top": 0.7400314444763403,
+"peer_argmax_agree": 0.766,
+"position_prior_entropy": 0.9985202856375267
+},
+"google/gemma-4-12B-it|paren|mmlu_social": {
+"entropy": 0.0759062168347118,
+"maxprob": 0.9609718636572361,
+"order_tv": 0.10770109576152082,
+"template_tv": 0.09098497685740427,
+"peer_prob_on_top": 0.7525368748838248,
+"peer_argmax_agree": 0.77575,
+"position_prior_entropy": 0.9961285974488268
+},
+"google/gemma-4-12B-it|paren|mmlu_stem": {
+"entropy": 0.1269192753971828,
+"maxprob": 0.9343862485289574,
+"order_tv": 0.1741497999993112,
+"template_tv": 0.12497860439983244,
+"peer_prob_on_top": 0.6593632232697204,
+"peer_argmax_agree": 0.69275,
+"position_prior_entropy": 0.9975452425641236
+},
+"google/gemma-4-12B-it|paren|mmlupro_biology": {
+"entropy": 0.06809861261205784,
+"maxprob": 0.9466611584126949,
+"order_tv": 0.15879518006535615,
+"template_tv": 0.1110108060977101,
+"peer_prob_on_top": 0.6951188105803127,
+"peer_argmax_agree": 0.72175,
+"position_prior_entropy": 0.9809045075801225
+},
+"google/gemma-4-12B-it|paren|mmlupro_business": {
+"entropy": 0.27459305341299867,
+"maxprob": 0.7816588875204324,
+"order_tv": 0.4308470836105086,
+"template_tv": 0.26895595180105036,
+"peer_prob_on_top": 0.3310425325369008,
+"peer_argmax_agree": 0.397,
+"position_prior_entropy": 0.9796574903006913
+},
+"google/gemma-4-12B-it|paren|mmlupro_chemistry": {
+"entropy": 0.35589389246783243,
+"maxprob": 0.7180597582608461,
+"order_tv": 0.4391392302674593,
+"template_tv": 0.2950771853224653,
+"peer_prob_on_top": 0.3088104476113049,
+"peer_argmax_agree": 0.3765,
+"position_prior_entropy": 0.9462775456548254
+},
+"google/gemma-4-12B-it|paren|mmlupro_computer_science": {
+"entropy": 0.12092013722638435,
+"maxprob": 0.9090650949718022,
+"order_tv": 0.24768687987276533,
+"template_tv": 0.16972879052263284,
+"peer_prob_on_top": 0.4821448079230169,
+"peer_argmax_agree": 0.535670731707317,
+"position_prior_entropy": 0.9989337924558396
+},
+"google/gemma-4-12B-it|paren|mmlupro_economics": {
+"entropy": 0.08145507657448035,
+"maxprob": 0.9414689639508724,
+"order_tv": 0.23010591441603087,
+"template_tv": 0.15615466338103204,
+"peer_prob_on_top": 0.5778990072285064,
+"peer_argmax_agree": 0.61625,
+"position_prior_entropy": 0.996707067865966
+},
+"google/gemma-4-12B-it|paren|mmlupro_engineering": {
+"entropy": 0.31487021122295566,
+"maxprob": 0.7588327763229609,
+"order_tv": 0.42237276775792654,
+"template_tv": 0.25406971888530544,
+"peer_prob_on_top": 0.3310798266661251,
+"peer_argmax_agree": 0.4165,
+"position_prior_entropy": 0.9878654822526215
+},
+"google/gemma-4-12B-it|paren|mmlupro_health": {
+"entropy": 0.09886303980390242,
+"maxprob": 0.9234525486677885,
+"order_tv": 0.20776755152856147,
+"template_tv": 0.15454077099332006,
+"peer_prob_on_top": 0.5159780297716473,
+"peer_argmax_agree": 0.55175,
+"position_prior_entropy": 0.9997619385698799
+},
+"google/gemma-4-12B-it|paren|mmlupro_history": {
+"entropy": 0.06768011664059442,
+"maxprob": 0.951171204486857,
+"order_tv": 0.19862616329837102,
+"template_tv": 0.1483515556062146,
+"peer_prob_on_top": 0.5432635555133171,
+"peer_argmax_agree": 0.5823490813648294,
+"position_prior_entropy": 0.9944023116953378
+},
+"google/gemma-4-12B-it|paren|mmlupro_law": {
+"entropy": 0.09909014591385147,
+"maxprob": 0.9267421514093875,
+"order_tv": 0.3135519573342341,
+"template_tv": 0.2141965520601659,
+"peer_prob_on_top": 0.36225842608688585,
+"peer_argmax_agree": 0.39525,
+"position_prior_entropy": 0.9716859418672744
+},
+"google/gemma-4-12B-it|paren|mmlupro_math": {
+"entropy": 0.261257547134693,
+"maxprob": 0.7925624479800463,
+"order_tv": 0.3822402226667648,
+"template_tv": 0.28185990429649554,
+"peer_prob_on_top": 0.32475541948282766,
+"peer_argmax_agree": 0.39025,
+"position_prior_entropy": 0.9910783003924479
+},
+"google/gemma-4-12B-it|paren|mmlupro_other": {
+"entropy": 0.1522744320158888,
+"maxprob": 0.8847919039130211,
+"order_tv": 0.27872453319675844,
+"template_tv": 0.19129178297655164,
+"peer_prob_on_top": 0.4554641296015111,
+"peer_argmax_agree": 0.504,
+"position_prior_entropy": 0.9810374135240597
+},
+"google/gemma-4-12B-it|paren|mmlupro_philosophy": {
+"entropy": 0.10346570956349094,
+"maxprob": 0.9261502135612205,
+"order_tv": 0.27618727578632435,
+"template_tv": 0.19789880470744964,
+"peer_prob_on_top": 0.49435959972985294,
+"peer_argmax_agree": 0.5405811623246493,
+"position_prior_entropy": 0.9979796764289492
+},
+"google/gemma-4-12B-it|paren|mmlupro_physics": {
+"entropy": 0.3222956314099544,
+"maxprob": 0.7458743340224028,
+"order_tv": 0.4180329606651241,
+"template_tv": 0.29315156796856967,
+"peer_prob_on_top": 0.32322521900595486,
+"peer_argmax_agree": 0.383,
+"position_prior_entropy": 0.51163838398018
+},
+"google/gemma-4-12B-it|paren|mmlupro_psychology": {
+"entropy": 0.0570899766987569,
+"maxprob": 0.9563272948861122,
+"order_tv": 0.15318615671245078,
+"template_tv": 0.11997425542968025,
+"peer_prob_on_top": 0.6494605095371468,
+"peer_argmax_agree": 0.68625,
+"position_prior_entropy": 0.9469937990108962
+},
+"google/gemma-4-12B-it|paren|openbookqa": {
+"entropy": 0.05047834391591864,
+"maxprob": 0.9757980727255344,
+"order_tv": 0.06391950330628617,
+"template_tv": 0.05845281740790842,
+"peer_prob_on_top": 0.807629223252661,
+"peer_argmax_agree": 0.84025,
+"position_prior_entropy": 0.9996001125756365
+},
+"google/gemma-4-12B-it|paren|winogrande": {
+"entropy": 0.16626276932692918,
+"maxprob": 0.9566964521408081,
+"order_tv": 0.12766798530923415,
+"template_tv": 0.12903918247574697,
+"peer_prob_on_top": 0.6668514037442398,
+"peer_argmax_agree": 0.7005
+},
+"ibm-granite/granite-4.2-8b|letter_colon|arc_challenge": {
+"entropy": 0.09872376692182454,
+"maxprob": 0.9489442088007927,
+"order_tv": 0.11859564020014432,
+"template_tv": 0.06995842578801433,
+"peer_prob_on_top": 0.8431475155939793,
+"peer_argmax_agree": 0.85325,
+"position_prior_entropy": 0.9979102612402311
+},
+"ibm-granite/granite-4.2-8b|letter_colon|arc_easy": {
+"entropy": 0.04499338622579036,
+"maxprob": 0.9776132873594761,
+"order_tv": 0.04554762785522003,
+"template_tv": 0.029581689513852646,
+"peer_prob_on_top": 0.9209383076202324,
+"peer_argmax_agree": 0.92825,
+"position_prior_entropy": 0.9999716945314624
+},
+"ibm-granite/granite-4.2-8b|letter_colon|boolq": {
+"entropy": 0.11919427363614515,
+"maxprob": 0.9673322281837463,
+"order_tv": 0.05224289897351446,
+"template_tv": 0.04873069684966958,
+"peer_prob_on_top": 0.8477961866602821,
+"peer_argmax_agree": 0.863
+},
+"ibm-granite/granite-4.2-8b|letter_colon|hellaswag": {
+"entropy": 0.09104191846496561,
+"maxprob": 0.9512501105425819,
+"order_tv": 0.1456240918552241,
+"template_tv": 0.06480231576383935,
+"peer_prob_on_top": 0.7626408335677178,
+"peer_argmax_agree": 0.7898185483870968,
+"position_prior_entropy": 0.9967501053414013
+},
+"ibm-granite/granite-4.2-8b|letter_colon|logiqa": {
+"entropy": 0.28945417680895913,
+"maxprob": 0.8463321687281131,
+"order_tv": 0.2653739028619499,
+"template_tv": 0.13989040808010209,
+"peer_prob_on_top": 0.5606380581983968,
+"peer_argmax_agree": 0.5935,
+"position_prior_entropy": 0.9891604526108885
+},
+"ibm-granite/granite-4.2-8b|letter_colon|mmlu_humanities": {
+"entropy": 0.2081374069226957,
+"maxprob": 0.8904165339171887,
+"order_tv": 0.2794021232050653,
+"template_tv": 0.11976685416017807,
+"peer_prob_on_top": 0.6347553031514555,
+"peer_argmax_agree": 0.65925,
+"position_prior_entropy": 0.9923312664079874
+},
+"ibm-granite/granite-4.2-8b|letter_colon|mmlu_other": {
+"entropy": 0.18000356774799023,
+"maxprob": 0.9043254511356353,
+"order_tv": 0.1918519399177118,
+"template_tv": 0.09554210395818583,
+"peer_prob_on_top": 0.7193960886986082,
+"peer_argmax_agree": 0.733,
+"position_prior_entropy": 0.9973944332641045
+},
+"ibm-granite/granite-4.2-8b|letter_colon|mmlu_social": {
+"entropy": 0.1497552718534235,
+"maxprob": 0.9219091925621032,
+"order_tv": 0.157731864505259,
+"template_tv": 0.09480452355055359,
+"peer_prob_on_top": 0.7411972519317117,
+"peer_argmax_agree": 0.7565,
+"position_prior_entropy": 0.993980611196636
+},
+"ibm-granite/granite-4.2-8b|letter_colon|mmlu_stem": {
+"entropy": 0.22678484826423237,
+"maxprob": 0.878136631578207,
+"order_tv": 0.2474216832741775,
+"template_tv": 0.10980137695680289,
+"peer_prob_on_top": 0.6624797536049852,
+"peer_argmax_agree": 0.6905,
+"position_prior_entropy": 0.9951944762677876
+},
+"ibm-granite/granite-4.2-8b|letter_colon|mmlupro_biology": {
+"entropy": 0.14089127174644486,
+"maxprob": 0.8895140094310046,
+"order_tv": 0.24636192202451127,
+"template_tv": 0.10293899971098605,
+"peer_prob_on_top": 0.6847556922877679,
+"peer_argmax_agree": 0.70975,
+"position_prior_entropy": 0.9665369558522474
+},
+"ibm-granite/granite-4.2-8b|letter_colon|mmlupro_business": {
+"entropy": 0.30426314420203415,
+"maxprob": 0.7595417792797089,
+"order_tv": 0.5499413739643368,
+"template_tv": 0.22334336982274192,
+"peer_prob_on_top": 0.34937523799093423,
+"peer_argmax_agree": 0.39625,
+"position_prior_entropy": 0.8942539518444477
+},
+"ibm-granite/granite-4.2-8b|letter_colon|mmlupro_chemistry": {
+"entropy": 0.3130628972648868,
+"maxprob": 0.7514760605245828,
+"order_tv": 0.5815496906270625,
+"template_tv": 0.2170030964258162,
+"peer_prob_on_top": 0.30885038389079544,
+"peer_argmax_agree": 0.35225,
+"position_prior_entropy": 0.9502759599874977
+},
+"ibm-granite/granite-4.2-8b|letter_colon|mmlupro_computer_science": {
+"entropy": 0.25412493210949705,
+"maxprob": 0.8064218918361314,
+"order_tv": 0.41004253733300555,
+"template_tv": 0.1821271602216161,
+"peer_prob_on_top": 0.4699465052264233,
+"peer_argmax_agree": 0.5134146341463415,
+"position_prior_entropy": 0.9894186389556358
+},
+"ibm-granite/granite-4.2-8b|letter_colon|mmlupro_economics": {
+"entropy": 0.1895429981333278,
+"maxprob": 0.8553675586134195,
+"order_tv": 0.3398657231838579,
+"template_tv": 0.14048220022710592,
+"peer_prob_on_top": 0.564649635923328,
+"peer_argmax_agree": 0.58925,
+"position_prior_entropy": 0.9887929225629084
+},
+"ibm-granite/granite-4.2-8b|letter_colon|mmlupro_engineering": {
+"entropy": 0.31606601107020255,
+"maxprob": 0.7554133335351944,
+"order_tv": 0.5698640704615632,
+"template_tv": 0.19355246059072567,
+"peer_prob_on_top": 0.3420491487156606,
+"peer_argmax_agree": 0.40775,
+"position_prior_entropy": 0.9727415355069994
+},
+"ibm-granite/granite-4.2-8b|letter_colon|mmlupro_health": {
+"entropy": 0.2388883572642719,
+"maxprob": 0.8151665088832378,
+"order_tv": 0.34667877659068896,
+"template_tv": 0.17408107649561516,
+"peer_prob_on_top": 0.4886484607012038,
+"peer_argmax_agree": 0.5135,
+"position_prior_entropy": 0.99546537945978
+},
+"ibm-granite/granite-4.2-8b|letter_colon|mmlupro_history": {
+"entropy": 0.2109121710367507,
+"maxprob": 0.8378629123992495,
+"order_tv": 0.30885361687641383,
+"template_tv": 0.1441925492546451,
+"peer_prob_on_top": 0.5233304363560375,
+"peer_argmax_agree": 0.5501968503937008,
+"position_prior_entropy": 0.9714410658394266
+},
+"ibm-granite/granite-4.2-8b|letter_colon|mmlupro_law": {
+"entropy": 0.2787780128868885,
+"maxprob": 0.7839484759420157,
+"order_tv": 0.4288502353380612,
+"template_tv": 0.1787931982896755,
+"peer_prob_on_top": 0.3746369344700886,
+"peer_argmax_agree": 0.4045,
+"position_prior_entropy": 0.9534478874768831
+},
+"ibm-granite/granite-4.2-8b|letter_colon|mmlupro_math": {
+"entropy": 0.34460539501857185,
+"maxprob": 0.7331258192956448,
+"order_tv": 0.557630936132048,
+"template_tv": 0.242026823212007,
+"peer_prob_on_top": 0.3375691316062979,
+"peer_argmax_agree": 0.3745,
+"position_prior_entropy": 0.7664489552246831
+},
+"ibm-granite/granite-4.2-8b|letter_colon|mmlupro_other": {
+"entropy": 0.2601129323516948,
+"maxprob": 0.7991144738495349,
+"order_tv": 0.39997996707797034,
+"template_tv": 0.19768759087014373,
+"peer_prob_on_top": 0.4388050805276455,
+"peer_argmax_agree": 0.4645,
+"position_prior_entropy": 0.9922726732455968
+},
+"ibm-granite/granite-4.2-8b|letter_colon|mmlupro_philosophy": {
+"entropy": 0.22330150542172872,
+"maxprob": 0.8335270968700698,
+"order_tv": 0.39773973271329993,
+"template_tv": 0.18686297253738482,
+"peer_prob_on_top": 0.48031106294698056,
+"peer_argmax_agree": 0.5117735470941884,
+"position_prior_entropy": 0.9934229017672592
+},
+"ibm-granite/granite-4.2-8b|letter_colon|mmlupro_physics": {
+"entropy": 0.3160483758745651,
+"maxprob": 0.7457705773264169,
+"order_tv": 0.5840445714485909,
+"template_tv": 0.22883852132909033,
+"peer_prob_on_top": 0.33200227526028725,
+"peer_argmax_agree": 0.3815,
+"position_prior_entropy": 0.8508802669802623
+},
+"ibm-granite/granite-4.2-8b|letter_colon|mmlupro_psychology": {
+"entropy": 0.1635453550773201,
+"maxprob": 0.8698362656235695,
+"order_tv": 0.27945735585166703,
+"template_tv": 0.1342837679855455,
+"peer_prob_on_top": 0.6299322064298012,
+"peer_argmax_agree": 0.65075,
+"position_prior_entropy": 0.9524203684902454
+},
+"ibm-granite/granite-4.2-8b|letter_colon|openbookqa": {
+"entropy": 0.12825731819193825,
+"maxprob": 0.9355370372831822,
+"order_tv": 0.13208211564215924,
+"template_tv": 0.09139768169554628,
+"peer_prob_on_top": 0.787834019707259,
+"peer_argmax_agree": 0.80875,
+"position_prior_entropy": 0.9989596970027693
+},
+"ibm-granite/granite-4.2-8b|letter_colon|winogrande": {
+"entropy": 0.4261423097141693,
+"maxprob": 0.8693934915065765,
+"order_tv": 0.3074906252474625,
+"template_tv": 0.10802433897770675,
+"peer_prob_on_top": 0.620984233254674,
+"peer_argmax_agree": 0.636
+},
+"ibm-granite/granite-4.2-8b|paren|arc_challenge": {
+"entropy": 0.10037500815243496,
+"maxprob": 0.9480536254048347,
+"order_tv": 0.10041511695941994,
+"template_tv": 0.06995842578801433,
+"peer_prob_on_top": 0.843687201452524,
+"peer_argmax_agree": 0.857,
+"position_prior_entropy": 0.9984634915179691
+},
+"ibm-granite/granite-4.2-8b|paren|arc_easy": {
+"entropy": 0.04129923491918471,
+"maxprob": 0.979909573674202,
+"order_tv": 0.044485335719316024,
+"template_tv": 0.029581689513852646,
+"peer_prob_on_top": 0.9159639908461569,
+"peer_argmax_agree": 0.923,
+"position_prior_entropy": 0.999861705179695
+},
+"ibm-granite/granite-4.2-8b|paren|boolq": {
+"entropy": 0.10782280566223627,
+"maxprob": 0.970857664167881,
+"order_tv": 0.04567919363972396,
+"template_tv": 0.04873069684966958,
+"peer_prob_on_top": 0.8300951902798553,
+"peer_argmax_agree": 0.842
+},
+"ibm-granite/granite-4.2-8b|paren|hellaswag": {
+"entropy": 0.09979198114516827,
+"maxprob": 0.9520446604057666,
+"order_tv": 0.13295057639403934,
+"template_tv": 0.06480231576383935,
+"peer_prob_on_top": 0.763989567582037,
+"peer_argmax_agree": 0.7976310483870968,
+"position_prior_entropy": 0.9976395320548069
+},
+"ibm-granite/granite-4.2-8b|paren|logiqa": {
+"entropy": 0.29420144535478215,
+"maxprob": 0.8396858673691749,
+"order_tv": 0.2492281191777181,
+"template_tv": 0.13989040808010209,
+"peer_prob_on_top": 0.5504618683259497,
+"peer_argmax_agree": 0.58175,
+"position_prior_entropy": 0.9945276696377234
+},
+"ibm-granite/granite-4.2-8b|paren|mmlu_humanities": {
+"entropy": 0.20375473425977803,
+"maxprob": 0.8903149686157703,
+"order_tv": 0.25390887723627475,
+"template_tv": 0.11976685416017807,
+"peer_prob_on_top": 0.6157052447977682,
+"peer_argmax_agree": 0.64025,
+"position_prior_entropy": 0.9880617962099936
+},
+"ibm-granite/granite-4.2-8b|paren|mmlu_other": {
+"entropy": 0.17014878279014728,
+"maxprob": 0.9124695318937301,
+"order_tv": 0.16290558950943956,
+"template_tv": 0.09554210395818583,
+"peer_prob_on_top": 0.7179052202437174,
+"peer_argmax_agree": 0.73675,
+"position_prior_entropy": 0.9981131808922641
+},
+"ibm-granite/granite-4.2-8b|paren|mmlu_social": {
+"entropy": 0.15194849748897618,
+"maxprob": 0.9193836328089238,
+"order_tv": 0.1457987606596051,
+"template_tv": 0.09480452355055359,
+"peer_prob_on_top": 0.7422119981523979,
+"peer_argmax_agree": 0.76175,
+"position_prior_entropy": 0.9947813936731914
+},
+"ibm-granite/granite-4.2-8b|paren|mmlu_stem": {
+"entropy": 0.22001608478567616,
+"maxprob": 0.8837446277439595,
+"order_tv": 0.21530127816582081,
+"template_tv": 0.10980137695680289,
+"peer_prob_on_top": 0.651558148373382,
+"peer_argmax_agree": 0.68225,
+"position_prior_entropy": 0.9941918541681353
+},
+"ibm-granite/granite-4.2-8b|paren|mmlupro_biology": {
+"entropy": 0.1289769506935743,
+"maxprob": 0.8964444554448128,
+"order_tv": 0.21978407291256832,
+"template_tv": 0.10293899971098605,
+"peer_prob_on_top": 0.6738831876384904,
+"peer_argmax_agree": 0.6955,
+"position_prior_entropy": 0.9751448648096868
+},
+"ibm-granite/granite-4.2-8b|paren|mmlupro_business": {
+"entropy": 0.3380627079297095,
+"maxprob": 0.7326916776001453,
+"order_tv": 0.5081754258753016,
+"template_tv": 0.22334336982274192,
+"peer_prob_on_top": 0.33778699938700135,
+"peer_argmax_agree": 0.4005,
+"position_prior_entropy": 0.8686395960495613
+},
+"ibm-granite/granite-4.2-8b|paren|mmlupro_chemistry": {
+"entropy": 0.33028019174745465,
+"maxprob": 0.7303824891448021,
+"order_tv": 0.5323559617916167,
+"template_tv": 0.2170030964258162,
+"peer_prob_on_top": 0.3045093902609471,
+"peer_argmax_agree": 0.3755,
+"position_prior_entropy": 0.9780552664890881
+},
+"ibm-granite/granite-4.2-8b|paren|mmlupro_computer_science": {
+"entropy": 0.25391603036290034,
+"maxprob": 0.8043530893035051,
+"order_tv": 0.3657634943172905,
+"template_tv": 0.1821271602216161,
+"peer_prob_on_top": 0.4736522291664917,
+"peer_argmax_agree": 0.5173780487804878,
+"position_prior_entropy": 0.997487737359458
+},
+"ibm-granite/granite-4.2-8b|paren|mmlupro_economics": {
+"entropy": 0.18273225310289898,
+"maxprob": 0.857127344712615,
+"order_tv": 0.31564099887254016,
+"template_tv": 0.14048220022710592,
+"peer_prob_on_top": 0.5628740276569515,
+"peer_argmax_agree": 0.59325,
+"position_prior_entropy": 0.9910361339584737
+},
+"ibm-granite/granite-4.2-8b|paren|mmlupro_engineering": {
+"entropy": 0.3102933712998083,
+"maxprob": 0.7612722494006157,
+"order_tv": 0.5360352848607335,
+"template_tv": 0.19355246059072567,
+"peer_prob_on_top": 0.33511540957915037,
+"peer_argmax_agree": 0.43,
+"position_prior_entropy": 0.9738847420017392
+},
+"ibm-granite/granite-4.2-8b|paren|mmlupro_health": {
+"entropy": 0.22797385878527318,
+"maxprob": 0.8225964237898589,
+"order_tv": 0.3254870252197344,
+"template_tv": 0.17408107649561516,
+"peer_prob_on_top": 0.4772141780943064,
+"peer_argmax_agree": 0.5,
+"position_prior_entropy": 0.9918931086307612
+},
+"ibm-granite/granite-4.2-8b|paren|mmlupro_history": {
+"entropy": 0.2086254455067894,
+"maxprob": 0.8373949504665189,
+"order_tv": 0.29434858906030015,
+"template_tv": 0.1441925492546451,
+"peer_prob_on_top": 0.534021887320427,
+"peer_argmax_agree": 0.5616797900262467,
+"position_prior_entropy": 0.9824952744631945
+},
+"ibm-granite/granite-4.2-8b|paren|mmlupro_law": {
+"entropy": 0.24842589488156427,
+"maxprob": 0.796755578994751,
+"order_tv": 0.41875464391951994,
+"template_tv": 0.1787931982896755,
+"peer_prob_on_top": 0.36896130183239406,
+"peer_argmax_agree": 0.39725,
+"position_prior_entropy": 0.9467103387613719
+},
+"ibm-granite/granite-4.2-8b|paren|mmlupro_math": {
+"entropy": 0.3531930865328615,
+"maxprob": 0.7276631970405578,
+"order_tv": 0.5073449844070533,
+"template_tv": 0.242026823212007,
+"peer_prob_on_top": 0.3283867268885032,
+"peer_argmax_agree": 0.38575,
+"position_prior_entropy": 0.7956181172213143
+},
+"ibm-granite/granite-4.2-8b|paren|mmlupro_other": {
+"entropy": 0.281581065509547,
+"maxprob": 0.7779518153220415,
+"order_tv": 0.36239494061234495,
+"template_tv": 0.19768759087014373,
+"peer_prob_on_top": 0.44664219792063964,
+"peer_argmax_agree": 0.4805,
+"position_prior_entropy": 0.9906266549482765
+},
+"ibm-granite/granite-4.2-8b|paren|mmlupro_philosophy": {
+"entropy": 0.22253985594221926,
+"maxprob": 0.8315890497100616,
+"order_tv": 0.36746693938577196,
+"template_tv": 0.18686297253738482,
+"peer_prob_on_top": 0.49825307295144233,
+"peer_argmax_agree": 0.5365731462925851,
+"position_prior_entropy": 0.9956293382068168
+},
+"ibm-granite/granite-4.2-8b|paren|mmlupro_physics": {
+"entropy": 0.33488729108682164,
+"maxprob": 0.7333335640132427,
+"order_tv": 0.5283500974838564,
+"template_tv": 0.22883852132909033,
+"peer_prob_on_top": 0.3239026253868205,
+"peer_argmax_agree": 0.39325,
+"position_prior_entropy": 0.5289581109346442
+},
+"ibm-granite/granite-4.2-8b|paren|mmlupro_psychology": {
+"entropy": 0.14818131035050533,
+"maxprob": 0.878173439949751,
+"order_tv": 0.24332790035694413,
+"template_tv": 0.1342837679855455,
+"peer_prob_on_top": 0.6308590432880392,
+"peer_argmax_agree": 0.6545,
+"position_prior_entropy": 0.9462954283724483
+},
+"ibm-granite/granite-4.2-8b|paren|openbookqa": {
+"entropy": 0.1349676909476739,
+"maxprob": 0.9314037455022335,
+"order_tv": 0.11312539661394294,
+"template_tv": 0.09139768169554628,
+"peer_prob_on_top": 0.7972529870394901,
+"peer_argmax_agree": 0.82125,
+"position_prior_entropy": 0.9983824556477102
+},
+"ibm-granite/granite-4.2-8b|paren|winogrande": {
+"entropy": 0.40453047326016534,
+"maxprob": 0.8779861142039299,
+"order_tv": 0.27373820447055186,
+"template_tv": 0.10802433897770675,
+"peer_prob_on_top": 0.6303240120045275,
+"peer_argmax_agree": 0.639
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|arc_challenge": {
+"entropy": 0.07361442226672797,
+"maxprob": 0.9633202926218509,
+"order_tv": 0.06924659099986911,
+"template_tv": 0.03412894696336571,
+"peer_prob_on_top": 0.8756729990951789,
+"peer_argmax_agree": 0.886,
+"position_prior_entropy": 0.9969913136821479
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|arc_easy": {
+"entropy": 0.051795045149837106,
+"maxprob": 0.9740785534381866,
+"order_tv": 0.032754420734924454,
+"template_tv": 0.021917701834053675,
+"peer_prob_on_top": 0.9319261151397269,
+"peer_argmax_agree": 0.938,
+"position_prior_entropy": 0.9997230884238226
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|boolq": {
+"entropy": 0.15544735335266827,
+"maxprob": 0.9575583828091622,
+"order_tv": 0.05593669654345649,
+"template_tv": 0.056053369857347206,
+"peer_prob_on_top": 0.850321407138825,
+"peer_argmax_agree": 0.868
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|hellaswag": {
+"entropy": 0.16641326202192935,
+"maxprob": 0.9154303619758256,
+"order_tv": 0.17320521494904284,
+"template_tv": 0.09411810897775194,
+"peer_prob_on_top": 0.7573214541843433,
+"peer_argmax_agree": 0.7820060483870968,
+"position_prior_entropy": 0.9984736219697485
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|logiqa": {
+"entropy": 0.3359041448276666,
+"maxprob": 0.8159602712392807,
+"order_tv": 0.24205162420833767,
+"template_tv": 0.1434350379389507,
+"peer_prob_on_top": 0.5560797836290134,
+"peer_argmax_agree": 0.59175,
+"position_prior_entropy": 0.9859173540329584
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|mmlu_humanities": {
+"entropy": 0.24962724895150126,
+"maxprob": 0.8645384953022003,
+"order_tv": 0.20151009433554928,
+"template_tv": 0.10105843249666265,
+"peer_prob_on_top": 0.6203945943100376,
+"peer_argmax_agree": 0.645,
+"position_prior_entropy": 0.9918197174011637
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|mmlu_other": {
+"entropy": 0.1696701722739303,
+"maxprob": 0.9111505005955696,
+"order_tv": 0.11736028027100667,
+"template_tv": 0.06874837739885795,
+"peer_prob_on_top": 0.7368122857103265,
+"peer_argmax_agree": 0.758,
+"position_prior_entropy": 0.9992667063347408
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|mmlu_social": {
+"entropy": 0.15752961839873675,
+"maxprob": 0.9181923770606518,
+"order_tv": 0.13732421071709394,
+"template_tv": 0.06616256552188242,
+"peer_prob_on_top": 0.7570474134553477,
+"peer_argmax_agree": 0.77525,
+"position_prior_entropy": 0.9967838088612118
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|mmlu_stem": {
+"entropy": 0.23196359043869716,
+"maxprob": 0.8725800494551659,
+"order_tv": 0.2049926889025577,
+"template_tv": 0.11499552288093963,
+"peer_prob_on_top": 0.6798439150918537,
+"peer_argmax_agree": 0.7035,
+"position_prior_entropy": 0.9934205199378814
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|mmlupro_biology": {
+"entropy": 0.14985662771737418,
+"maxprob": 0.8812286431789398,
+"order_tv": 0.20549415317464428,
+"template_tv": 0.09582480709592514,
+"peer_prob_on_top": 0.7052722843454574,
+"peer_argmax_agree": 0.72925,
+"position_prior_entropy": 0.9896791377802339
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|mmlupro_business": {
+"entropy": 0.3997991338977442,
+"maxprob": 0.6747012338787317,
+"order_tv": 0.5335662701874049,
+"template_tv": 0.2584316998877067,
+"peer_prob_on_top": 0.3440753130554407,
+"peer_argmax_agree": 0.381,
+"position_prior_entropy": 0.9306000105982518
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|mmlupro_chemistry": {
+"entropy": 0.4540197140404347,
+"maxprob": 0.6294507056176663,
+"order_tv": 0.5652330523969399,
+"template_tv": 0.29031004347202266,
+"peer_prob_on_top": 0.3134400369600179,
+"peer_argmax_agree": 0.34575,
+"position_prior_entropy": 0.9433185944299239
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|mmlupro_computer_science": {
+"entropy": 0.30959228489985224,
+"maxprob": 0.7566397647123512,
+"order_tv": 0.3823160430921269,
+"template_tv": 0.18083252270961658,
+"peer_prob_on_top": 0.47913416130991415,
+"peer_argmax_agree": 0.5234756097560975,
+"position_prior_entropy": 0.986498227290546
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|mmlupro_economics": {
+"entropy": 0.20910216393689682,
+"maxprob": 0.8384900944977999,
+"order_tv": 0.2918382771818582,
+"template_tv": 0.12756801601357098,
+"peer_prob_on_top": 0.5864241653240309,
+"peer_argmax_agree": 0.61225,
+"position_prior_entropy": 0.9968036246458468
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|mmlupro_engineering": {
+"entropy": 0.4993804906144061,
+"maxprob": 0.5969970201253891,
+"order_tv": 0.5545271089307839,
+"template_tv": 0.27646739719945607,
+"peer_prob_on_top": 0.33855796361003193,
+"peer_argmax_agree": 0.3805,
+"position_prior_entropy": 0.9583390119318841
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|mmlupro_health": {
+"entropy": 0.2238679377250005,
+"maxprob": 0.8218984726667404,
+"order_tv": 0.2566673839066736,
+"template_tv": 0.1266727014218592,
+"peer_prob_on_top": 0.5378596343611971,
+"peer_argmax_agree": 0.57075,
+"position_prior_entropy": 0.9945388567250728
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|mmlupro_history": {
+"entropy": 0.22770556099967176,
+"maxprob": 0.8223274871902516,
+"order_tv": 0.2558483237259143,
+"template_tv": 0.12739369491637817,
+"peer_prob_on_top": 0.5499063329434196,
+"peer_argmax_agree": 0.577755905511811,
+"position_prior_entropy": 0.9972880104652575
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|mmlupro_law": {
+"entropy": 0.3434530686067455,
+"maxprob": 0.7241042699962854,
+"order_tv": 0.36131215237308695,
+"template_tv": 0.15622710163399392,
+"peer_prob_on_top": 0.3821454777976452,
+"peer_argmax_agree": 0.41225,
+"position_prior_entropy": 0.9891493251236514
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|mmlupro_math": {
+"entropy": 0.4178268177152927,
+"maxprob": 0.6566122931540013,
+"order_tv": 0.5236722229810226,
+"template_tv": 0.2823543811888039,
+"peer_prob_on_top": 0.3210008348398968,
+"peer_argmax_agree": 0.34775,
+"position_prior_entropy": 0.9991809162361148
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|mmlupro_other": {
+"entropy": 0.3033286711998784,
+"maxprob": 0.7635345613956451,
+"order_tv": 0.34115463725059997,
+"template_tv": 0.16119592484359305,
+"peer_prob_on_top": 0.46755770772162564,
+"peer_argmax_agree": 0.49525,
+"position_prior_entropy": 0.9565268125553358
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|mmlupro_philosophy": {
+"entropy": 0.3113738044180526,
+"maxprob": 0.7642476660216261,
+"order_tv": 0.340977276408803,
+"template_tv": 0.16962017797667028,
+"peer_prob_on_top": 0.5063072747525834,
+"peer_argmax_agree": 0.5380761523046093,
+"position_prior_entropy": 0.995307549758076
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|mmlupro_physics": {
+"entropy": 0.4365362867444015,
+"maxprob": 0.6410829608738422,
+"order_tv": 0.5325807522950973,
+"template_tv": 0.27909705103883753,
+"peer_prob_on_top": 0.3362540397386876,
+"peer_argmax_agree": 0.368,
+"position_prior_entropy": 0.9594380324745662
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|mmlupro_psychology": {
+"entropy": 0.16832525490863387,
+"maxprob": 0.8634520009458065,
+"order_tv": 0.21571943151949638,
+"template_tv": 0.10215101052287287,
+"peer_prob_on_top": 0.6513304011074275,
+"peer_argmax_agree": 0.67675,
+"position_prior_entropy": 0.9363471784036616
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|openbookqa": {
+"entropy": 0.17367418625806513,
+"maxprob": 0.9105748314261436,
+"order_tv": 0.1298949006832513,
+"template_tv": 0.07444769465273499,
+"peer_prob_on_top": 0.7888645304285451,
+"peer_argmax_agree": 0.80975,
+"position_prior_entropy": 0.9982360692527208
+},
+"mistralai/Ministral-3-8B-Instruct-2512|letter_colon|winogrande": {
+"entropy": 0.32273524625690597,
+"maxprob": 0.904747477889061,
+"order_tv": 0.2590359051826381,
+"template_tv": 0.14910793729485886,
+"peer_prob_on_top": 0.6707261201541429,
+"peer_argmax_agree": 0.69975
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|arc_challenge": {
+"entropy": 0.09257933211190764,
+"maxprob": 0.956188324868679,
+"order_tv": 0.0685905476262269,
+"template_tv": 0.03412894696336571,
+"peer_prob_on_top": 0.8722026709412181,
+"peer_argmax_agree": 0.886,
+"position_prior_entropy": 0.9975219694465575
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|arc_easy": {
+"entropy": 0.05977208570934039,
+"maxprob": 0.9708593528866768,
+"order_tv": 0.027360019630360513,
+"template_tv": 0.021917701834053675,
+"peer_prob_on_top": 0.9263078877255468,
+"peer_argmax_agree": 0.93175,
+"position_prior_entropy": 0.9996910000448006
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|boolq": {
+"entropy": 0.18378671814053538,
+"maxprob": 0.9467525269985199,
+"order_tv": 0.05296687092789216,
+"template_tv": 0.056053369857347206,
+"peer_prob_on_top": 0.853764211472258,
+"peer_argmax_agree": 0.8635
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|hellaswag": {
+"entropy": 0.2409001719336577,
+"maxprob": 0.8829558198790877,
+"order_tv": 0.153964566431464,
+"template_tv": 0.09411810897775194,
+"peer_prob_on_top": 0.7678188108059761,
+"peer_argmax_agree": 0.7903225806451613,
+"position_prior_entropy": 0.9971980183181616
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|logiqa": {
+"entropy": 0.40928701343181684,
+"maxprob": 0.772959951967001,
+"order_tv": 0.21506133121017046,
+"template_tv": 0.1434350379389507,
+"peer_prob_on_top": 0.5509484327765746,
+"peer_argmax_agree": 0.584,
+"position_prior_entropy": 0.9947258203564188
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|mmlu_humanities": {
+"entropy": 0.2704594779411017,
+"maxprob": 0.8567062202692032,
+"order_tv": 0.18439147941395823,
+"template_tv": 0.10105843249666265,
+"peer_prob_on_top": 0.619299761893056,
+"peer_argmax_agree": 0.6435,
+"position_prior_entropy": 0.9924467108902756
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|mmlu_other": {
+"entropy": 0.20499475572356,
+"maxprob": 0.8938894557058811,
+"order_tv": 0.1074408818605425,
+"template_tv": 0.06874837739885795,
+"peer_prob_on_top": 0.7456913265391644,
+"peer_argmax_agree": 0.76375,
+"position_prior_entropy": 0.999115290394565
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|mmlu_social": {
+"entropy": 0.1849845292850467,
+"maxprob": 0.9055424860417843,
+"order_tv": 0.12158082516166678,
+"template_tv": 0.06616256552188242,
+"peer_prob_on_top": 0.762124957727559,
+"peer_argmax_agree": 0.78325,
+"position_prior_entropy": 0.9967925693046421
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|mmlu_stem": {
+"entropy": 0.2878782589110369,
+"maxprob": 0.84093794927001,
+"order_tv": 0.1796002990307743,
+"template_tv": 0.11499552288093963,
+"peer_prob_on_top": 0.6731861084560885,
+"peer_argmax_agree": 0.70225,
+"position_prior_entropy": 0.9978712658159554
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|mmlupro_biology": {
+"entropy": 0.17486697813105834,
+"maxprob": 0.8605777758210897,
+"order_tv": 0.18035485651625816,
+"template_tv": 0.09582480709592514,
+"peer_prob_on_top": 0.7032106747052794,
+"peer_argmax_agree": 0.72225,
+"position_prior_entropy": 0.9914272500938799
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|mmlupro_business": {
+"entropy": 0.515526018972021,
+"maxprob": 0.5818822388201952,
+"order_tv": 0.4590409523104457,
+"template_tv": 0.2584316998877067,
+"peer_prob_on_top": 0.34384043750803966,
+"peer_argmax_agree": 0.39025,
+"position_prior_entropy": 0.9114085463006637
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|mmlupro_chemistry": {
+"entropy": 0.5818649287051469,
+"maxprob": 0.5243373754471541,
+"order_tv": 0.45467662046342155,
+"template_tv": 0.29031004347202266,
+"peer_prob_on_top": 0.3152683557632869,
+"peer_argmax_agree": 0.36525,
+"position_prior_entropy": 0.9671439065952523
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|mmlupro_computer_science": {
+"entropy": 0.3580155275686274,
+"maxprob": 0.721767296387655,
+"order_tv": 0.3299488910191446,
+"template_tv": 0.18083252270961658,
+"peer_prob_on_top": 0.48516537015032984,
+"peer_argmax_agree": 0.524390243902439,
+"position_prior_entropy": 0.9926096534819261
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|mmlupro_economics": {
+"entropy": 0.23742600585119972,
+"maxprob": 0.816404111623764,
+"order_tv": 0.2705853507978786,
+"template_tv": 0.12756801601357098,
+"peer_prob_on_top": 0.589914014082396,
+"peer_argmax_agree": 0.62125,
+"position_prior_entropy": 0.9978106097883398
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|mmlupro_engineering": {
+"entropy": 0.6025275851873069,
+"maxprob": 0.5158052184134722,
+"order_tv": 0.4647068801442199,
+"template_tv": 0.27646739719945607,
+"peer_prob_on_top": 0.32542230112713216,
+"peer_argmax_agree": 0.386,
+"position_prior_entropy": 0.9508970842286129
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|mmlupro_health": {
+"entropy": 0.25428507221923613,
+"maxprob": 0.8012070951908827,
+"order_tv": 0.25369223095539595,
+"template_tv": 0.1266727014218592,
+"peer_prob_on_top": 0.5294478873080991,
+"peer_argmax_agree": 0.554,
+"position_prior_entropy": 0.9954831740857676
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|mmlupro_history": {
+"entropy": 0.2445876731406043,
+"maxprob": 0.8121970919721083,
+"order_tv": 0.24980704111220253,
+"template_tv": 0.12739369491637817,
+"peer_prob_on_top": 0.5524296054900784,
+"peer_argmax_agree": 0.577755905511811,
+"position_prior_entropy": 0.999168604812195
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|mmlupro_law": {
+"entropy": 0.35253892322680924,
+"maxprob": 0.7169700342714787,
+"order_tv": 0.3483808556225986,
+"template_tv": 0.15622710163399392,
+"peer_prob_on_top": 0.38518552469883766,
+"peer_argmax_agree": 0.40875,
+"position_prior_entropy": 0.9932873643723943
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|mmlupro_math": {
+"entropy": 0.5308095678556792,
+"maxprob": 0.568385431304574,
+"order_tv": 0.438192148625809,
+"template_tv": 0.2823543811888039,
+"peer_prob_on_top": 0.3241866706478634,
+"peer_argmax_agree": 0.3685,
+"position_prior_entropy": 0.9897285459747842
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|mmlupro_other": {
+"entropy": 0.34681884343309927,
+"maxprob": 0.7338320185095072,
+"order_tv": 0.31128632588966815,
+"template_tv": 0.16119592484359305,
+"peer_prob_on_top": 0.4736138323453383,
+"peer_argmax_agree": 0.511,
+"position_prior_entropy": 0.962288937605951
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|mmlupro_philosophy": {
+"entropy": 0.3401261331456663,
+"maxprob": 0.7442134228910139,
+"order_tv": 0.3179264685121215,
+"template_tv": 0.16962017797667028,
+"peer_prob_on_top": 0.5023660377736023,
+"peer_argmax_agree": 0.5335671342685371,
+"position_prior_entropy": 0.9974456875183121
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|mmlupro_physics": {
+"entropy": 0.5503804156284166,
+"maxprob": 0.5456597466766834,
+"order_tv": 0.43171654823313715,
+"template_tv": 0.27909705103883753,
+"peer_prob_on_top": 0.3307122286446419,
+"peer_argmax_agree": 0.37625,
+"position_prior_entropy": 0.8903890444555764
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|mmlupro_psychology": {
+"entropy": 0.1841044596451797,
+"maxprob": 0.8506044342517852,
+"order_tv": 0.2088253940584688,
+"template_tv": 0.10215101052287287,
+"peer_prob_on_top": 0.6469492843724087,
+"peer_argmax_agree": 0.66975,
+"position_prior_entropy": 0.9069203385934954
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|openbookqa": {
+"entropy": 0.1914780084705832,
+"maxprob": 0.9034771379828453,
+"order_tv": 0.11717282701929253,
+"template_tv": 0.07444769465273499,
+"peer_prob_on_top": 0.7990435542621365,
+"peer_argmax_agree": 0.8215,
+"position_prior_entropy": 0.9991988017058117
+},
+"mistralai/Ministral-3-8B-Instruct-2512|paren|winogrande": {
+"entropy": 0.4255866780470533,
+"maxprob": 0.8676803542971611,
+"order_tv": 0.1581787091117876,
+"template_tv": 0.14910793729485886,
+"peer_prob_on_top": 0.6734951575636223,
+"peer_argmax_agree": 0.7
+}
+}

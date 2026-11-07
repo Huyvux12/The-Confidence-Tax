@@ -1,0 +1,165 @@
+NOTE: running on the sealed confirmation split
+10 units, 10 cached
+reusing menu selection from runs/rbcal_dev/units (sources identical)
+{
+ "all": {
+  "E1_vs_MRTS": {
+   "paired": {
+    "unit": "__macro__",
+    "n_cases": 2652,
+    "mean_diff": -0.032381733435064036,
+    "ci_low": -0.03542807451995613,
+    "ci_high": -0.029342693446360386
+   },
+   "harm": [
+    0,
+    0
+   ],
+   "pass": true
+  },
+  "E2_vs_POOLED_TS": {
+   "harm": [
+    0,
+    7
+   ],
+   "worst": [
+    0.0051999432181235065,
+    0.05770098708685157
+   ],
+   "gain_retained": 0.8670082741081574,
+   "pass": true
+  },
+  "E3_vs_RBCAL_CONST": {
+   "paired": {
+    "unit": "__macro__",
+    "n_cases": 2652,
+    "mean_diff": -0.002267656225420841,
+    "ci_low": -0.0031406838687812323,
+    "ci_high": -0.00134632042701378
+   },
+   "harm": [
+    0,
+    0
+   ],
+   "pass": true
+  }
+ },
+ "conflict": {
+  "E1_vs_MRTS": {
+   "paired": {
+    "unit": "__macro__",
+    "n_cases": 2652,
+    "mean_diff": -0.03090822815082306,
+    "ci_low": -0.0350036031969118,
+    "ci_high": -0.026596260989928244
+   },
+   "harm": [
+    0,
+    0
+   ],
+   "pass": true
+  },
+  "E2_vs_POOLED_TS": {
+   "harm": [
+    0,
+    5
+   ],
+   "worst": [
+    0.0051999432181235065,
+    0.040694135488299935
+   ],
+   "gain_retained": 0.565200181401502,
+   "pass": true
+  },
+  "E3_vs_RBCAL_CONST": {
+   "paired": {
+    "unit": "__macro__",
+    "n_cases": 2652,
+    "mean_diff": 0.00012766812249551384,
+    "ci_low": -0.001988649639377317,
+    "ci_high": 0.0023494919284850154
+   },
+   "harm": [
+    0,
+    0
+   ],
+   "pass": false
+  }
+ },
+ "consensus": {
+  "E1_vs_MRTS": {
+   "paired": {
+    "unit": "__macro__",
+    "n_cases": 2652,
+    "mean_diff": -0.033013235699738734,
+    "ci_low": -0.03705916413405072,
+    "ci_high": -0.028870251509970288
+   },
+   "harm": [
+    0,
+    0
+   ],
+   "pass": true
+  },
+  "E2_vs_POOLED_TS": {
+   "harm": [
+    0,
+    2
+   ],
+   "worst": [
+    4.517509052022935e-21,
+    0.05770098708685157
+   ],
+   "gain_retained": 0.8841674930272522,
+   "pass": true
+  },
+  "E3_vs_RBCAL_CONST": {
+   "paired": {
+    "unit": "__macro__",
+    "n_cases": 2652,
+    "mean_diff": -0.0032942238030992783,
+    "ci_low": -0.004173478232095226,
+    "ci_high": -0.002460869237726668
+   },
+   "harm": [
+    0,
+    0
+   ],
+   "pass": true
+  }
+ }
+}
+
+method                   macro dNLL    worst  harm     ECE
+IDENTITY                    +0.0000  +0.0000     0  0.1191
+MRTS                        -0.2320  +0.0000     0  0.0829
+MRTS_GATED                  -0.2226  +0.0000     0  0.0844
+POOLED_TS                   -0.3050  +0.0577     7  0.0511
+SHRINKAGE_LOSO              -0.1656  +0.0059     0  0.0800
+POOLED_AFFINE               -0.1261  +0.0000     0  0.0894
+POOLED_RBF                  -0.1261  +0.0000     0  0.0894
+POOLED_TOPGAP               -0.1263  +0.0000     0  0.0894
+RBCAL_CONST_e0.0            -0.1261  +0.0000     0  0.0894
+RBCAL_CONST_e0.0025         -0.1318  +0.0016     0  0.0885
+RBCAL_CONST_e0.005          -0.1344  +0.0032     0  0.0877
+RBCAL_CONST_e0.01           -0.1373  +0.0063     0  0.0870
+RBCAL_CONST_e0.02           -0.1262  +0.0124     2  0.0894
+RBCAL_RBF_e0.0              -0.1261  +0.0000     0  0.0894
+RBCAL_RBF_e0.0025           -0.1332  +0.0000     0  0.0871
+RBCAL_RBF_e0.005            -0.1262  +0.0030     0  0.0895
+RBCAL_RBF_e0.01             -0.1262  +0.0062     0  0.0897
+RBCAL_RBF_e0.02             -0.1263  +0.0115     1  0.0896
+RBCAL_TOPGAP_e0.0           -0.1263  +0.0000     0  0.0894
+RBCAL_TOPGAP_e0.0025        -0.1263  +0.0015     0  0.0895
+RBCAL_TOPGAP_e0.005         -0.1263  +0.0030     0  0.0894
+RBCAL_TOPGAP_e0.01          -0.1264  +0.0059     0  0.0898
+RBCAL_TOPGAP_e0.02          -0.1264  +0.0116     1  0.0894
+RBCAL_UCB_CONST_e0.005      -0.2626  +0.0027     0  0.0701
+RBCAL_UCB_CONST_e0.01       -0.2621  +0.0054     0  0.0681
+RBCAL_UCB_CONST_e0.02       -0.2734  +0.0107     1  0.0632
+RBCAL_UCB_RBF_e0.005        -0.2651  +0.0026     0  0.0663
+RBCAL_UCB_RBF_e0.01         -0.2644  +0.0052     0  0.0655
+RBCAL_UCB_RBF_e0.02         -0.2752  +0.0102     1  0.0614
+RBCAL_UCB_TOPGAP_e0.005     -0.2459  +0.0026     0  0.0728
+RBCAL_UCB_TOPGAP_e0.01      -0.2536  +0.0052     0  0.0696
+RBCAL_UCB_TOPGAP_e0.02      -0.2615  +0.0103     1  0.0666

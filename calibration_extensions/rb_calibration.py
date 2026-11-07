@@ -21,6 +21,11 @@ from .source_splits import loso_folds
 RBF_MENU = [("constant", 0, None, 0.0)] + [("rbf", J, s, l) for J in (1, 2, 4, 8)
                                            for s in (0.2, 0.5, 1.0) for l in (0.0, 0.01, 0.1)]
 TOPGAP_MENU = [("top_gap", 0, None, l) for l in (0.0, 0.01, 0.1)]
+# phase 8: same menu, RBF on z extended with answer-order consistency (features.py)
+RBF_OC_MENU = [("constant", 0, None, 0.0)] + [("rbf_oc", J, s, l) for (_, J, s, l) in RBF_MENU[1:]]
+RBF_OCT_MENU = [("constant", 0, None, 0.0)] + [("rbf_oct", J, s, l) for (_, J, s, l) in RBF_MENU[1:]]
+RBF_OCP_MENU = [("constant", 0, None, 0.0)] + [("rbf_ocp", J, s, l) for (_, J, s, l) in RBF_MENU[1:]]
+RBF_OCP1_MENU = [("constant", 0, None, 0.0)] + [("rbf_ocp1", J, s, l) for (_, J, s, l) in RBF_MENU[1:]]
 CONSTANT_MENU = [("constant", 0, None, 0.0)]
 BOUNDS = (0.25, 4.0)
 

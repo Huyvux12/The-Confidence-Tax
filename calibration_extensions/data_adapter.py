@@ -20,7 +20,8 @@ SPLIT_FILES = {
 }
 PRIVATE_FILE = "target_labels_private.jsonl"
 REQUIRED = ("sample_id", "case_id", "model_id", "prompt_id", "source_id", "task_id", "probs", "label_ids")
-OPTIONAL = ("label_provenance", "parent_case_id", "question_type", "annotation_cost", "split_id")
+OPTIONAL = ("label_provenance", "parent_case_id", "question_type", "annotation_cost", "split_id",
+            "order_tv_raw", "peer_top", "peer_top1")      # last three: data_gen/make_aug.py (phase 10)
 
 
 def read_jsonl(path) -> list[dict]:

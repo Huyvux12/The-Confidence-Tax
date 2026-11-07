@@ -1,0 +1,20 @@
+{
+ "primary": {
+  "strong": "POOLED_TS",
+  "signal": "combined",
+  "tau": 0.19277473109112772,
+  "loto_in_sample_delta": -0.6082271637843737
+ },
+ "no_peer": {
+  "strong": "POOLED_TS",
+  "signal": "order_template",
+  "tau": 0.12825645054153711,
+  "loto_in_sample_delta": -0.6075240230509574
+ },
+ "thermo": {
+  "strong": "THERMO_P",
+  "signal": "combined",
+  "tau": 0.28871100079853695,
+  "loto_in_sample_delta": -0.5946140243536876
+ }
+}

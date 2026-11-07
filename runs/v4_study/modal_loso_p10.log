@@ -1,0 +1,99 @@
+✓ Initialized. View run at 
+https://modal.com/apps/robertbr-1905/main/ap-rJEDVMaKpG4sQjKnTe9yIh
+✓ Created objects.
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\scripts\modal_v4.py
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\runs\gate_study\hypers.json
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\data\real\confirm3_sealed
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\scripts\base_study.py
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\scripts\v4_study.py
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\data\real\confirm2_sealed
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\scripts\gate_study.py
+├── ✓ Uploaded E:\Dowload\project\AI 
+│   project\100PRR\mrts\data\real\confirm_sealed
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\data\real\dev_aug
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\data\real\dev_avg
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\data\real\dev
+├── ✓ Uploaded E:\Dowload\project\AI project\100PRR\mrts\calibration_extensions
+└── ✓ Created Function run.
+loso: 1850 jobs, 0 done, 1850 to run
+25/1850
+50/1850
+75/1850
+100/1850
+125/1850
+150/1850
+175/1850
+200/1850
+225/1850
+250/1850
+275/1850
+300/1850
+325/1850
+350/1850
+375/1850
+400/1850
+425/1850
+450/1850
+475/1850
+500/1850
+525/1850
+550/1850
+575/1850
+600/1850
+625/1850
+650/1850
+675/1850
+700/1850
+725/1850
+750/1850
+775/1850
+800/1850
+825/1850
+850/1850
+875/1850
+900/1850
+925/1850
+950/1850
+975/1850
+1000/1850
+1025/1850
+1050/1850
+1075/1850
+1100/1850
+1125/1850
+1150/1850
+1175/1850
+1200/1850
+1225/1850
+1250/1850
+1275/1850
+1300/1850
+1325/1850
+1350/1850
+1375/1850
+1400/1850
+1425/1850
+1450/1850
+1475/1850
+1500/1850
+1525/1850
+1550/1850
+1575/1850
+1600/1850
+1625/1850
+1650/1850
+1675/1850
+1700/1850
+1725/1850
+1750/1850
+1775/1850
+1800/1850
+1825/1850
+1850/1850
+JOB DONE loso fails=0
+Stopping app - local entrypoint completed.
+✓ App completed. View run at 
+https://modal.com/apps/robertbr-1905/main/ap-rJEDVMaKpG4sQjKnTe9yIh

@@ -7,7 +7,14 @@ import numpy as np
 
 from .numerics import ProbSet
 
-KINDS = ("constant", "entropy_affine", "rbf")
+KINDS = ("constant", "entropy_affine", "rbf", "rbf_oc", "rbf_oct", "rbf_ocp", "rbf_ocp1")
+# rbf_oc / rbf_oct (phase 8): the RBF field on z extended with label-free answer-order consistency,
+#   tv  = total variation between the two answer orders of the same question (semantic options), per row
+#   tvT = mean tv of the row's task batch (source task for sources, target task for targets; no labels)
+# rbf_ocp / rbf_ocp1 (phase 10): rbf_oct plus peer consensus (row value and task mean) from the data field
+#   peer_top (4 other models) or peer_top1 (one pre-chosen peer); see data_gen/make_aug.py
+RBF_LIKE = ("rbf", "rbf_oc", "rbf_oct", "rbf_ocp", "rbf_ocp1")
+PEER_FIELD = {"rbf_ocp": "peer_top", "rbf_ocp1": "peer_top1"}
 
 
 def group_features(logP: np.ndarray) -> np.ndarray:
@@ -23,6 +30,67 @@ def prob_features(ps: ProbSet) -> np.ndarray:
     for g in ps.groups:
         z[g.idx] = group_features(g.logP)
     return z
+
+
+def semantic_probs(ps: ProbSet, i: int) -> np.ndarray:
+    """Probabilities re-indexed by the original option index (label_ids[i][pos] = option shown at pos)."""
+    p = np.exp(ps.log_p[i])
+    out = np.zeros(p.size)
+    for pos, lab in enumerate(ps.label_ids[i]):
+        out[int(lab)] = p[pos]
+    return out
+
+
+def order_tv(ps: ProbSet) -> tuple[np.ndarray, int]:
+    """Per row: TV distance to the other answer order of the same question (same model and prompt).
+    Rows without a partner get 0; returns (tv, number of unpaired rows). If the data carry the precomputed
+    field order_tv_raw (derived datasets whose probs were averaged over orders), that value is used."""
+    raw = ps.extra.get("order_tv_raw")
+    if raw is not None and all(v is not None for v in raw):
+        return np.asarray(raw, dtype=float), 0
+    by_key: dict[tuple, list[int]] = {}
+    for i in range(ps.n):
+        by_key.setdefault((str(ps.case_id[i]), str(ps.model_id[i]), str(ps.prompt_id[i])), []).append(i)
+    tv = np.zeros(ps.n)
+    unpaired = 0
+    for rows in by_key.values():
+        if len(rows) < 2:
+            unpaired += len(rows)
+            continue
+        sem = [semantic_probs(ps, i) for i in rows]
+        for a, i in enumerate(rows):          # mean TV to the other orders (two orders in this data)
+            tv[i] = np.mean([0.5 * np.abs(sem[a] - sem[b]).sum() for b in range(len(rows)) if b != a])
+    return tv, unpaired
+
+
+def batch_key(ps: ProbSet) -> np.ndarray:
+    return np.array([str(s) if str(s) not in ("", "None") else str(t) for s, t in zip(ps.source_id, ps.task_id)])
+
+
+def task_mean(values: np.ndarray, keys: np.ndarray) -> np.ndarray:
+    out = np.empty_like(values)
+    for k in set(keys.tolist()):
+        m = keys == k
+        out[m] = values[m].mean()
+    return out
+
+
+def features_for(ps: ProbSet, kind: str) -> np.ndarray:
+    z = prob_features(ps)
+    if kind not in ("rbf_oc", "rbf_oct", "rbf_ocp", "rbf_ocp1"):
+        return z
+    tv, _ = order_tv(ps)
+    keys = batch_key(ps)
+    cols = [z, tv[:, None]]
+    if kind != "rbf_oc":
+        cols.append(task_mean(tv, keys)[:, None])
+    if kind in PEER_FIELD:
+        vals = ps.extra.get(PEER_FIELD[kind])
+        if vals is None or any(v is None for v in vals):
+            raise ValueError(f"{kind} needs the data field {PEER_FIELD[kind]} (data_gen/make_aug.py)")
+        peer = np.asarray(vals, dtype=float)
+        cols += [peer[:, None], task_mean(peer, keys)[:, None]]
+    return np.hstack(cols)
 
 
 def select_centers(z: np.ndarray, sample_id, J: int) -> np.ndarray:
@@ -57,7 +125,7 @@ class FeatureMap:
     def __post_init__(self):
         if self.kind not in KINDS:
             raise ValueError(self.kind)
-        if self.kind == "rbf" and (self.centers is None or self.centers.shape[0] == 0):
+        if self.kind in RBF_LIKE and (self.centers is None or self.centers.shape[0] == 0):
             self.kind, self.centers, self.sigma = "constant", None, None
 
     @property
@@ -66,7 +134,7 @@ class FeatureMap:
 
     @property
     def n_centers(self) -> int:
-        return self.dim - 1 if self.kind == "rbf" else 0
+        return self.dim - 1 if self.kind in RBF_LIKE else 0
 
     def identity_theta(self) -> np.ndarray:
         t = np.zeros(self.dim)
@@ -82,7 +150,7 @@ class FeatureMap:
         return np.column_stack([ones, rbf_psi(z, self.centers, self.sigma)])
 
     def phi(self, ps: ProbSet) -> np.ndarray:
-        return self.phi_from_z(prob_features(ps))
+        return self.phi_from_z(features_for(ps, self.kind))
 
     def beta(self, ps: ProbSet, theta: np.ndarray) -> np.ndarray:
         return self.phi(ps) @ theta
@@ -92,9 +160,9 @@ class FeatureMap:
 
 
 def fit_feature_map(ps: ProbSet, kind: str, J: int = 0, sigma: float | None = None) -> FeatureMap:
-    if kind != "rbf" or J == 0:
-        return FeatureMap(kind if kind != "rbf" else "constant")
-    return FeatureMap("rbf", select_centers(prob_features(ps), ps.sample_id, J), sigma)
+    if kind not in RBF_LIKE or J == 0:
+        return FeatureMap(kind if kind not in RBF_LIKE else "constant")
+    return FeatureMap(kind, select_centers(features_for(ps, kind), ps.sample_id, J), sigma)
 
 
 def beta_bound_slack(fmap: FeatureMap, theta: np.ndarray, beta_min: float, beta_max: float) -> float:
@@ -112,7 +180,7 @@ def beta_bound_slack(fmap: FeatureMap, theta: np.ndarray, beta_min: float, beta_
 def project_to_bounds(fmap: FeatureMap, theta: np.ndarray, beta_min: float, beta_max: float) -> np.ndarray:
     """Remove solver-tolerance violations of the global beta bounds (never a large move)."""
     t = theta.copy()
-    if fmap.kind == "rbf":
+    if fmap.kind in RBF_LIKE:
         t[0] = np.clip(t[0], beta_min, beta_max)
         room = min(t[0] - beta_min, beta_max - t[0])
         nv = np.linalg.norm(t[1:])

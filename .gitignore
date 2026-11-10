@@ -13,7 +13,12 @@ paper/*.out
 paper/build*.log
 
 # regenerable large data: rebuild with `python data_gen/make_splits.py`, check with data/real_SHA256SUMS.txt
-data/real/
+data/real/*
+!data/real/dev/
+data/real/dev/*
+!data/real/dev/source_train.jsonl
+!data/real/dev/source_select.jsonl
+!data/real/dev/source_audit.jsonl
 data/real3/
 data/real_gemma/
 data/real_qwen/

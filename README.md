@@ -27,8 +27,9 @@ python -m venv .venv && .venv/Scripts/pip install -r requirements.txt    # Linux
 ```
 
 **From the shipped probabilities (CPU only).** The repository ships the raw probabilities
-(`data_gen/raw/`) and the per-unit fits (`runs/*/units/`), not the derived splits or the concatenated
-`unit_results.pkl` files. Rebuild them first (both steps are deterministic):
+(`data_gen/raw/`), the three source splits (`data/real/dev/source_{train,select,audit}.jsonl`), and the
+per-unit fits (`runs/*/units/`). The remaining derived splits and the concatenated `unit_results.pkl`
+files are not included. Rebuild them first (both steps are deterministic):
 
 ```bash
 python data_gen/make_splits.py --raw data_gen/raw --out data/real

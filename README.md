@@ -45,6 +45,16 @@ python scripts/verify_paper_results.py
 
 This checks the 500-unit aggregate results, five roster breakdowns and paired LOTO negative-transfer rescues against the author's latest paper. It does **not** prove that every figure/ablation is independently reproducible, and it does not rerun LLM inference or CMA-ES fitting.
 
+## Controlled Margin vs No-margin ablation
+
+The author-supplied script is included at `scripts/run_fixed_margin_control.py`. It fixes the RBF specification (`runs/v4_study/chosen.json`) and compares `z=1.645` with `z=0` in the **inner source-regret constrained fit**, keeping the same `G-sig` deployment gate for both cases:
+
+```bash
+python scripts/run_fixed_margin_control.py --workers 4 --out runs/fixed_margin_control.jsonl
+```
+
+This is a fixed-field ablation, **not a separate CMA-ES Evo-RB run**. The full 250-unit output was **not provided with the source script** and remains to be verified before linking the manuscript's controlled No-margin numbers to the GitHub artifact.
+
 ## Installation and figure regeneration
 
 ```bash

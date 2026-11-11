@@ -1,92 +1,73 @@
-# RB-Cal: regret-budgeted multi-source calibration
+# The Confidence Tax: Evolutionary Regret-Budgeted Calibration for Language Models
 
-Code, data and paper for *Regret-Budgeted Calibration: Transferring Temperature Scaling Across Tasks
-While Bounding the Harm to Each Source* (`paper/main.pdf`).
+**Evo-RB — Evolutionary Regret-Budgeted Calibration**  
+Research code, frozen model predictions, experiments, and results for *The Confidence Tax: Evolutionary Regret-Budgeted Calibration for Language Models* (EvoLearn 2027 submission).
 
-Progress and scope: `todo.md`. Pre-registration: `PREREGISTRATION.md`. Dated decisions and deviations:
-`data_gen/PROTOCOL_LOG.md`.
+Evo-RB is a post-hoc calibration method for multiple-choice language models. It uses an **outer CMA-ES** search to choose the structure (RBF centres and bandwidth) of an input-dependent temperature field, and an **inner SLSQP** optimization to fit coefficients under per-source NLL regret constraints. The underlying language model is not retrained.
 
-## Layout
+> **Repository status (2026-11-11):** This is the original `main` branch, with historical research files still present. A publication-oriented cleanup is underway in [PR #1](../../pull/1) on branch `cleanup/evorb-paper-20261111`. The archived `paper/main.tex` is an **older RB-Cal manuscript**, and `paper_lncs/main.tex` is an **earlier Evo-RB draft**—neither should be mistaken for the author's latest 15-page PDF. The final manuscript's exact LaTeX source is not yet synchronized here.
 
-| Path | Content |
-|---|---|
-| `calibration_extensions/` | calibrators, objectives, RB-Cal (`rb_calibration.py`), baselines, evaluator, tests |
-| `data_gen/` | question set builder, GPU inference script, split builder, raw per-model probabilities (`raw/`), pinned revisions |
-| `data/real/dev`, `data/real/confirm_sealed` | canonical splits (sources identical in both; targets differ) |
-| `scripts/` | experiment runners, secondary analyses, paper assets, rechecks |
-| `runs/` | frozen outputs: per-unit fits, predictions, hashes, reports |
-| `paper/` | LaTeX source; every number, table and figure is generated into `paper/generated/` and `paper/figures/` |
+## Main comparison: five methods
 
-## Reproduce
+The manuscript compares **Pooled TS, Thermometer-P, ATS-P, Minimax TS, and Evo-RB**. Thermometer-P and ATS-P are probability-feature adaptations of the corresponding published methods, not exact implementations using their original hidden-state inputs. Fixed RBF/RB-Cal appears in the code as a development method and ablation rather than a sixth headline baseline.
 
-Python 3.13. All commands from this directory.
+| Method | Mean ΔNLL ↓ | ECE ↓ | Brier ↓ | Harm (ΔNLL > 0.01) ↓ |
+|:--|--:|--:|--:|--:|
+| Pooled TS | -0.490 | 0.078 | 0.431 | 58/500 |
+| Thermometer-P | -0.493 | 0.075 | 0.430 | 49/500 |
+| ATS-P | -0.487 | 0.078 | 0.432 | 74/500 |
+| Minimax TS | -0.368 | 0.131 | 0.462 | 1/500 |
+| **Evo-RB** | **-0.473** | **0.084** | **0.435** | **8/500** |
 
-```bash
-python -m venv .venv && .venv/Scripts/pip install -r requirements.txt    # Linux/macOS: .venv/bin/pip
-.venv/Scripts/python -m pytest calibration_extensions/tests -q
-```
+These numbers come from the committed frozen results in `runs/evo_study/aggregate_500.json`: five LLMs, two prompts, and 500 model–prompt–task evaluation units over five rosters (C1: 30, C2: 60, C3: 60, Hard: 100, LOTO: 250). Evo-RB trades a small amount of mean NLL gain for substantially fewer harmed units than the unconstrained baselines; **it is not the best method on every metric**.
 
-**From the shipped probabilities (CPU only).** The repository ships the raw probabilities
-(`data_gen/raw/`), the three source splits (`data/real/dev/source_{train,select,audit}.jsonl`), and the
-per-unit fits (`runs/*/units/`). The remaining derived splits and the concatenated `unit_results.pkl`
-files are not included. Rebuild them first (both steps are deterministic):
+## Start here: code and results
 
-```bash
-python data_gen/make_splits.py --raw data_gen/raw --out data/real
-(cd data/real && sha256sum -c ../real_SHA256SUMS.txt)                 # must print OK for all 12 files
-PYTHONPATH=. python scripts/run_rbcal.py --data data/real/dev --out runs/rbcal_dev        # reads the cached units: minutes
-PYTHONPATH=. python scripts/run_rbcal.py --data data/real/confirm_sealed --out runs/rbcal_confirm
-```
+| File / folder | Role |
+|:--|:--|
+| [`scripts/evo_study.py`](scripts/evo_study.py) | **Evo-RB implementation**: CMA-ES over RBF centres/bandwidth, inner SLSQP, gating, evaluation and LOTO jobs |
+| [`calibration_extensions/rb_calibration.py`](calibration_extensions/rb_calibration.py) | Constrained coefficient optimization and source regret calculations |
+| [`calibration_extensions/features.py`](calibration_extensions/features.py) | Label-free feature maps and temperature fields |
+| [`calibration_extensions/source_objectives.py`](calibration_extensions/source_objectives.py) | Scalar calibration objectives, Pooled TS and Minimax TS |
+| [`calibration_extensions/extra_baselines.py`](calibration_extensions/extra_baselines.py) | Thermometer-P and ATS-P |
+| [`scripts/v4_study.py`](scripts/v4_study.py) | Fixed-structure RBF experiments and ablation support |
+| [`scripts/gate_study.py`](scripts/gate_study.py) | Source-side selection and deployment gate |
+| [`scripts/base_study.py`](scripts/base_study.py) | Consistent baseline evaluation on shared data |
+| [`runs/evo_study/`](runs/evo_study) | Frozen Evo-RB per-unit outputs, aggregate results, fronts, LOTO |
+| [`runs/v4_study/`](runs/v4_study) | Frozen fixed-field and baseline results |
+| [`data_gen/`](data_gen) | Benchmark construction, model probability extraction, pinned revisions |
+| [`calibration_extensions/tests/`](calibration_extensions/tests) | Unit tests for core math and calibrators |
 
-To refit everything instead of reading the cached units, delete `runs/*/units/` first:
+The method's **bilevel structure search is implemented in `scripts/evo_study.py::evo_rb_fit`**. The file `calibration_extensions/evo_calibration.py` is a separate CMA-ES coefficient/frontier diagnostic, not the whole Evo-RB method.
 
-```bash
-PYTHONPATH=. python scripts/run_rbcal.py --data data/real/dev --out runs/rbcal_dev               # 42-285 min per unit
-PYTHONPATH=. python scripts/run_rbcal.py --data data/real/confirm_sealed --out runs/rbcal_confirm \
-    --reuse-selection data/real/dev runs/rbcal_dev/units                                          # 6-15 min per unit
-PYTHONPATH=. python scripts/run_extra_baselines.py --out runs/extra_baselines
-PYTHONPATH=. python scripts/run_loto.py --out runs/loto
-sh paper/build.sh                                                                                 # needs pdflatex + bibtex
-```
+## Install and inspect
 
-`--reuse-selection` is valid only because the source files of the two phases are byte-identical; the runner
-checks their SHA-256 and refuses otherwise. `scripts/recheck_full_refit.py` refits a confirm unit without it.
-
-**Checks.** `scripts/recheck_numbers.py` recomputes the paper's main numbers without the evaluator;
-`runs/*/prediction_hash.txt` holds the SHA-256 of all target predictions of each run.
-
-## EvoLearn 2027 version (`paper_lncs/`)
-
-LNCS paper *The Confidence Tax: Evolving Regret-Budgeted Temperature Fields for Safe Calibration Transfer in
-Language Models*. Build: `sh paper_lncs/build.sh` (every number, table and figure comes from `runs/` through
-`scripts/make_lncs_assets.py`). Later phases are logged in `data_gen/PROTOCOL_LOG.md` and `todo.md` (phases 6-12):
-
-| Path | Content |
-|---|---|
-| `data_gen/build_items_confirm{2,3,4}.py`, `data_gen/raw_confirm{2,3,4}/` | three further sealed rosters (items, raw probabilities) |
-| `data/real/confirm{2,3,4}_SHA256SUMS.txt` | rebuild with `data_gen/make_confirm2.py --raw ... --out ... --role target_confirmN` |
-| `calibration_extensions/features.py` | order-consistency (`rbf_oc`, `rbf_oct`) and peer (`rbf_ocp*`) feature maps |
-| `calibration_extensions/evo_calibration.py`, `scripts/evo_study.py` | CMA-ES solver, Pareto fronts, Evo-RB |
-| `scripts/v4_study.py`, `base_study.py`, `gate_study.py`, `modal_*.py` | experiment drivers (Modal CPU/GPU) |
-| `runs/v4_study`, `runs/evo_study`, `runs/rbcal_confirm{2,3,4}`, `runs/step0` | outputs and reports |
-
-## Large artifacts (Hugging Face)
-
-The per-unit fits of the confirm2-4 rosters (`runs/rbcal_confirm{2,3,4}/units/`, 765 MB) are in the public
-Hugging Face dataset [huyvux3005/rbcal-confidence-tax-runs](https://huggingface.co/datasets/huyvux3005/rbcal-confidence-tax-runs), not in git:
+Python 3.13 was used for the original project. Run commands from the repository root:
 
 ```bash
-hf download huyvux3005/rbcal-confidence-tax-runs --repo-type dataset --local-dir .
-sha256sum -c runs/HF_SHA256SUMS.txt                                                   # 30 files must print OK
+python -m venv .venv
+# Activate .venv, then:
+python -m pip install -r requirements.txt
+python -m pytest calibration_extensions/tests -q
 ```
 
-**From scratch (GPU).** `data_gen/build_items.py` rebuilds `data_gen/items.jsonl` from Hugging Face datasets;
-`data_gen/run_all.py` with `data_gen/infer_mcq.py` scores the five models (one A100 40GB, about 2.6 hours;
-`data_gen/requirements-inference.txt`); `data_gen/make_splits.py` writes `data/real/`. The model and dataset
-commits used are in `data_gen/revisions.json` (`run_all.py` pins them when the file is copied next to it).
-GPU numerics can differ in the last bits between hardware and library versions.
+Existing numbers can be inspected directly:
 
-## Data licences
+```bash
+python -c "import json; print(json.load(open('runs/evo_study/aggregate_500.json'))['aggregate']['EVO_RB'])"
+```
 
-Benchmark texts and labels keep their original licences (`data_gen/revisions.json` lists the Hugging Face
-licence tags); SciQ is CC BY-NC 3.0. The five models are Apache-2.0. No model weights are included.
+For rebuilding raw model probabilities, source splits and calibrator fits, consult `data_gen/PROTOCOL_LOG.md`, `PREREGISTRATION.md` and the research scripts listed above. Raw probabilities, frozen records, and inference/build scripts are preserved on `main`. Additional large fitted artifacts are linked from the historical run documentation.
+
+## Paper / code alignment notes
+
+- **LOTO configuration caveat:** The frozen runs refit coefficients without the held-out source task, but the discrete RBF specification was selected globally using all 25 sources before the LOTO holdouts. This is *fixed-global-configuration LOTO*, not fully nested per-holdout hyperparameter selection. Do not claim full task exclusion at every selection stage without a new run.
+- **Ablation provenance:** The latest controlled **No-margin** ablation results are not yet independently paired with a clearly identified frozen output artifact in this checkout.
+- **Original paper sources:** `paper/` and `paper_lncs/` are previous manuscripts; the final submission source and figures must still be synchronized before claiming exact paper reproducibility.
+- **Public access / anonymity:** The repository is currently private. Check reviewer access and the conference's double-blind requirements before putting a direct GitHub URL in the submission.
+
+All numerical results shown above reflect **saved experimental records**, not newly rerun GPU experiments. The cleanup PR provides a narrower paper-focused tree and additional artifact verification scripts; do not merge until the remaining reproducibility gaps are addressed.
+
+## Data and model licenses
+
+Original benchmark/data licensing terms remain in force; see `data_gen/revisions.json`. No LLM weights are included in this repository.

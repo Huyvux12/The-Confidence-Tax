@@ -59,10 +59,20 @@ python -c "import json; print(json.load(open('runs/evo_study/aggregate_500.json'
 
 For rebuilding raw model probabilities, source splits and calibrator fits, consult `data_gen/PROTOCOL_LOG.md`, `PREREGISTRATION.md` and the research scripts listed above. Raw probabilities, frozen records, and inference/build scripts are preserved on `main`. Additional large fitted artifacts are linked from the historical run documentation.
 
+## Controlled margin ablation (LOTO)
+
+The original author-supplied fixed-structure margin-control runner has been added as [`scripts/run_fixed_margin_control.py`](scripts/run_fixed_margin_control.py), with a correction to the `FitResult.solver_valid` attribute, process-safe input passing and resumable output writes.
+
+```bash
+python scripts/run_fixed_margin_control.py --workers 4 --out runs/fixed_margin_control.jsonl
+```
+
+It compares the **same frozen V4B RBF structure** using inner-optimization margin coefficients `z=1.645` versus `z=0` on 250 LOTO units. **This is not an outer-CMA-ES Evo-RB refit.** The original source-side `G-sig` deployment gate is applied in both arms. The code exists, but the complete `runs/fixed_margin_control.jsonl` output and exact Table 4 values have **not** been verified in this GitHub checkout. Do not claim the ablation numbers are reproduced until the 250-job output is provided and checked.
+
 ## Paper / code alignment notes
 
 - **LOTO configuration caveat:** The frozen runs refit coefficients without the held-out source task, but the discrete RBF specification was selected globally using all 25 sources before the LOTO holdouts. This is *fixed-global-configuration LOTO*, not fully nested per-holdout hyperparameter selection. Do not claim full task exclusion at every selection stage without a new run.
-- **Ablation provenance:** The latest controlled **No-margin** ablation results are not yet independently paired with a clearly identified frozen output artifact in this checkout.
+- **Ablation provenance:** The fixed-structure **Margin vs No-margin runner is now provided** as `scripts/run_fixed_margin_control.py`. Its complete 250-job output has not yet been verified in this checkout.
 - **Original paper sources:** `paper/` and `paper_lncs/` are previous manuscripts; the final submission source and figures must still be synchronized before claiming exact paper reproducibility.
 - **Public access / anonymity:** The repository is currently private. Check reviewer access and the conference's double-blind requirements before putting a direct GitHub URL in the submission.
 

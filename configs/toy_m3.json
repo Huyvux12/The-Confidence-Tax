@@ -1,4 +1,0 @@
-{"method": "M3", "data_dir": "data/toy_m3_top_gap", "out_dir": "runs/toy_m3", "seed": 0,
- "generate_toy": {"scenario": "m3_top_gap", "seed": 0, "K": 4},
- "m3": {"box": [0.25, 4.0], "lambdas": [0.0, 0.01, 0.1]},
- "exploratory": true}

@@ -1,0 +1,27 @@
+name: Check Evo-RB paper artifact
+on:
+  push:
+    paths:
+      - 'scripts/verify_paper_results.py'
+      - 'runs/evo_study/**'
+      - 'runs/v4_study/**'
+      - '.github/workflows/paper-artifact-check.yml'
+  pull_request:
+    paths:
+      - 'scripts/verify_paper_results.py'
+      - 'runs/evo_study/**'
+      - 'runs/v4_study/**'
+      - '.github/workflows/paper-artifact-check.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reference-results:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify frozen paper tables and paired LOTO rescue counts
+        run: python scripts/verify_paper_results.py

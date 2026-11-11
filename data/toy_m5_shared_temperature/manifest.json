@@ -1,7 +1,0 @@
-{
-  "generator": "toy_data",
-  "scenario": "a_shared_temperature",
-  "seed": 1,
-  "K": 4,
-  "label_provenance": "synthetic_known_truth"
-}

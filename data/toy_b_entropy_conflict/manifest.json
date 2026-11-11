@@ -1,7 +1,0 @@
-{
-  "generator": "toy_data",
-  "scenario": "b_entropy_conflict",
-  "seed": 0,
-  "K": 4,
-  "label_provenance": "synthetic_known_truth"
-}

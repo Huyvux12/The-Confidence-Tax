@@ -1,83 +1,99 @@
-# The Confidence Tax: Evolutionary Regret-Budgeted Calibration for Language Models
+# The Confidence Tax — Evo-RB
 
-**Evo-RB — Evolutionary Regret-Budgeted Calibration**  
-Research code, frozen model predictions, experiments, and results for *The Confidence Tax: Evolutionary Regret-Budgeted Calibration for Language Models* (EvoLearn 2027 submission).
+**Research artifact for EvoLearn 2027:** *The Confidence Tax: Evolutionary Regret-Budgeted Calibration for Language Models*.
 
-Evo-RB is a post-hoc calibration method for multiple-choice language models. It uses an **outer CMA-ES** search to choose the structure (RBF centres and bandwidth) of an input-dependent temperature field, and an **inner SLSQP** optimization to fit coefficients under per-source NLL regret constraints. The underlying language model is not retrained.
+Evo-RB is a source-only, post-hoc calibration method for multiple-choice language models. An outer **CMA-ES** search selects the centres and bandwidth of an input-dependent radial-basis inverse-temperature field; an inner **SLSQP** optimization fits its coefficients subject to **per-source NLL regret budgets** and an empirical uncertainty margin. The base LLM remains frozen.
 
-> **Repository status (2026-11-11):** This is the original `main` branch, with historical research files still present. A publication-oriented cleanup is underway in [PR #1](../../pull/1) on branch `cleanup/evorb-paper-20261111`. The archived `paper/main.tex` is an **older RB-Cal manuscript**, and `paper_lncs/main.tex` is an **earlier Evo-RB draft**—neither should be mistaken for the author's latest 15-page PDF. The final manuscript's exact LaTeX source is not yet synchronized here.
+> **Status, 11 Nov 2026.** The manuscript supplied by the authors contains 15 LNCS pages and 500 held-out model–prompt–task evaluation units (five models × two prompts × 50 task/roster occurrences). This repository contains the frozen records supporting the aggregate/roster comparisons. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for provenance, a LOTO hyperparameter-selection caveat, and components not yet accompanied by standalone ablation output files. Do not interpret the source-side empirical margin as a target-distribution safety guarantee.
 
-## Main comparison: five methods
+## Reported results
 
-The manuscript compares **Pooled TS, Thermometer-P, ATS-P, Minimax TS, and Evo-RB**. Thermometer-P and ATS-P are probability-feature adaptations of the corresponding published methods, not exact implementations using their original hidden-state inputs. Fixed RBF/RB-Cal appears in the code as a development method and ablation rather than a sixth headline baseline.
-
-| Method | Mean ΔNLL ↓ | ECE ↓ | Brier ↓ | Harm (ΔNLL > 0.01) ↓ |
+| Method | TL-ECE ↓ | Brier ↓ | Mean ΔNLL ↓ | Harm (ΔNLL > 0.01) ↓ |
 |:--|--:|--:|--:|--:|
-| Pooled TS | -0.490 | 0.078 | 0.431 | 58/500 |
-| Thermometer-P | -0.493 | 0.075 | 0.430 | 49/500 |
-| ATS-P | -0.487 | 0.078 | 0.432 | 74/500 |
-| Minimax TS | -0.368 | 0.131 | 0.462 | 1/500 |
-| **Evo-RB** | **-0.473** | **0.084** | **0.435** | **8/500** |
+| Pooled TS | 0.078 | 0.431 | −0.490 | 58/500 |
+| Thermometer-P | 0.075 | 0.430 | −0.493 | 49/500 |
+| ATS-P | 0.078 | 0.432 | −0.487 | 74/500 |
+| Minimax TS | 0.131 | 0.462 | −0.368 | 1/500 |
+| **Evo-RB** | **0.084** | **0.435** | **−0.473** | **8/500** |
 
-These numbers come from the committed frozen results in `runs/evo_study/aggregate_500.json`: five LLMs, two prompts, and 500 model–prompt–task evaluation units over five rosters (C1: 30, C2: 60, C3: 60, Hard: 100, LOTO: 250). Evo-RB trades a small amount of mean NLL gain for substantially fewer harmed units than the unconstrained baselines; **it is not the best method on every metric**.
+This is a measured **gain–harm trade-off**, not dominance on every metric. Thermometer-P and ATS-P are probability-interface adaptations, **not** exact hidden-state reproductions of their published implementations.
 
-## Start here: code and results
+## Repository map — start here
 
-| File / folder | Role |
+| Path | Purpose |
 |:--|:--|
-| [`scripts/evo_study.py`](scripts/evo_study.py) | **Evo-RB implementation**: CMA-ES over RBF centres/bandwidth, inner SLSQP, gating, evaluation and LOTO jobs |
-| [`calibration_extensions/rb_calibration.py`](calibration_extensions/rb_calibration.py) | Constrained coefficient optimization and source regret calculations |
-| [`calibration_extensions/features.py`](calibration_extensions/features.py) | Label-free feature maps and temperature fields |
-| [`calibration_extensions/source_objectives.py`](calibration_extensions/source_objectives.py) | Scalar calibration objectives, Pooled TS and Minimax TS |
-| [`calibration_extensions/extra_baselines.py`](calibration_extensions/extra_baselines.py) | Thermometer-P and ATS-P |
-| [`scripts/v4_study.py`](scripts/v4_study.py) | Fixed-structure RBF experiments and ablation support |
-| [`scripts/gate_study.py`](scripts/gate_study.py) | Source-side selection and deployment gate |
-| [`scripts/base_study.py`](scripts/base_study.py) | Consistent baseline evaluation on shared data |
-| [`runs/evo_study/`](runs/evo_study) | Frozen Evo-RB per-unit outputs, aggregate results, fronts, LOTO |
-| [`runs/v4_study/`](runs/v4_study) | Frozen fixed-field and baseline results |
-| [`data_gen/`](data_gen) | Benchmark construction, model probability extraction, pinned revisions |
-| [`calibration_extensions/tests/`](calibration_extensions/tests) | Unit tests for core math and calibrators |
+| `scripts/evo_study.py` | **Evo-RB**: outer CMA-ES centre/bandwidth search; inner constrained SLSQP fit; gated target evaluation |
+| `calibration_extensions/rb_calibration.py` | Regret budgets, clustered source uncertainty, parameter optimization and model selection |
+| `calibration_extensions/features.py` | Label-free entropy, top probability, margin and answer-order consistency features |
+| `scripts/v4_study.py`, `scripts/gate_study.py` | Fixed-field ablation and source-side selection/audit variants |
+| `calibration_extensions/extra_baselines.py`, `scripts/base_study.py` | Thermometer-P/ATS-P baseline implementations |
+| `calibration_extensions/source_objectives.py` | Pooled TS and Minimax TS fitting |
+| `runs/evo_study/`, `runs/v4_study/` | Frozen per-unit results underlying the manuscript's principal aggregate, roster and paired-LOTO analyses |
+| `data_gen/`, `data/real/dev/` | Pinned benchmark items, inference and source splits; target splits rebuild deterministically |
+| `paper_submission/` | Exact-author-source provenance, publication-facing reproduction instructions and figure regeneration |
+| `scripts/verify_paper_results.py` | Independent, standard-library-only numerical checks of the paper tables and paired rescues |
+| `scripts/build_submission_figures.py` | Rebuild manuscript figures from committed frozen records |
 
-The method's **bilevel structure search is implemented in `scripts/evo_study.py::evo_rb_fit`**. The file `calibration_extensions/evo_calibration.py` is a separate CMA-ES coefficient/frontier diagnostic, not the whole Evo-RB method.
+The historical RB-Cal drafts, prototype experiment runs, and duplicate verification files were **removed from the publication branch**, not erased from Git history. The dated decisions in `PREREGISTRATION.md` and `data_gen/PROTOCOL_LOG.md` remain for transparent provenance.
 
-## Install and inspect
-
-Python 3.13 was used for the original project. Run commands from the repository root:
+## Quick verification (no GPU, no model weights)
 
 ```bash
-python -m venv .venv
-# Activate .venv, then:
-python -m pip install -r requirements.txt
-python -m pytest calibration_extensions/tests -q
+python scripts/verify_paper_results.py
 ```
 
-Existing numbers can be inspected directly:
+This checks the 500-unit aggregate results, five roster breakdowns and paired LOTO negative-transfer rescues against the author's latest paper. It does **not** prove that every figure/ablation is independently reproducible, and it does not rerun LLM inference or CMA-ES fitting.
 
-```bash
-python -c "import json; print(json.load(open('runs/evo_study/aggregate_500.json'))['aggregate']['EVO_RB'])"
-```
+## Controlled Margin vs No-margin ablation
 
-For rebuilding raw model probabilities, source splits and calibrator fits, consult `data_gen/PROTOCOL_LOG.md`, `PREREGISTRATION.md` and the research scripts listed above. Raw probabilities, frozen records, and inference/build scripts are preserved on `main`. Additional large fitted artifacts are linked from the historical run documentation.
-
-## Controlled margin ablation (LOTO)
-
-The original author-supplied fixed-structure margin-control runner has been added as [`scripts/run_fixed_margin_control.py`](scripts/run_fixed_margin_control.py), with a correction to the `FitResult.solver_valid` attribute, process-safe input passing and resumable output writes.
+The author-supplied script is included at `scripts/run_fixed_margin_control.py`. It fixes the RBF specification (`runs/v4_study/chosen.json`) and compares `z=1.645` with `z=0` in the **inner source-regret constrained fit**, keeping the same `G-sig` deployment gate for both cases:
 
 ```bash
 python scripts/run_fixed_margin_control.py --workers 4 --out runs/fixed_margin_control.jsonl
 ```
 
-It compares the **same frozen V4B RBF structure** using inner-optimization margin coefficients `z=1.645` versus `z=0` on 250 LOTO units. **This is not an outer-CMA-ES Evo-RB refit.** The original source-side `G-sig` deployment gate is applied in both arms. The code exists, but the complete `runs/fixed_margin_control.jsonl` output and exact Table 4 values have **not** been verified in this GitHub checkout. Do not claim the ablation numbers are reproduced until the 250-job output is provided and checked.
+This is a fixed-field ablation, **not a separate CMA-ES Evo-RB run**. The full 250-unit output was **not provided with the source script** and remains to be verified before linking the manuscript's controlled No-margin numbers to the GitHub artifact.
 
-## Paper / code alignment notes
+## Installation and figure regeneration
 
-- **LOTO configuration caveat:** The frozen runs refit coefficients without the held-out source task, but the discrete RBF specification was selected globally using all 25 sources before the LOTO holdouts. This is *fixed-global-configuration LOTO*, not fully nested per-holdout hyperparameter selection. Do not claim full task exclusion at every selection stage without a new run.
-- **Ablation provenance:** The fixed-structure **Margin vs No-margin runner is now provided** as `scripts/run_fixed_margin_control.py`. Its complete 250-job output has not yet been verified in this checkout.
-- **Original paper sources:** `paper/` and `paper_lncs/` are previous manuscripts; the final submission source and figures must still be synchronized before claiming exact paper reproducibility.
-- **Public access / anonymity:** The repository is currently private. Check reviewer access and the conference's double-blind requirements before putting a direct GitHub URL in the submission.
+```bash
+python -m venv .venv
+# Activate it, then:
+python -m pip install -r requirements.txt
+python scripts/build_submission_figures.py
+python -m pytest calibration_extensions/tests -q
+```
 
-All numerical results shown above reflect **saved experimental records**, not newly rerun GPU experiments. The cleanup PR provides a narrower paper-focused tree and additional artifact verification scripts; do not merge until the remaining reproducibility gaps are addressed.
+The generated figure files appear in `paper_submission/`. Read `paper_submission/README.md` before compiling the paper.
 
-## Data and model licenses
+## Large fitted artifacts — Hugging Face
 
-Original benchmark/data licensing terms remain in force; see `data_gen/revisions.json`. No LLM weights are included in this repository.
+The full large per-unit fitted outputs for the **confirm2, confirm3 and confirm4 rosters** are hosted in the project's Hugging Face dataset:
+
+**[huyvux3005/rbcal-confidence-tax-runs](https://huggingface.co/datasets/huyvux3005/rbcal-confidence-tax-runs)**
+
+These 30 fitted files (about 765 MB as documented by the original repository) are **not meant to be committed to GitHub**. They were produced in the original RB-Cal/confirmation fitting pipeline and retained for reproducibility of the downstream Evo-RB comparison. Download them only when a full refit/artifact audit needs these `runs/rbcal_confirm{2,3,4}/units/` caches:
+
+```bash
+python -m pip install huggingface_hub
+hf download huyvux3005/rbcal-confidence-tax-runs --repo-type dataset --local-dir .
+sha256sum -c runs/HF_SHA256SUMS.txt
+```
+
+The existing `runs/HF_SHA256SUMS.txt` contains checksums for all 30 files. **No data were removed from the Hugging Face dataset during this GitHub cleanup**; only the README link was accidentally omitted during the earlier rewrite. The dataset's present remote availability/content has not been independently checked in this cleanup, so use the SHA-256 command to confirm the downloaded files match the original run.
+
+## From-scratch pipeline
+
+1. Rebuild items from pinned dataset revisions: `data_gen/build_items.py` and the `data_gen/build_items_confirm*.py` variants.
+2. Infer five open-weight LLMs and both answer orders with `data_gen/infer_mcq.py` (GPU; original runs are already cached in `data_gen/raw*/`).
+3. Recreate source and target splits with `data_gen/make_splits.py` and `data_gen/make_confirm2.py` plus the other cohort scripts.
+4. Fit the source-side baselines and frozen field configurations with `scripts/run_rbcal.py`, `scripts/run_extra_baselines.py`, `scripts/gate_study.py` and `scripts/v4_study.py`.
+5. Run the outer Evo-RB search with `scripts/evo_study.py` through `scripts/modal_v4.py` or a comparable job runner, then verify recorded results.
+
+**Reproducing the original numeric run** means retaining its frozen source-only hyperparameters and seeds; **correcting the strict LOTO hyperparameter-selection issue requires rerunning those experiments** and may change the paper numbers. Do not combine the two protocols.
+
+## Release / access
+
+The repository may currently be **private**. Before including its URL in an anonymous submission, check both the conference anonymity policy and GitHub's repository visibility/access settings. Do not place identifying account names, tokens, private URLs or author metadata in the anonymous paper artifact.
+
+License note: benchmark texts, labels and model terms follow their original licenses. No LLM weights are distributed.

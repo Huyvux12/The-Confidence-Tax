@@ -44,3 +44,10 @@ paper_lncs/*.bbl
 paper_lncs/*.blg
 paper_lncs/*.log
 paper_lncs/*.out
+
+# Regenerable research artifacts intentionally omitted from the Evo-RB cleanup branch
+*.log
+runs/toy_m*/
+runs/rbcal_dev_reuse/
+data_gen/raw_confirm3_check/
+data_gen/raw_confirm4_check/

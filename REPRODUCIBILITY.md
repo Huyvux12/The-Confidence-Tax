@@ -25,7 +25,7 @@ Therefore the current published LOTO numbers support **fixed global-configuratio
 
 ## Additional incomplete items
 
-- The PDF's Table 4 includes scalar, fixed-RBF, matched-feature and a **frozen-structure No-margin** controlled run. That precise no-margin output is not independently named/checked as a first-class artifact in the present Git tree. The paper's values should not be claimed as regenerated from the repository until the corresponding raw run, selection freeze/config and output hashes are committed.
+- The PDF's Table 4 includes scalar, fixed-RBF, matched-feature and a **frozen-structure No-margin** controlled run. The author-supplied script has now been added as `scripts/run_fixed_margin_control.py`, with the existing gate and experimental protocol preserved. **Its full 250-unit output has not yet been supplied or verified.** The paper's numerical ablation values should not be claimed as regenerated until `runs/fixed_margin_control.jsonl` is available and audited.
 - The exact source ZIP included specific static artwork; the new script creates **data-derived replacement plots**, not byte-identical copies of the provided PNGs. The manuscript wording and results must not be altered to disguise this distinction.
 - The code contains exploratory design choices beyond the five final reported methods (for example, previous M1/M3 diagnostics). A small shared dependency remains because the historical fitting and core tests reference it; unused experiments and large generated toy outputs are not part of this publication checkout.
 - Tests of code logic and the current artifact validation do **not** certify target-distribution safety, repeated-seed uncertainty or independent third-party reproduction.

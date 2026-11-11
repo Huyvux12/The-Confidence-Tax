@@ -10,7 +10,6 @@ Evo-RB is a source-only, post-hoc calibration method for multiple-choice languag
 
 | Method | TL-ECE ↓ | Brier ↓ | Mean ΔNLL ↓ | Harm (ΔNLL > 0.01) ↓ |
 |:--|--:|--:|--:|--:|
-| Uncalibrated | 0.190 | 0.507 | 0.000 | 0/500 |
 | Pooled TS | 0.078 | 0.431 | −0.490 | 58/500 |
 | Thermometer-P | 0.075 | 0.430 | −0.493 | 49/500 |
 | ATS-P | 0.078 | 0.432 | −0.487 | 74/500 |
@@ -66,6 +65,22 @@ python -m pytest calibration_extensions/tests -q
 ```
 
 The generated figure files appear in `paper_submission/`. Read `paper_submission/README.md` before compiling the paper.
+
+## Large fitted artifacts — Hugging Face
+
+The full large per-unit fitted outputs for the **confirm2, confirm3 and confirm4 rosters** are hosted in the project's Hugging Face dataset:
+
+**[huyvux3005/rbcal-confidence-tax-runs](https://huggingface.co/datasets/huyvux3005/rbcal-confidence-tax-runs)**
+
+These 30 fitted files (about 765 MB as documented by the original repository) are **not meant to be committed to GitHub**. They were produced in the original RB-Cal/confirmation fitting pipeline and retained for reproducibility of the downstream Evo-RB comparison. Download them only when a full refit/artifact audit needs these `runs/rbcal_confirm{2,3,4}/units/` caches:
+
+```bash
+python -m pip install huggingface_hub
+hf download huyvux3005/rbcal-confidence-tax-runs --repo-type dataset --local-dir .
+sha256sum -c runs/HF_SHA256SUMS.txt
+```
+
+The existing `runs/HF_SHA256SUMS.txt` contains checksums for all 30 files. **No data were removed from the Hugging Face dataset during this GitHub cleanup**; only the README link was accidentally omitted during the earlier rewrite. The dataset's present remote availability/content has not been independently checked in this cleanup, so use the SHA-256 command to confirm the downloaded files match the original run.
 
 ## From-scratch pipeline
 

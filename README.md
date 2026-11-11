@@ -1,3 +1,18 @@
+# The Confidence Tax — Evo-RB research repository
+
+> **Manuscript alignment (11 November 2026).** The latest author-provided 15-page manuscript is titled *The Confidence Tax: Evolutionary Regret-Budgeted Calibration for Language Models*. The checked-in `paper_lncs/main.tex` remains an **earlier EvoLearn draft**, and `paper/main.tex` is the **historical RB-Cal draft**. Neither should be represented as the exact source of that latest manuscript until synchronized. In particular, the current paper version includes a new paired negative-transfer rescue figure and controlled ablations. See [REPO_CLEANUP_AUDIT.md](REPO_CLEANUP_AUDIT.md) for the source-to-paper map and cleanup scope.
+
+## Core research path
+
+- **Method:** `scripts/evo_study.py` (bilevel evolutionary centre/bandwidth search and SLSQP inner fit), `calibration_extensions/rb_calibration.py` (coefficient fitting and regret constraints), `calibration_extensions/features.py` (label-free features).
+- **Baselines:** `calibration_extensions/extra_baselines.py`, `calibration_extensions/source_objectives.py`, and `scripts/run_extra_baselines.py`.
+- **Experiments:** `scripts/v4_study.py`, `scripts/gate_study.py`, `runs/evo_study/`, `runs/v4_study/`, `runs/gate_study/`, and the source/target probability files.
+- **Historical manuscripts, M1–M5 prototype code and tests** are retained for traceability; generated toy-run outputs and redundant caches are not tracked on this cleanup branch.
+
+---
+
+### Historical README (RB-Cal)
+
 # RB-Cal: regret-budgeted multi-source calibration
 
 Code, data and paper for *Regret-Budgeted Calibration: Transferring Temperature Scaling Across Tasks

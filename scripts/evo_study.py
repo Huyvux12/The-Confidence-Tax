@@ -155,7 +155,7 @@ def evo_unit_job(phase, unit, spec):
             "select": {"V": gate}, "target": target, "row_nll": row_nll, "fit": info}
 
 
-def evo_loto_job(unit, task, spec):
+def evo_loto_job(unit, task, spec=None, nested=False):
     from calibration_extensions.calibrators import IdentityCalibrator
     from calibration_extensions.evaluator import ece, row_metrics
     from calibration_extensions.numerics import concat
@@ -163,6 +163,12 @@ def evo_loto_job(unit, task, spec):
     s = v4_study.load_unit("loto", unit, ["source_train", "source_select", "source_audit"])
     keep = lambda ps, inside: ps.subset((ps.source_id == task) == inside)
     tr, sel, aud = keep(s["source_train"], False), keep(s["source_select"], False), keep(s["source_audit"], False)
+    if nested:
+        if spec is not None:
+            raise ValueError("Nested Evo-RB LOTO must not use the global spec")
+        spec = v4_study.nested_loto_spec(tr, "v4b", task)
+    elif spec is None:
+        raise ValueError("Historical Evo-RB LOTO requires its global spec")
     ev = concat([keep(s[k], True) for k in s])
     cal, info = evo_rb_fit(tr, sel, spec)
     gate = None if cal is None else gate_study.select_stats(aud, cal)
@@ -174,8 +180,12 @@ def evo_loto_job(unit, task, spec):
         target[name] = {task: {"nll": float(rm["nll"].mean()), "brier": float(rm["brier"].mean()),
                                "ece_15": ece(rm["conf"], rm["correct"]), "accuracy": float(rm["correct"].mean()),
                                "delta_nll": float(rm["delta"].mean())}}
-    return {"stage": "evo_loto", "unit": list(unit), "task": task, "variant": "evo_rb", "spec": spec,
-            "select": {"V": gate}, "target": target, "fit": info}
+    result = {"stage": "evo_loto_nested" if nested else "evo_loto",
+              "unit": list(unit), "task": task, "variant": "evo_rb", "spec": spec,
+              "select": {"V": gate}, "target": target, "fit": info}
+    if nested:
+        result["selection_protocol"] = "nested_loso_on_24_sources"
+    return result
 
 
 def run_job(job):
@@ -183,13 +193,22 @@ def run_job(job):
         return front_job(tuple(job["unit"]), job["spec"])
     if job["stage"] == "evo_unit":
         return evo_unit_job(job["phase"], tuple(job["unit"]), job["spec"])
-    return evo_loto_job(tuple(job["unit"]), job["task"], job["spec"])
+    if job["stage"] == "evo_loto_nested":
+        return evo_loto_job(tuple(job["unit"]), job["task"], nested=True)
+    if job["stage"] == "evo_loto":
+        return evo_loto_job(tuple(job["unit"]), job["task"], job["spec"])
+    raise ValueError(f"Unknown Evo-RB stage: {job['stage']}")
 
 
 def jobs_for(stage, phase="dev"):
     hy = json.loads((ROOT / "runs/gate_study/hypers.json").read_text(encoding="utf-8"))
-    chosen = json.loads((ROOT / "runs/v4_study/chosen.json").read_text(encoding="utf-8"))["v4b"]
     units = [u.split("|") for u in sorted(hy["units"])]
+    if stage == "evo_loto_nested":
+        return [{"module": "evo_study", "stage": stage, "unit": u, "task": t, "variant": "evo_rb"}
+                for u in units for t in hy["tasks"]]
+    if stage not in ("front", "evo_unit", "evo_loto"):
+        raise ValueError(f"Unknown Evo-RB stage: {stage}")
+    chosen = json.loads((ROOT / "runs/v4_study/chosen.json").read_text(encoding="utf-8"))["v4b"]
     if stage == "front":
         return [{"module": "evo_study", "stage": "front", "unit": u, "variant": "front", "spec": chosen["|".join(u)]}
                 for u in units]

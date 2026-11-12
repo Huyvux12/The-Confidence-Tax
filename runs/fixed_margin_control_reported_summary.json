@@ -1,0 +1,30 @@
+{
+  "experiment": "Fixed-structure Margin vs No-margin control (LOTO)",
+  "status": "reported_aggregate_only",
+  "provenance": "Aggregate values previously reported from a CPU control run on 2026-11-10; individual per-unit output has not been recovered or independently revalidated.",
+  "script": "scripts/run_fixed_margin_control.py",
+  "expected_raw_output": "runs/fixed_margin_control.jsonl",
+  "raw_output_available": false,
+  "full_outer_cma_es_rerun": false,
+  "number_of_evaluation_units": 250,
+  "fixed_structure": "v4b, held constant between arms",
+  "harm_definition": "mean delta_nll > 0.01 nats",
+  "arms": {
+    "margin": {
+      "inner_uncertainty_multiplier": 1.645,
+      "mean_delta_nll": -0.573097,
+      "mean_ece": 0.092418,
+      "mean_brier": 0.51281,
+      "harmed_units": 0
+    },
+    "no_margin": {
+      "inner_uncertainty_multiplier": 0,
+      "mean_delta_nll": -0.55643,
+      "mean_ece": 0.08493,
+      "mean_brier": 0.512253,
+      "harmed_units": 8,
+      "mean_positive_regret_over_harmed_units": 0.015638
+    }
+  },
+  "caution": "These are reported aggregate point estimates, NOT 250 per-unit records. Do not rename this as fixed_margin_control.jsonl or treat it as independent reproduction."
+}

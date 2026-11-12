@@ -53,17 +53,19 @@ def main(stage: str, phase: str = "dev", variants: str = "", base: str = "", pee
         import base_study
         jobs = base_study.jobs_for(stage, phase, base, peer)
         name = f"base_{phase}{base}" if stage == "base_unit" else f"base_loto{base}"
-    elif stage in ("front", "evo_unit", "evo_loto"):
+    elif stage in ("front", "evo_unit", "evo_loto", "evo_loto_nested"):
         import evo_study
         jobs = evo_study.jobs_for(stage, phase)
-        name = {"front": "front", "evo_unit": f"evo_{phase}", "evo_loto": "evo_loto"}[stage]
+        name = {"front": "front", "evo_unit": f"evo_{phase}",
+                "evo_loto": "evo_loto", "evo_loto_nested": "evo_loto_nested"}[stage]
         outdir = "runs/evo_study"
     else:
         vs = [v for v in variants.split(",") if v] or None
         if stage == "final" and vs is None:
             vs = list(v4_study.VARIANTS)
         jobs = v4_study.jobs_for(stage, phase, vs)
-        name = {"loso": "loso", "final": f"final_{phase}", "loto": "loto"}[stage]
+        name = {"loso": "loso", "final": f"final_{phase}",
+                "loto": "loto", "loto_nested": "loto_nested"}[stage]
     out = ROOT / outdir / f"{name}.jsonl"
     out.parent.mkdir(parents=True, exist_ok=True)
     done = set()

@@ -1,12 +1,12 @@
-# Reproducibility and paper alignment (11 Nov 2026)
+# Reproducibility and paper alignment (12 Nov 2026)
 
 ## Manuscript identity
 
-The author's latest file is **The Confidence Tax: Evolutionary Regret-Budgeted Calibration for Language Models**, 15 LNCS pages, built from an Overleaf package titled `Confidence_Tax_EvoRB_Table2_TwoTier_Fig3_FIXED_15pages_Overleaf.zip` and verified locally on 2026-11-11 as a 15-page pdfLaTeX document. The extracted source `main.tex` has SHA-256:
+The current **corrected** paper is **The Confidence Tax: Evolutionary Regret-Budgeted Calibration for Language Models**, 15 Springer LNCS pages. Its separate submission source archive is `EvoRB_LOTO_Corrected_Overleaf_Source.zip`; the corrected `main.tex` has SHA-256:
 
-`691dfda7772e5e288d3830c547f296866cd74b84742154a93be687499e9ddc2a`.
+`3070c25bcd5648decc6e1d826208bd211dba9c3911c63756c8ae8b8bd8f16004`.
 
-**Do not use the old `paper_lncs/main.tex` as the submission manuscript**: its text/figures describe a previous Evo-RB draft. The old LaTeX directory was removed from this publication branch, but remains in Git history.
+This public code repository does **not** contain that anonymous submission source archive. Keep the separate Overleaf ZIP as the authority for the submission. An earlier, now superseded Overleaf package was `Confidence_Tax_EvoRB_Table2_TwoTier_Fig3_FIXED_15pages_Overleaf.zip` (SHA-256 of its `main.tex`: `691dfda7772e5e288d3830c547f296866cd74b84742154a93be687499e9ddc2a`). Do not substitute historical `paper_lncs/main.tex` or generated plot replacements for the final submission files.
 
 ## Exactly supported by frozen outputs
 
@@ -17,15 +17,15 @@ The author's latest file is **The Confidence Tax: Evolutionary Regret-Budgeted C
 
 Main five-method comparison: Pooled TS, Thermometer-P, ATS-P, Minimax TS, Evo-RB. The fixed regret-budgeted field V4B is **an internal ablation**, not a sixth headline baseline. Neither Thermometer-P nor ATS-P uses the hidden states of the original published method.
 
-## Critical LOTO protocol difference — address before claiming strict task isolation
+## LOTO protocol: globally selected specification and fold-specific refitting
 
-The submitted manuscript says that each held-out source task is removed from **fitting, hyperparameter selection and auditing**. In the committed experimental path, `scripts/evo_study.py::jobs_for("evo_loto")` loads the per-model/prompt `v4b` specification from `runs/v4_study/chosen.json`; `scripts/v4_study.py::jobs_for("loto")` uses that same global choice. That choice was made using all 25 source tasks before each LOTO holdout was designated. The actual LOTO **coefficient fitting** excludes the held-out task, and the held-out task is excluded from the source-selection/audit statistics for those fits, but the discrete specification has prior information from the held-out task.
+The corrected manuscript (12 Nov 2026) explicitly distinguishes **globally selected hyperparameters** from **fold-specific fitting and auditing**. In earlier wording, the held-out task had incorrectly been described as excluded from all hyperparameter selection. In the committed experimental path, `scripts/evo_study.py::jobs_for("evo_loto")` loads the per-model/prompt `v4b` specification from `runs/v4_study/chosen.json`; `scripts/v4_study.py::jobs_for("loto")` uses that same global choice. That choice was made using all 25 source tasks before each LOTO holdout was designated. The actual LOTO **coefficient fitting** excludes the held-out task, and the held-out task is excluded from the source-selection/audit statistics for those fits, but the discrete specification has prior information from the held-out task.
 
-Therefore the current published LOTO numbers support **fixed global-configuration LOTO with held-out refitting**, **not full nested hyperparameter selection**. Rerunning nested LOTO selection or revising that manuscript sentence is necessary before making a stronger claim. The figures/tables remain the actual frozen outcomes; no re-labelled or invented data have been substituted here.
+Therefore the frozen LOTO numbers support **globally selected configuration with held-out task refitting**, **not nested hyperparameter selection**. The corrected manuscript uses that accurate description. A separate, unmerged draft PR (#2) proposes a nested protocol for possible future runs; its code has **not** generated the paper's saved results. The tables/figures remain the original frozen outcomes.
 
 ## Additional incomplete items
 
-- The PDF's Table 4 includes scalar, fixed-RBF, matched-feature and a **frozen-structure No-margin** controlled run. The author-supplied script has now been added as `scripts/run_fixed_margin_control.py`, with the existing gate and experimental protocol preserved. **Its full 250-unit output has not yet been supplied or verified.** The paper's numerical ablation values should not be claimed as regenerated until `runs/fixed_margin_control.jsonl` is available and audited.
+- The PDF's Table 4 includes scalar, fixed-RBF, matched-feature and a **frozen-structure No-margin** controlled run. The author-supplied script has now been added as `scripts/run_fixed_margin_control.py`, with the existing gate and experimental protocol preserved. The reported aggregate result is now archived as `runs/fixed_margin_control_reported_summary.json`, but **its full 250-unit raw output remains unavailable**. That summary documents previously reported values; it is not a substitute for `runs/fixed_margin_control.jsonl`, and the ablation should not be claimed as independently regenerated from saved per-unit results.
 - The exact source ZIP included specific static artwork; the new script creates **data-derived replacement plots**, not byte-identical copies of the provided PNGs. The manuscript wording and results must not be altered to disguise this distinction.
 - The code contains exploratory design choices beyond the five final reported methods (for example, previous M1/M3 diagnostics). A small shared dependency remains because the historical fitting and core tests reference it; unused experiments and large generated toy outputs are not part of this publication checkout.
 - Tests of code logic and the current artifact validation do **not** certify target-distribution safety, repeated-seed uncertainty or independent third-party reproduction.

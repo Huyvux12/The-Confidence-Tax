@@ -1,8 +1,10 @@
 # Manuscript — EvoLearn 2027 artifact
 
-The author-provided PDF is titled **The Confidence Tax: Evolutionary Regret-Budgeted Calibration for Language Models** (15 pages, Springer LNCS, double-anonymous). Its original Overleaf ZIP, preserved in the author's source files, was compiled locally with pdfLaTeX to 15 pages with matching paragraphs and tables.
+The corrected double-anonymous submission is titled **The Confidence Tax: Evolutionary Regret-Budgeted Calibration for Language Models** (15 Springer LNCS pages). The current authority is the separately maintained `EvoRB_LOTO_Corrected_Overleaf_Source.zip`; its `main.tex` SHA-256 is:
 
-The archived main-source SHA-256 is `691dfda7772e5e288d3830c547f296866cd74b84742154a93be687499e9ddc2a`. The source is the authority for exact manuscript wording and typesetting; do **not** substitute the older `paper_lncs` draft.
+`3070c25bcd5648decc6e1d826208bd211dba9c3911c63756c8ae8b8bd8f16004`.
+
+This repository keeps the code, recorded experimental outputs and figure-generation scripts, **not** the final double-blind source archive. The corrected manuscript clarifies that LOTO reuses a globally selected discrete field specification and excludes each held-out task from fold-specific fitting/evolution/audit. Do not use previous `paper_lncs` or historic source ZIPs as the current submission.
 
 Figures can be regenerated from the committed research records:
 
@@ -18,4 +20,4 @@ Outputs in this folder:
 
 The programmatically regenerated figures **represent the same frozen data but need not be visually identical** to the author's original PNGs. The precise No-margin ablation output for Table 4 remains a documented reproducibility gap. See [../REPRODUCIBILITY.md](../REPRODUCIBILITY.md).
 
-The original Overleaf `main.tex` references the three names above. Once the verified source is placed in this folder, use pdfLaTeX (and the official LNCS class) to compile. Preserve the conference-specified layout. Never substitute regenerated Table 4 numbers without their audited source run.
+The corrected Overleaf ZIP references the three figure filenames above and includes the official LNCS class and original artwork. Compile that ZIP separately with pdfLaTeX, preserving the conference layout. The reported Margin vs No-margin aggregate is archived in `runs/fixed_margin_control_reported_summary.json`, but the per-unit raw output remains unrecovered; do not claim independent reproduction of Table 4 from that summary.

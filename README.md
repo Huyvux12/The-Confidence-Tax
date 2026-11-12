@@ -4,7 +4,7 @@
 
 Evo-RB is a source-only, post-hoc calibration method for multiple-choice language models. An outer **CMA-ES** search selects the centres and bandwidth of an input-dependent radial-basis inverse-temperature field; an inner **SLSQP** optimization fits its coefficients subject to **per-source NLL regret budgets** and an empirical uncertainty margin. The base LLM remains frozen.
 
-> **Status, 11 Nov 2026.** The manuscript supplied by the authors contains 15 LNCS pages and 500 held-out model–prompt–task evaluation units (five models × two prompts × 50 task/roster occurrences). This repository contains the frozen records supporting the aggregate/roster comparisons. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for provenance, a LOTO hyperparameter-selection caveat, and components not yet accompanied by standalone ablation output files. Do not interpret the source-side empirical margin as a target-distribution safety guarantee.
+> **Status, 12 Nov 2026.** The corrected manuscript contains 15 LNCS pages and 500 held-out model–prompt–task evaluation units (five models × two prompts × 50 task/roster occurrences). This repository contains the frozen records supporting the aggregate/roster comparisons. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for provenance, a LOTO hyperparameter-selection caveat, and components not yet accompanied by standalone ablation output files. Do not interpret the source-side empirical margin as a target-distribution safety guarantee.
 
 ## Reported results
 
@@ -30,7 +30,7 @@ This is a measured **gain–harm trade-off**, not dominance on every metric. The
 | `calibration_extensions/source_objectives.py` | Pooled TS and Minimax TS fitting |
 | `runs/evo_study/`, `runs/v4_study/` | Frozen per-unit results underlying the manuscript's principal aggregate, roster and paired-LOTO analyses |
 | `data_gen/`, `data/real/dev/` | Pinned benchmark items, inference and source splits; target splits rebuild deterministically |
-| `paper_submission/` | Exact-author-source provenance, publication-facing reproduction instructions and figure regeneration |
+| `paper_submission/` | Paper-source provenance notes; exact corrected submission LaTeX is maintained separately during double-blind review |
 | `scripts/verify_paper_results.py` | Independent, standard-library-only numerical checks of the paper tables and paired rescues |
 | `scripts/build_submission_figures.py` | Rebuild manuscript figures from committed frozen records |
 
@@ -52,7 +52,7 @@ The author-supplied script is included at `scripts/run_fixed_margin_control.py`.
 python scripts/run_fixed_margin_control.py --workers 4 --out runs/fixed_margin_control.jsonl
 ```
 
-This is a fixed-field ablation, **not a separate CMA-ES Evo-RB run**. The full 250-unit output was **not provided with the source script** and remains to be verified before linking the manuscript's controlled No-margin numbers to the GitHub artifact.
+This is a fixed-field ablation, **not a separate CMA-ES Evo-RB run**. The reported aggregate values are recorded in [`runs/fixed_margin_control_reported_summary.json`](runs/fixed_margin_control_reported_summary.json). That file is **only a reported summary**, not the underlying 250 per-unit outputs. The original `runs/fixed_margin_control.jsonl` has not been recovered, so this ablation is not independently reproducible from saved per-unit results yet.
 
 ## Installation and figure regeneration
 
@@ -94,6 +94,6 @@ The existing `runs/HF_SHA256SUMS.txt` contains checksums for all 30 files. **No 
 
 ## Release / access
 
-The repository may currently be **private**. Before including its URL in an anonymous submission, check both the conference anonymity policy and GitHub's repository visibility/access settings. Do not place identifying account names, tokens, private URLs or author metadata in the anonymous paper artifact.
+This GitHub repository is **public** and its owner URL reveals a GitHub account. **Do not place this identifying URL into a double-blind submission.** The current manuscript ZIP/PDF is maintained separately; the public repo is a code-and-results snapshot, not a substitute for the anonymous submission package. Avoid tokens, private URLs, and author metadata in any review artifact.
 
 License note: benchmark texts, labels and model terms follow their original licenses. No LLM weights are distributed.

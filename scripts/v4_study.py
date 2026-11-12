@@ -118,13 +118,37 @@ def final_job(phase, unit, variant, spec):
             "identity_raw_nll": raw_identity_nll(phase, unit) if base else None}
 
 
-def loto_job(unit, task, variant, spec):
+def nested_loto_spec(train, variant, heldout_task):
+    """Select the discrete spec using inner LOSO on 24 outer-training tasks only.
+
+    This must NOT use the global runs/v4_study/chosen.json configuration.
+    Only source_train rows of the 24 remaining tasks enter the selection.
+    """
+    from calibration_extensions.rb_calibration import Spec, select_by_loso
+
+    if any(str(s) == heldout_task for s in train.source_id):
+        raise ValueError("Held-out task leaked into nested LOTO selection")
+    if len(train.sources()) != 24:
+        raise ValueError("Nested LOTO requires exactly 24 remaining source tasks")
+    _name, eps, z, _base = VARIANTS[variant]
+    specs = [Spec(*entry) for entry in menu(variant)]
+    selected, _scores = select_by_loso(train, specs, eps, EPS, z)
+    return [selected.kind, selected.J, selected.sigma, selected.lam]
+
+
+def loto_job(unit, task, variant, spec=None, nested=False):
     from calibration_extensions.evaluator import ece, row_metrics
     from calibration_extensions.numerics import concat
     base = VARIANTS[variant][3]
     s = load_unit("loto", unit, ["source_train", "source_select", "source_audit"], base)
     keep = lambda ps, inside: ps.subset((ps.source_id == task) == inside)
     tr, sel = keep(s["source_train"], False), keep(s["source_select"], False)
+    if nested:
+        if spec is not None:
+            raise ValueError("Nested LOTO must not receive a globally selected spec")
+        spec = nested_loto_spec(tr, variant, task)
+    elif spec is None:
+        raise ValueError("Legacy LOTO requires its historical global spec")
     ev = concat([keep(s[k], True) for k in s])
     cals, stats = fit_candidate(tr, sel, spec, variant)
     target = {}
@@ -135,9 +159,12 @@ def loto_job(unit, task, variant, spec):
         target[name] = {task: {"nll": float(rm["nll"].mean()), "brier": float(rm["brier"].mean()),
                                "ece_15": ece(rm["conf"], rm["correct"]), "accuracy": float(rm["correct"].mean()),
                                "delta_nll": float(rm["delta"].mean())}}
-    return {"stage": "loto", "unit": list(unit), "task": task, "variant": variant, "spec": spec,
-            "select": {"V": stats}, "target": target,
-            "identity_raw_nll": raw_identity_nll("loto", unit, task) if base else None}
+    result = {"stage": "loto_nested" if nested else "loto", "unit": list(unit), "task": task,
+              "variant": variant, "spec": spec, "select": {"V": stats}, "target": target,
+              "identity_raw_nll": raw_identity_nll("loto", unit, task) if base else None}
+    if nested:
+        result["selection_protocol"] = "nested_loso_on_24_sources"
+    return result
 
 
 def run_job(job: dict) -> dict:
@@ -146,7 +173,11 @@ def run_job(job: dict) -> dict:
         return loso_job(tuple(job["unit"]), job["variant"], job["k"])
     if st == "final":
         return final_job(job["phase"], tuple(job["unit"]), job["variant"], job["spec"])
-    return loto_job(tuple(job["unit"]), job["task"], job["variant"], job["spec"])
+    if st == "loto_nested":
+        return loto_job(tuple(job["unit"]), job["task"], job["variant"], nested=True)
+    if st == "loto":
+        return loto_job(tuple(job["unit"]), job["task"], job["variant"], job["spec"])
+    raise ValueError(f"Unknown v4 stage: {st}")
 
 
 def jobs_for(stage, phase=None, variants=None):
@@ -156,6 +187,11 @@ def jobs_for(stage, phase=None, variants=None):
     variants = variants or list(VARIANTS)
     if stage == "loso":
         return [{"stage": "loso", "unit": u, "variant": v, "k": k} for u in units for v in variants for k in range(37)]
+    if stage == "loto_nested":
+        return [{"stage": stage, "unit": u, "task": t, "variant": v}
+                for u in units for t in hy["tasks"] for v in variants]
+    if stage not in ("final", "loto"):
+        raise ValueError(f"Unknown v4 stage: {stage}")
     chosen = json.loads((OUT / "chosen.json").read_text(encoding="utf-8"))
     if stage == "final":
         return [{"stage": "final", "phase": phase, "unit": u, "variant": v, "spec": chosen[v]["|".join(u)]}
